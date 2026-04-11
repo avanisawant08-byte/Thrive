@@ -6,7 +6,10 @@ const Transaction = require('../models/Transaction');
 const submitActivity = async (req, res) => {
   try {
     const { activityType, eventId, description } = req.body;
-    const proofMedia = req.body.proofMedia || [];
+
+    // proofMedia URLs already uploaded to Firebase from frontend
+    let proofMedia = req.body.proofMedia || [];
+    if (typeof proofMedia === 'string') proofMedia = [proofMedia];
 
     const activity = await Activity.create({
       userId: req.user._id,
@@ -94,4 +97,10 @@ const getPendingActivities = async (req, res) => {
   }
 };
 
-module.exports = { submitActivity, getMyActivities, getActivityById, updateActivityStatus, getPendingActivities };
+module.exports = {
+  submitActivity,
+  getMyActivities,
+  getActivityById,
+  updateActivityStatus,
+  getPendingActivities
+};
