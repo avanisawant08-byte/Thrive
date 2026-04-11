@@ -6,7 +6,7 @@ const Transaction = require('../models/Transaction');
 const submitActivity = async (req, res) => {
   try {
     const { activityType, eventId, description } = req.body;
-    const proofMedia = req.files ? req.files.map(f => f.path) : [];
+    const proofMedia = req.body.proofMedia || [];
 
     const activity = await Activity.create({
       userId: req.user._id,
@@ -26,7 +26,8 @@ const submitActivity = async (req, res) => {
 const getMyActivities = async (req, res) => {
   try {
     const activities = await Activity.find({ userId: req.user._id })
-      .populate('eventId', 'title address date');
+      .populate('eventId', 'title address date')
+      .sort({ createdAt: -1 });
     res.json(activities);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -60,12 +61,10 @@ const updateActivityStatus = async (req, res) => {
     if (status === 'approved' && coinsAwarded) {
       activity.coinsAwarded = coinsAwarded;
 
-      // Add coins to user
       await User.findByIdAndUpdate(activity.userId, {
         $inc: { coinBalance: coinsAwarded }
       });
 
-      // Create transaction
       await Transaction.create({
         userId: activity.userId,
         type: 'earned',
@@ -87,7 +86,8 @@ const getPendingActivities = async (req, res) => {
   try {
     const activities = await Activity.find({ status: 'pending' })
       .populate('userId', 'name email profilePhoto')
-      .populate('eventId', 'title');
+      .populate('eventId', 'title')
+      .sort({ createdAt: -1 });
     res.json(activities);
   } catch (error) {
     res.status(500).json({ message: error.message });
