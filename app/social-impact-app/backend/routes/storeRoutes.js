@@ -5,7 +5,7 @@ const {
   getMyRedemptions, createStoreItem,
   updateStoreItem, deleteStoreItem
 } = require('../controllers/storeController');
-const { protect, adminOnly } = require('../controllers/authMiddleware');
+const { protect, adminOnly } = require('../middleware/authMiddleware');
 
 router.get('/', getStoreItems);
 router.get('/redemptions/me', protect, getMyRedemptions);
