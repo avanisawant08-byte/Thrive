@@ -5,7 +5,7 @@ const {
   updateEvent, deleteEvent, joinEvent,
   leaveEvent, addComment, getComments
 } = require('../controllers/eventController');
-const { protect } = require('../controllers/authMiddleware');
+const { protect } = require('../middleware/authMiddleware');
 
 router.get('/', getEvents);
 router.post('/', protect, createEvent);
