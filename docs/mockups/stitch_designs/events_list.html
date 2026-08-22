@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IMPACT PULSE - Events</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#005227",
+                    "on-tertiary-fixed-variant": "#584400",
+                    "surface-variant": "#353534",
+                    "tertiary": "#fffaf7",
+                    "tertiary-fixed-dim": "#e5c364",
+                    "secondary-fixed": "#9af7b0",
+                    "inverse-primary": "#006d36",
+                    "on-primary-container": "#007138",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container-lowest": "#0e0e0e",
+                    "primary-fixed-dim": "#00e478",
+                    "error-container": "#93000a",
+                    "surface-container-low": "#1c1b1b",
+                    "on-tertiary-fixed": "#241a00",
+                    "background": "#131313",
+                    "tertiary-fixed": "#ffe08d",
+                    "surface-container": "#201f1f",
+                    "on-secondary-fixed-variant": "#005227",
+                    "on-secondary": "#003919",
+                    "surface-container-high": "#2a2a2a",
+                    "primary": "#f1ffef",
+                    "primary-container": "#00ff87",
+                    "on-surface": "#e5e2e1",
+                    "surface-container-highest": "#353534",
+                    "on-tertiary-container": "#795f01",
+                    "surface-dim": "#131313",
+                    "on-secondary-fixed": "#00210c",
+                    "surface-tint": "#00e478",
+                    "on-tertiary": "#3d2f00",
+                    "tertiary-container": "#ffdb79",
+                    "surface-bright": "#3a3939",
+                    "on-background": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "on-error-container": "#ffdad6",
+                    "on-error": "#690005",
+                    "on-primary-fixed": "#00210c",
+                    "primary-fixed": "#60ff98",
+                    "outline-variant": "#3b4b3d",
+                    "inverse-on-surface": "#313030",
+                    "on-secondary-container": "#94f0aa",
+                    "outline": "#849585",
+                    "secondary": "#7eda96",
+                    "on-primary": "#003919",
+                    "secondary-container": "#017038",
+                    "secondary-fixed-dim": "#7eda96",
+                    "on-surface-variant": "#b9cbb9",
+                    "surface": "#131313"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(53, 53, 52, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .pulse-gradient {
+            background: linear-gradient(135deg, #f1ffef 0%, #00ff87 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen pb-24 md:pb-0">
+<!-- TopNavBar Shell -->
+<header class="bg-zinc-900/40 backdrop-blur-[20px] docked full-width top-0 sticky z-50 bg-zinc-800/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)] shadow-[0_0_40px_rgba(0,255,135,0.05)]">
+<div class="flex justify-between items-center px-8 h-20 w-full max-w-screen-2xl mx-auto">
+<div class="text-xl font-black tracking-[-0.05em] text-[#f1ffef]">IMPACT PULSE</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-inter text-sm font-medium tracking-[-0.02em] text-zinc-400 hover:bg-[#00ff87]/10 hover:text-[#00ff87] transition-all px-3 py-1 rounded-full" href="#">Dashboard</a>
+<a class="font-inter text-sm font-medium tracking-[-0.02em] text-[#00ff87] font-bold" href="#">Events</a>
+<a class="font-inter text-sm font-medium tracking-[-0.02em] text-zinc-400 hover:bg-[#00ff87]/10 hover:text-[#00ff87] transition-all px-3 py-1 rounded-full" href="#">Impact</a>
+<a class="font-inter text-sm font-medium tracking-[-0.02em] text-zinc-400 hover:bg-[#00ff87]/10 hover:text-[#00ff87] transition-all px-3 py-1 rounded-full" href="#">Rewards</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 text-zinc-400 hover:text-[#00ff87] transition-all" title="Toggle Theme">
+<span class="material-symbols-outlined">light_mode</span>
+</button>
+<button class="font-inter text-sm font-medium tracking-[-0.02em] text-[#00ff87] hover:bg-[#00ff87]/10 transition-all px-4 py-2 rounded-lg">Login</button>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-variant flex items-center justify-center border border-outline-variant/20">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Close up portrait of a smiling young professional man with short dark hair in a clean studio setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS4CIcLWhAB0ZrgLLspDBgZSrlGmqIVA-2b0XkbCKjtf1TFNYsFwcDUGdfVNcGZbwn75sk8v0E_U10XMzP9nnEF6m278S3DNK9wqeyiChym0Kt3hDjV1T78GwPvWXI-qyijBTnYkLLdgKWckyuFZpFJN4Ynzg6HfuPCHF3_tH3OtoZqAD_RCehpMkT9Ib-EUNPowvrg-lS62busd5XFf_jRuDLwVTJLU-0Gnlx3YZYNsMPrqCw2AWOYqcKZpr8s9hvkwwTk2jx6l1e"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-screen-2xl mx-auto px-8 pt-12 pb-24">
+<!-- Header & Action Row -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<span class="text-[0.75rem] uppercase tracking-[0.1em] font-bold text-primary-container mb-2 block">Social Mobilization</span>
+<h1 class="text-5xl md:text-6xl font-black tracking-[-0.03em] text-primary">Events</h1>
+</div>
+<button class="pulse-gradient text-on-primary font-bold px-8 py-4 rounded-xl flex items-center gap-2 shadow-[0_0_20px_rgba(0,255,135,0.3)] active:scale-95 transition-all w-fit">
+<span class="material-symbols-outlined">add_circle</span>
+<span>Create Event</span>
+</button>
+</div>
+<!-- Filter Chips -->
+<div class="flex flex-wrap gap-3 mb-10 overflow-x-auto pb-2 scrollbar-hide">
+<button class="px-6 py-2 rounded-full bg-primary-container text-on-primary-container font-bold text-xs uppercase tracking-wider">All</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-bold text-xs uppercase tracking-wider hover:bg-surface-variant transition-colors">Blood Donation</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-bold text-xs uppercase tracking-wider hover:bg-surface-variant transition-colors">Tree Plant</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-bold text-xs uppercase tracking-wider hover:bg-surface-variant transition-colors">Beach Clean</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-bold text-xs uppercase tracking-wider hover:bg-surface-variant transition-colors">Food Drive</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-bold text-xs uppercase tracking-wider hover:bg-surface-variant transition-colors">Education</button>
+</div>
+<!-- Events Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Event Card 1 -->
+<div class="glass-card rounded-[32px] overflow-hidden group border border-outline-variant/10">
+<div class="h-56 relative overflow-hidden">
+<img alt="Tree Planting Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Wide angle shot of group of volunteers planting young saplings in a sunny open field with soft green grass and rolling hills" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA9BdivjXntz4kh-U1nK2Zg4zZKFSYGV3mq_q184haKJMF9ZDVWAqWwnpNkkVVKKmAXh6POxdjbx9pbVbsimqPQwEsGhHJ60DE41EGXrttewmIgB0ng3dMu81tduDX2g2yGdD1YgHeeJZZ2EosFgLHJa_o-Yibmi0RlTpWg23ejJfVR7UFww145h4lLyDAbXdrOhCf0F6lqVCEiJz_AS_xUoXElghKj2LHVfY5nRSCfIAQPmQqjXr-A6n8s9ZR83THthuIJrt1e8di"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary-container/90 backdrop-blur-md text-on-primary-container px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest">Environment</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold text-primary mb-3 leading-tight">Metro Forest Restoration 2024</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-6 font-medium leading-relaxed">Join us in our mission to plant 5,000 native trees and restore the local biodiversity of our city's primary green lung.</p>
+<div class="space-y-3 mb-8">
+<div class="flex items-center gap-3 text-on-surface-variant/80">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="event">event</span>
+<span class="text-xs font-medium">Sat, Oct 24 • 08:00 AM</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant/80">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="location_on">location_on</span>
+<span class="text-xs font-medium">Central Nature Reserve, Sector 4</span>
+</div>
+</div>
+<button class="w-full py-4 rounded-2xl bg-surface-variant/50 text-primary font-bold text-sm tracking-wide border border-outline-variant/20 hover:bg-primary-container hover:text-on-primary-container transition-all">
+                        View Details
+                    </button>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="glass-card rounded-[32px] overflow-hidden group border border-outline-variant/10">
+<div class="h-56 relative overflow-hidden">
+<img alt="Blood Donation Drive" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Interior of a modern clean medical facility with specialized equipment for blood donation, bright and welcoming atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBryiCe45SZh2PxiyBjlxAQ-q2LgXOCDcfr6_JNyh9pFSlNkQ8f6PsX1ZB5jBhhpXeIjA312ovVzp977mgRAcximnVCfxvI1BPE8vXM9cw1sZmqNavFFNkXg9AVAjVGXcs4qW2_WWN11ncmdsuKztfcC2MQqkrFoPwaAy3hzTYk4vrvGD_XX8-DXSuvpsBy2rUsmzl7uBWOVm8WZpTDjJxCTH4bab6gR_UvFAPVD8mEhzJdIQIEqlkpbmwY9At48Sghp4qFtIu2VANd"/>
+<div class="absolute top-4 left-4">
+<span class="bg-error/90 backdrop-blur-md text-on-error px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest">Health</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold text-primary mb-3 leading-tight">Emergency Blood Drive: Type O-</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-6 font-medium leading-relaxed">Critical shortage at City Hospital. Your donation can save up to three lives today. Refreshments will be provided for all donors.</p>
+<div class="space-y-3 mb-8">
+<div class="flex items-center gap-3 text-on-surface-variant/80">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="event">event</span>
+<span class="text-xs font-medium">Tue, Oct 20 • 09:00 AM</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant/80">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="location_on">location_on</span>
+<span class="text-xs font-medium">City General Hospital, Wing B</span>
+</div>
+</div>
+<button class="w-full py-4 rounded-2xl bg-surface-variant/50 text-primary font-bold text-sm tracking-wide border border-outline-variant/20 hover:bg-primary-container hover:text-on-primary-container transition-all">
+                        View Details
+                    </button>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="glass-card rounded-[32px] overflow-hidden group border border-outline-variant/10">
+<div class="h-56 relative overflow-hidden">
+<img alt="Food Distribution" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Heartwarming scene of people packing boxes with fresh produce and dry goods in a brightly lit community center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF9H_-gJdqZmnYVMXrxio5uaO3xc9qEJc1fMZeJJCt7HXAzsZ_ZVbGXHH4aaWvdADnA-YxWmqV2__LZK5mCD8D78KUv0qUmWy0zxdYu6TrVCniuD_NovQnBpqQ_rpI-SNCFEsgugRRRhNAqtXP0s6kDolkQa_30KOyWiC7FoIPwPLXYfcbw0HeJlVWdQ03UMGqn_RyJ_-DPrOI5GZFCPhyPrxbT68VnQvduHU18Yt33JNiwii6TVsxwx5grMvezQ1MqA38jG77U5Ic"/>
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary-fixed-dim/90 backdrop-blur-md text-on-tertiary-fixed px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest">Community</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold text-primary mb-3 leading-tight">Weekend Soup Kitchen Support</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-6 font-medium leading-relaxed">Help us prepare and serve warm meals to those in need. We require both kitchen hands and distribution coordinators.</p>
+<div class="space-y-3 mb-8">
+<div class="flex items-center gap-3 text-on-surface-variant/80">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="event">event</span>
+<span class="text-xs font-medium">Sun, Oct 25 • 11:00 AM</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant/80">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="location_on">location_on</span>
+<span class="text-xs font-medium">Grace Community Center, Hall A</span>
+</div>
+</div>
+<button class="w-full py-4 rounded-2xl bg-surface-variant/50 text-primary font-bold text-sm tracking-wide border border-outline-variant/20 hover:bg-primary-container hover:text-on-primary-container transition-all">
+                        View Details
+                    </button>
+</div>
+</div>
+<!-- Event Card 4 -->
+<div class="glass-card rounded-[32px] overflow-hidden group border border-outline-variant/10">
+<div class="h-56 relative overflow-hidden">
+<img alt="Beach Cleanup" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Sunset at a coastal area with volunteers carrying bags of waste, scenic ocean view with golden sunlight reflecting on water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0rD7TAYP97CDcnpEmhhvt93WrMFaeBwVl5Gb7RahcklYfJLZCZ_g2BPRZn2CYkFWYyBo5ScGv8iqBbCbIy85-wuyJHuwasw4Gc5aMx7d9bUafe1BQbG5L415k_7zn17GUF-xfyYSgPgkWTT1SRdsV6GN4WqnSeVB5V-T6WxfDK1FEqdrKk4kP-wArR0qRp-ZM9-JGv7imsNGJOFiQ-0OoH-ugahLgU49PGCX3TG8OcSjDb395J62Mhhmr57qnrRcZjj3mDQ5bPk3i"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary-container/90 backdrop-blur-md text-on-primary-container px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest">Environment</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold text-primary mb-3 leading-tight">Coastal Waste Clearance Drive</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-6 font-medium leading-relaxed">Protect our marine life by clearing microplastics and debris from our local beaches. Gloves and equipment provided.</p>
+<div class="space-y-3 mb-8">
+<div class="flex items-center gap-3 text-on-surface-variant/80">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="event">event</span>
+<span class="text-xs font-medium">Sat, Nov 01 • 07:00 AM</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant/80">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="location_on">location_on</span>
+<span class="text-xs font-medium">Blue Bay South Shore</span>
+</div>
+</div>
+<button class="w-full py-4 rounded-2xl bg-surface-variant/50 text-primary font-bold text-sm tracking-wide border border-outline-variant/20 hover:bg-primary-container hover:text-on-primary-container transition-all">
+                        View Details
+                    </button>
+</div>
+</div>
+<!-- Event Card 5 -->
+<div class="glass-card rounded-[32px] overflow-hidden group border border-outline-variant/10">
+<div class="h-56 relative overflow-hidden">
+<img alt="Tech Workshop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Diverse group of teenagers using laptops in a collaborative workspace with neon lighting and modern tech atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUTz5YGunGFgXDRf49dUeyZZuhOBJ6ytXRgBnhILpN8AonLQUApuDKekSzpb1_6D36JyTm8dsLRPbbyC9Swyw8QMaMopSx_KQahDK0rX7X83iwW7ScVUQ-GlpIrt_mCCKAQnTbzI3ROEayWkhUZhhGf_5m2U8HMIMABpiXirNDLnSu5oN3oTqr6w2YnMSzA9pqXLPdFgQozx3PWVZR73lRoRB5KAinYN8HmFIFRPw0ul3FiE9G3h94ZKE4Y0L-gJHYkV_dsz4cwcld"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-fixed-dim/90 backdrop-blur-md text-on-secondary-fixed px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest">Education</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold text-primary mb-3 leading-tight">Code For Good: Youth Workshop</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-6 font-medium leading-relaxed">Teach basic coding skills to underprivileged youth. Empower the next generation of digital creators and problem solvers.</p>
+<div class="space-y-3 mb-8">
+<div class="flex items-center gap-3 text-on-surface-variant/80">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="event">event</span>
+<span class="text-xs font-medium">Wed, Nov 05 • 04:00 PM</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant/80">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="location_on">location_on</span>
+<span class="text-xs font-medium">Tech Hub Community Room</span>
+</div>
+</div>
+<button class="w-full py-4 rounded-2xl bg-surface-variant/50 text-primary font-bold text-sm tracking-wide border border-outline-variant/20 hover:bg-primary-container hover:text-on-primary-container transition-all">
+                        View Details
+                    </button>
+</div>
+</div>
+<!-- Featured Event / Bento Style -->
+<div class="lg:col-span-1 glass-card rounded-[32px] p-1 border border-outline-variant/20 bg-gradient-to-br from-primary-container/20 to-transparent">
+<div class="h-full flex flex-col justify-center items-center text-center p-8 glass-card rounded-[30px]">
+<div class="w-20 h-20 rounded-full bg-primary-container/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-4xl text-primary-container" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<h3 class="text-2xl font-black text-primary mb-4">Host Your Own Event?</h3>
+<p class="text-on-surface-variant text-sm mb-8">Empower your community. Create an impact event today and start earning Pulsar Rewards for every verified volunteer participant.</p>
+<button class="pulse-gradient text-on-primary font-black px-10 py-4 rounded-2xl shadow-xl w-full active:scale-95 transition-all">
+                        GET STARTED
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Shell (Mobile Only) -->
+<nav class="md:hidden bg-zinc-900/40 backdrop-blur-[20px] fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe z-50 rounded-t-[32px] shadow-[0_-10px_40px_rgba(0,0,0,0.4)]">
+<div class="flex flex-col items-center justify-center text-zinc-500 hover:text-[#f1ffef]">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-inter text-[10px] uppercase tracking-wider font-bold">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-zinc-800/60 text-[#00ff87] rounded-full px-6 py-2 shadow-[0_0_15px_rgba(0,255,135,0.2)]">
+<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
+<span class="font-inter text-[10px] uppercase tracking-wider font-bold">Events</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 hover:text-[#f1ffef]">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-inter text-[10px] uppercase tracking-wider font-bold">Wallet</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 hover:text-[#f1ffef]">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[10px] uppercase tracking-wider font-bold">Profile</span>
+</div>
+</nav>
+</body></html>

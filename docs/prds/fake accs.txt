@@ -1,0 +1,15 @@
+ Shopkeeper Account (To access the Portal)
+Email: shop@test.com
+Password: password123
+Role: Shopkeeper (Eco Test Store)
+👤 Test User (To claim rewards)
+Email: user@test.com
+Password: password123
+Points: 5000
+How to test the full loop:
+Login as the User (user@test.com) and go to the Reward Store.
+Claim a reward (this will generate a coupon code in your "My Rewards" section).
+Logout and Login as the Shopkeeper (shop@test.com).
+Go to the 🏪 Shop Portal.
+Enter the user's coupon code in the Verify Coupon box.
+You will see the user's name and the item details. Click Confirm Redemption to finish!

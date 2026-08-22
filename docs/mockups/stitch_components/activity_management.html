@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#201f1f",
+                    "surface-container-low": "#1c1b1b",
+                    "on-surface-variant": "#b9cbb9",
+                    "surface-variant": "#353534",
+                    "inverse-on-surface": "#313030",
+                    "primary-fixed-dim": "#00e478",
+                    "tertiary-fixed": "#ffe08d",
+                    "surface-container-highest": "#353534",
+                    "secondary": "#7eda96",
+                    "primary-fixed": "#60ff98",
+                    "outline-variant": "#3b4b3d",
+                    "on-tertiary-container": "#795f01",
+                    "on-surface": "#e5e2e1",
+                    "on-tertiary": "#3d2f00",
+                    "on-secondary": "#003919",
+                    "tertiary-fixed-dim": "#e5c364",
+                    "secondary-fixed-dim": "#7eda96",
+                    "on-background": "#e5e2e1",
+                    "primary": "#f1ffef",
+                    "surface-container-lowest": "#0e0e0e",
+                    "secondary-container": "#017038",
+                    "on-tertiary-fixed-variant": "#584400",
+                    "on-error": "#690005",
+                    "inverse-surface": "#e5e2e1",
+                    "tertiary-container": "#ffdb79",
+                    "primary-container": "#00ff87",
+                    "on-primary-container": "#007138",
+                    "surface-tint": "#00e478",
+                    "on-secondary-fixed": "#00210c",
+                    "error": "#ffb4ab",
+                    "on-primary-fixed-variant": "#005227",
+                    "outline": "#849585",
+                    "on-tertiary-fixed": "#241a00",
+                    "on-primary": "#003919",
+                    "error-container": "#93000a",
+                    "inverse-primary": "#006d36",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-dim": "#131313",
+                    "on-secondary-container": "#94f0aa",
+                    "on-primary-fixed": "#00210c",
+                    "tertiary": "#fffaf7",
+                    "surface-bright": "#3a3939",
+                    "background": "#131313",
+                    "surface": "#131313",
+                    "secondary-fixed": "#9af7b0",
+                    "on-secondary-fixed-variant": "#005227",
+                    "on-error-container": "#ffdad6"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "display": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-full w-72 bg-[#131313] flex flex-col h-full py-8 z-40">
+<div class="px-8 mb-12">
+<h1 class="text-xl font-black text-[#00ff87]">Impact Pulse</h1>
+<p class="text-xs font-medium uppercase tracking-[0.05em] text-[#b9cbb9]">Admin Console</p>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Dashboard -->
+<a class="flex items-center text-[#b9cbb9] py-4 px-6 hover:bg-[#353534]/50 transition-colors duration-200 font-inter text-sm font-medium uppercase tracking-[0.05em]" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<!-- NGO Approvals -->
+<a class="flex items-center text-[#b9cbb9] py-4 px-6 hover:bg-[#353534]/50 transition-colors duration-200 font-inter text-sm font-medium uppercase tracking-[0.05em]" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="verified_user">verified_user</span>
+                NGO Approvals
+            </a>
+<!-- Shop Verification -->
+<a class="flex items-center text-[#b9cbb9] py-4 px-6 hover:bg-[#353534]/50 transition-colors duration-200 font-inter text-sm font-medium uppercase tracking-[0.05em]" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="storefront">storefront</span>
+                Shop Verification
+            </a>
+<!-- Activity Management (ACTIVE) -->
+<a class="flex items-center bg-gradient-to-r from-[#00ff87]/20 to-transparent text-[#00ff87] border-l-4 border-[#00ff87] py-4 px-6 scale-100 active:scale-[0.98] transition-transform font-inter text-sm font-medium uppercase tracking-[0.05em]" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="pending_actions" style="font-variation-settings: 'FILL' 1;">pending_actions</span>
+                Activity Management
+            </a>
+<!-- Global Metrics -->
+<a class="flex items-center text-[#b9cbb9] py-4 px-6 hover:bg-[#353534]/50 transition-colors duration-200 font-inter text-sm font-medium uppercase tracking-[0.05em]" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="analytics">analytics</span>
+                Global Metrics
+            </a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full py-4 bg-gradient-to-r from-[#f1ffef] to-[#00ff87] text-[#003919] font-bold rounded-xl active:scale-95 transition-all">
+                New Campaign
+            </button>
+</div>
+</aside>
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 right-0 w-[calc(100%-18rem)] z-50 bg-[#131313]/60 backdrop-blur-lg flex justify-between items-center h-20 px-8 shadow-[0_40px_40px_rgba(0,255,135,0.08)]">
+<div class="flex items-center gap-4">
+<h2 class="text-2xl font-black tracking-tighter text-[#f1ffef]">Impact Admin</h2>
+<div class="h-6 w-px bg-outline-variant mx-4"></div>
+<span class="text-[#00ff87] font-bold font-inter text-sm tracking-wide">Activity Review Queue</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="bg-surface-container-low border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-1 focus:ring-primary-container w-64" placeholder="Search submissions..." type="text"/>
+</div>
+<div class="flex gap-4">
+<button class="text-[#b9cbb9] hover:text-[#00ff87] transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-[#b9cbb9] hover:text-[#00ff87] transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant">
+<img alt="Admin Avatar" class="w-full h-full object-cover" data-alt="professional headshot of a male admin in dark studio lighting with soft highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRwdlBXkj-WyHE55_-PPRJZYYDNsra6bpGg6zHiO_YIZDPqAFXv_OkW-92pCwuZu-hbk9MQI3qvxVY_tHSeWunpNqReBEPnI7I-DCyB68kYnlIcanQhRJbvj4oGsz9q1P34BjyrySJWHWOpng4eHnuJ9t-hyBiFDMZlqUkpOdbsFRn7SCYnZ9dx99KLYRYoJmvmWuopiY6afYM7WMIsnXdRYT8OXDx-1IKn8CrDBLdKBb9rXPCus6S03IXvi07vwgD1RrgSA3ucTx1"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-72 pt-28 px-8 pb-12">
+<!-- Dashboard Hero Stats -->
+<div class="grid grid-cols-4 gap-6 mb-12">
+<div class="bg-surface-container-low p-6 rounded-2xl relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container/10 rounded-full blur-3xl group-hover:bg-primary-container/20 transition-all"></div>
+<p class="text-[0.75rem] uppercase tracking-[0.05em] text-on-surface-variant mb-2">Pending Review</p>
+<h3 class="text-4xl font-black text-primary-container">142</h3>
+<div class="mt-4 flex items-center text-xs text-secondary">
+<span class="material-symbols-outlined text-sm mr-1">trending_up</span>
+<span>12% increase from yesterday</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl">
+<p class="text-[0.75rem] uppercase tracking-[0.05em] text-on-surface-variant mb-2">Average Response</p>
+<h3 class="text-4xl font-black text-primary">2.4<span class="text-xl font-normal ml-1">hrs</span></h3>
+<div class="mt-4 h-1 w-full bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary-container shadow-[0_0_8px_rgba(0,255,135,0.6)] w-3/4"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl">
+<p class="text-[0.75rem] uppercase tracking-[0.05em] text-on-surface-variant mb-2">Verified Today</p>
+<h3 class="text-4xl font-black text-primary">892</h3>
+<p class="text-xs text-on-surface-variant mt-4">Goal: 1000 approvals</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl">
+<p class="text-[0.75rem] uppercase tracking-[0.05em] text-on-surface-variant mb-2">System Integrity</p>
+<h3 class="text-4xl font-black text-[#7eda96]">99.8%</h3>
+<p class="text-xs text-on-surface-variant mt-4">0 flagged anomalies</p>
+</div>
+</div>
+<!-- Review Queue Bento Grid -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Active Focus Item -->
+<div class="col-span-8 space-y-6">
+<div class="glass-panel p-8 rounded-3xl border border-outline-variant/15">
+<div class="flex justify-between items-start mb-8">
+<div>
+<span class="px-3 py-1 bg-primary-container/10 text-primary-container text-[0.75rem] font-bold rounded-full tracking-wider uppercase mb-3 inline-block">High Priority Review</span>
+<h2 class="text-3xl font-black tracking-tight mb-1">Ocean Plastic Recovery</h2>
+<p class="text-on-surface-variant">Submitted by <span class="text-primary">@marcus_dev</span> • 14 mins ago</p>
+</div>
+<div class="flex gap-3">
+<button class="p-3 bg-error-container/20 text-error rounded-xl hover:bg-error-container/40 transition-all active:scale-95">
+<span class="material-symbols-outlined">block</span>
+</button>
+<button class="p-3 bg-surface-variant/40 text-on-surface rounded-xl hover:bg-surface-variant transition-all active:scale-95">
+<span class="material-symbols-outlined">flag</span>
+</button>
+<button class="px-8 py-3 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-xl active:scale-95 transition-all">
+                                Approve Activity
+                            </button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8 mb-8">
+<div class="space-y-4">
+<p class="text-[0.75rem] uppercase tracking-widest text-on-surface-variant font-bold">Proof of Impact</p>
+<div class="aspect-video rounded-2xl overflow-hidden border border-outline-variant/20 relative group">
+<img alt="Ocean plastic cleanup" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close-up of a person wearing blue gloves holding a mesh bag full of plastic waste on a sandy beach at dawn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD--uoDUlr7xw0mbBjvKaL_KQGutK4LqAB5eIroxpc--XLRdNrBy6e2h5KpOVjpAjN3g5cOUC1BFoV4Mv9E62GtVIvXDWedwGp0BMs5mUsZjsKtUGwAo_ad2xGOu46Vh-4tQD31GW4uZVtpcfsOIVWuiIwMRQjPuYP88dJhVXsx0w3E8iwGF2FOB5c1Y32tUmvnsLRDnH5gi895RJLpj3brTg8Eshv1iwapRGE17uQpbiqbThx_9hlwxG3xMjPn-xWnhZUeUBierVyZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+<span class="text-xs text-white/80 flex items-center"><span class="material-symbols-outlined text-sm mr-1">location_on</span> Bali, Indonesia</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="aspect-square rounded-lg overflow-hidden border border-outline-variant/20">
+<img alt="Secondary proof" class="w-full h-full object-cover" data-alt="a group of volunteers standing on a beach with bags of trash under a bright midday sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWIHQOhoCulnhDplNClmn2SprrNKi_M0_0b0V1ytZRtDoaxv9nYLdVHODg9shbY9LVnaNZ-xGbI6k4EzidL8FcgSeuhHSDUszPBqD9AfZneb9IBa8UxdZCWTYVNghjZNNaxrxDbPV18-OgURFdUgDLG-QfbDnVnTnTZJex6mvR60CwC_q3kw70rcMuOJd5bAyriAfKg1SYqJcjvQJf1dRYn9awnWScZu0cDFUHCZkAgFTXfcslWYDzXmYs9Nyut_4Zw-bFL1Z8lFcL"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden border border-outline-variant/20">
+<img alt="Secondary proof" class="w-full h-full object-cover" data-alt="detailed macro shot of microplastic bits collected in a glass jar for scientific review" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwq2FkCvmz6aQWIE6ty-4-LFJ8xH0lApYS9bZvxh1AdUrXxxx0_K_Ms5O0taA1QDMdtdy99wiJffe5hn7XRwboGOMx-kE_5XQcoNRbSDFWXzX5bC3zgHE-V8f5VSpaR4eD2QFKUhhbSuqo9XCZiTaULRPqnsFoD15c6316eP5HaU_PBH81e-goeHh5SNYTJgIYiY8LvqHdwBwm6MTZSmaFmeEVQHFQv0A3DryYQoAIpPNrEKv1ywZo071utRiVeERXgK0RxGcwhld1"/>
+</div>
+<div class="aspect-square rounded-lg bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="text-sm font-bold">+2</span>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<div>
+<p class="text-[0.75rem] uppercase tracking-widest text-on-surface-variant font-bold mb-3">Verification Details</p>
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/10">
+<p class="leading-relaxed text-on-surface">"Collected approximately 12kg of marine debris during the community sunrise sweep at Echo Beach. Mostly single-use PET bottles and discarded fishing nets."</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-highest p-4 rounded-xl border border-outline-variant/15">
+<p class="text-[0.6rem] uppercase text-on-surface-variant mb-1">Impact Units</p>
+<p class="text-lg font-bold text-primary-container">+45 Pulse</p>
+</div>
+<div class="bg-surface-container-highest p-4 rounded-xl border border-outline-variant/15">
+<p class="text-[0.6rem] uppercase text-on-surface-variant mb-1">AI Confidence</p>
+<p class="text-lg font-bold text-secondary">94% Valid</p>
+</div>
+</div>
+<div class="p-4 bg-primary-container/5 rounded-xl border border-primary-container/20">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container">auto_awesome</span>
+<p class="text-xs text-on-surface">AI analysis detects consistent lighting and valid metadata (GPS/EXIF).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary items in queue -->
+<div class="bg-surface-container-low rounded-3xl overflow-hidden">
+<div class="px-8 py-4 border-b border-outline-variant/10 flex justify-between items-center">
+<h3 class="font-bold text-on-surface-variant uppercase text-xs tracking-widest">Incoming Queue</h3>
+<span class="text-xs text-primary-container font-medium">8 new since login</span>
+</div>
+<div class="divide-y divide-outline-variant/5">
+<!-- Queue Item 1 -->
+<div class="px-8 py-5 flex items-center gap-6 hover:bg-surface-variant/20 transition-all cursor-pointer group">
+<div class="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0">
+<img alt="Queue item 1" class="w-full h-full object-cover" data-alt="close up of small green sapling being planted into rich dark soil by hand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkF-vRqh0hZ3h-a4p82oNs-voyGAoZ6ZHScgZ2nFTP1LNQNAUfT-3xVst8QWs43zMKmNj5bWeZPdDtxbv7Rbdr37hbdAeaHKrxRfrNohsQQYVzebwwoboSb_PrlJ3y8wL2of61DfqdUZ-ftp00SCCI7JwrAnurrY5FqeNULQ8fKqxPZ6CXZ9A7VFIBjwVAGhJzZNwck3FPCHv4IpufLdqhPEeNg8mWC6TnIDOvbc9EMROC-M_wDpFJGNwuTZtmYb6Xgq4KpShVqvLM"/>
+</div>
+<div class="flex-1">
+<h4 class="font-bold group-hover:text-primary-container transition-colors">Urban Tree Planting</h4>
+<p class="text-xs text-on-surface-variant">@eco_warrior • Berlin • 12 mins ago</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs font-mono text-secondary">AI: 88%</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+<!-- Queue Item 2 -->
+<div class="px-8 py-5 flex items-center gap-6 hover:bg-surface-variant/20 transition-all cursor-pointer group">
+<div class="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0">
+<img alt="Queue item 2" class="w-full h-full object-cover" data-alt="a crate full of fresh vegetables being delivered to a community kitchen center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBduGQRKuQND9V-k-V1PN0oIZ8Se4c7sed0hmQNo752iPRCyURLaUTFFNtZDuQT3h5M-m143YZBCPWy5PN3KKUnwENG_k60oSqcUlniODpe7NivJykITA3baCygA6qAaGpSjsADs3jsjwBN3a6r4B4oPG3n_oHEUlSVtzKWYFSbsEY7l8ZyCpsXsVzmmGtdm8ese_9uGYLYOgSlL7zzlVhLKG5IvR8YdISFCBVtBlMcaRr26Kkh-d_2NVxAxJ59ie3mouDztd4Zko2"/>
+</div>
+<div class="flex-1">
+<h4 class="font-bold group-hover:text-primary-container transition-colors">Community Kitchen Support</h4>
+<p class="text-xs text-on-surface-variant">@food_rescue • London • 28 mins ago</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs font-mono text-secondary">AI: 92%</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Info / Metrics -->
+<div class="col-span-4 space-y-6">
+<!-- User Profile Context -->
+<div class="bg-surface-container-low rounded-3xl p-6 border border-outline-variant/10">
+<h3 class="text-xs font-black uppercase tracking-widest text-on-surface-variant mb-6">Submitter Profile</h3>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-full bg-primary-container/20 p-1">
+<img alt="User avatar" class="w-full h-full object-cover rounded-full" data-alt="portrait of a young man with a friendly smile and athletic build in a natural outdoor setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5khteeR2Bd1LMLuNDhvT9E6XELgv8hVeLRkY6V8cDNvPWRaGRUBVe6AjX2eUV9CKkV-3_Uocvw3GjqQWwNYtKjUs_mTydoySCfy7hXEK-uMBxNr9VnSKb1IwMrq5VJPe8Lbwr5UDz7yZ-YGLz5ATDu9Ge6vX70XMfaxsVbikN_JYQOV74bW8Ml0k1q-Y54PDlOqQlpu3Er49sh-jbVYSWjB1DmdcrkM5o_RCPmePOQKv7MrYMIo0gvtT7_aE_iopcjr3ol78VvYme"/>
+</div>
+<div>
+<p class="font-bold text-lg">Marcus Davis</p>
+<p class="text-xs text-primary-container font-mono">Level 42 Guardian</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Total Submissions</span>
+<span class="font-bold">248</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Trust Score</span>
+<span class="font-bold text-primary-container">98.2%</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Joined</span>
+<span class="font-bold">Oct 2023</span>
+</div>
+</div>
+<button class="w-full mt-6 py-3 bg-surface-container-highest text-on-surface text-sm font-bold rounded-xl hover:bg-surface-variant transition-all">
+                        View Audit History
+                    </button>
+</div>
+<!-- Activity Map Context -->
+<div class="bg-surface-container-low rounded-3xl p-4 border border-outline-variant/10 overflow-hidden h-64 relative group">
+<img alt="Map Location" class="w-full h-full object-cover rounded-2xl opacity-50 grayscale hover:grayscale-0 transition-all duration-700" data-alt="topographic satellite view map of a coastal region with lush green vegetation and deep blue ocean waters" data-location="Bali" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0eA-rKTX5YMNffdLoRgFqqvSkzsbx6GRxMi3Q8bXJWNmK3lh6PB81zI9LtuSjmWCRWvSavB_LXNEQ1uTjfJamvT4vJFvD7l6XwU0amXv4am8fIrFL88cDS2XBVn8Hpi332JmIACIeIOIL5hDBAJiiMdwE9-JwWMg-QCNORVe4zZRxUwBbVio8gA7vWQO1wSNiFfySJmN--MSmYfMo_WBoVQP7zFF_iAWi5TDI18P3ZZ0Zo-JEqsktMNyeP-vHUmSQUDGfBAc2dQr8"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-8 h-8 bg-primary-container rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,255,135,0.6)] animate-pulse">
+<span class="material-symbols-outlined text-on-primary-container text-lg">location_on</span>
+</div>
+</div>
+<div class="absolute bottom-6 left-6 right-6 p-4 glass-panel rounded-xl border border-outline-variant/20">
+<p class="text-xs font-bold text-primary-container uppercase tracking-tighter">Location Context</p>
+<p class="text-sm font-medium">Echo Beach, Canggu</p>
+</div>
+</div>
+<!-- Verification Guidelines -->
+<div class="bg-primary-container/10 rounded-3xl p-6 border border-primary-container/20">
+<h3 class="text-xs font-black uppercase tracking-widest text-primary-container mb-4">Review Checklist</h3>
+<ul class="space-y-4 text-sm">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary-container text-lg">check_circle</span>
+<span class="text-on-surface">Action is clearly visible in photo</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary-container text-lg">check_circle</span>
+<span class="text-on-surface">Location matches GPS metadata</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary-container text-lg">check_circle</span>
+<span class="text-on-surface">Timestamp is within 24 hours</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">radio_button_unchecked</span>
+<span class="text-on-surface-variant italic">No duplicate image in database</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</body></html>
