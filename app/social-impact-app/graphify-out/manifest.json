@@ -1,0 +1,474 @@
+{
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\read_prd.py": {
+    "mtime": 1776416528.1535337,
+    "hash": "3d2e1fb17e3ccc2252f7fafc652bd79a"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\seed_shopkeeper.js": {
+    "mtime": 1776416975.0489666,
+    "hash": "55846c9720d2be22c11184c3d19e371c"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\server.js": {
+    "mtime": 1775811120.0,
+    "hash": "b5f13f5a117438afd4f534647451e4d3"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\index.js": {
+    "mtime": 1777633783.5213115,
+    "hash": "1fd955e07a334e0f58bce1bc1353b292"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\test-connection.js": {
+    "mtime": 1775830087.6244457,
+    "hash": "4db98bee7b43052f9c14d9f426f1f0ce"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\config\\cloudinary.js": {
+    "mtime": 1776081281.2367575,
+    "hash": "015400a332fb9302bb2d49303dd47370"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\config\\db.js": {
+    "mtime": 1775493714.4397619,
+    "hash": "1e6c686af56f8ba0ebff662cae225845"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\config\\firebase.js": {
+    "mtime": 1775830002.383433,
+    "hash": "ca2420ec9f6a0e7fb897d9ab6b1b7583"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\controllers\\activityController.js": {
+    "mtime": 1776322777.8040943,
+    "hash": "27aed739b7c64400497d720270af9863"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\controllers\\adminController.js": {
+    "mtime": 1776421347.7558868,
+    "hash": "64f2ccf36868df25ff5f257c499274c9"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\controllers\\authController.js": {
+    "mtime": 1776926085.8383567,
+    "hash": "de8820bd8bf06afb6264392820a3881a"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\controllers\\donationController.js": {
+    "mtime": 1777633749.0032916,
+    "hash": "be06414b21e760035797b8a1ad234bba"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\controllers\\eventController.js": {
+    "mtime": 1777634200.9852426,
+    "hash": "2d518c8ce2c36af34c3149d03894124f"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\controllers\\ngoController.js": {
+    "mtime": 1777632200.1204581,
+    "hash": "37e495dee874f118113d442abee33af5"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\controllers\\rewardController.js": {
+    "mtime": 1776420006.1111379,
+    "hash": "2e1e94309a90d6d0fa60c0964c572e5f"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\controllers\\shopkeeperController.js": {
+    "mtime": 1777629967.1841123,
+    "hash": "56a886e6e50d5f7304ef443442e2be2b"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\controllers\\socialController.js": {
+    "mtime": 1776751230.4046934,
+    "hash": "bd3b43f3be84430f900d7e846911419f"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\controllers\\storeController.js": {
+    "mtime": 1776416761.38533,
+    "hash": "881b9cc45ada4dc71b53cd3efbf92603"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\middleware\\authMiddleware.js": {
+    "mtime": 1776670897.8181012,
+    "hash": "752e013f1e45a2580604b3a9b646aedb"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\models\\Activity.js": {
+    "mtime": 1775493877.2095413,
+    "hash": "78e8c876c347b482cf47b1e3cc9c1dc8"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\models\\Donation.js": {
+    "mtime": 1777633737.563755,
+    "hash": "0c489e603bb43c53bf7a405381db09f2"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\models\\Event.js": {
+    "mtime": 1776671183.4796684,
+    "hash": "0a42948b01aa25dff09bf5dd11f77a1b"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\models\\NGO.js": {
+    "mtime": 1776669163.8703868,
+    "hash": "569c6a81671c33b5528d54d4533bb121"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\models\\NGOFollow.js": {
+    "mtime": 1776669145.12057,
+    "hash": "49f25dd6f224c3e8786fefea8ae8f199"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\models\\NGOPost.js": {
+    "mtime": 1776669159.7783773,
+    "hash": "e76880562f10cc202995ec3e3ee3894a"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\models\\Notification.js": {
+    "mtime": 1776669161.808195,
+    "hash": "129fd9b3a3789d78bd85a39f9986aeb3"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\models\\Redemption.js": {
+    "mtime": 1776416749.4087348,
+    "hash": "c0472aa9c4f0f2d78a0d44ca290000d9"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\models\\Store.js": {
+    "mtime": 1776417942.462478,
+    "hash": "87e36aeb247cb3d4816d825d091769d6"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\models\\Transaction.js": {
+    "mtime": 1776320521.6411858,
+    "hash": "108a50dcb81bce3019df51009da2d936"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\models\\User.js": {
+    "mtime": 1776926083.8146122,
+    "hash": "4a0f0d8447fa94554be845816bbb0a48"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\routes\\activityRoutes.js": {
+    "mtime": 1776239141.5377936,
+    "hash": "b0fd9c29de2edd09652dcfd0058dadda"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\routes\\adminRoutes.js": {
+    "mtime": 1776421362.7266097,
+    "hash": "4ef7906b3bdacb3922bca3baf0113cc8"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\routes\\authRoutes.js": {
+    "mtime": 1776272812.4817228,
+    "hash": "06e02232d6ec37c7ca51762dd7e68b00"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\routes\\donationRoutes.js": {
+    "mtime": 1777633763.7359464,
+    "hash": "fbd62baaf1cd58da42bd125e3ddd662e"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\routes\\eventRoutes.js": {
+    "mtime": 1776426877.9129503,
+    "hash": "17b20e05bcf153942dfc3c32be4cf481"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\routes\\ngoRoutes.js": {
+    "mtime": 1777633756.771801,
+    "hash": "010325ffcf1b610b8ed96e13e143ddcf"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\routes\\rewardRoutes.js": {
+    "mtime": 1775978044.2464747,
+    "hash": "0f68b6516ab895c88378ee5162d8e49a"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\routes\\shopkeeperRoutes.js": {
+    "mtime": 1776418379.041683,
+    "hash": "81907acde6b09bb97868fff23698bfd3"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\routes\\socialRoutes.js": {
+    "mtime": 1776751240.2126272,
+    "hash": "1aa3fb932da878e86adc79285eb96d67"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\routes\\storeRoutes.js": {
+    "mtime": 1775978068.5875938,
+    "hash": "bd459bd639f89b3a46eb8c88fe0e90f5"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\scratch\\check-db.js": {
+    "mtime": 1776861741.4383965,
+    "hash": "fe6b44900d67ede9e25a136b67cdcfcf"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\scripts\\createTestShopkeeper.js": {
+    "mtime": 1776933101.463335,
+    "hash": "b07f553f23365649e24a23c9a3355566"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\scripts\\createTestUser.js": {
+    "mtime": 1776933121.5111508,
+    "hash": "8a905c0c9c9fabef597ce1c1c95d15be"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\postcss.config.js": {
+    "mtime": 1776861525.613933,
+    "hash": "ef3ba2a81ba19f8ea5ddf625521e96f0"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\tailwind.config.js": {
+    "mtime": 1776860817.249731,
+    "hash": "71ae6053baa74a2fea74ff0ac0e524d9"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\vite.config.js": {
+    "mtime": 1776860725.3960102,
+    "hash": "ac605e4b540846227ec125e13f24f3e2"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\App.jsx": {
+    "mtime": 1778057789.6085644,
+    "hash": "8d2e5568249294fbbad01f0b5ae2bed6"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\main.jsx": {
+    "mtime": 1776860725.4722433,
+    "hash": "54a301507dcdfccf4e5565754374b5dc"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\components\\Background.jsx": {
+    "mtime": 1776860841.8435516,
+    "hash": "6ffcb8c217bb8c04ba95caca8ecdc77b"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\components\\EventDetail.jsx": {
+    "mtime": 1777633565.3773935,
+    "hash": "62fddb69977bc87fa88c973b1ed33f6d"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\components\\LeafLoader.jsx": {
+    "mtime": 1778057999.6493835,
+    "hash": "ea474623d6f8756bc6a3251c71b5d4d9"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\components\\Loader.jsx": {
+    "mtime": 1778057974.8522756,
+    "hash": "87d8500e170a171f6738045fdbf448f6"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\components\\Navbar.jsx": {
+    "mtime": 1777633827.7871442,
+    "hash": "2312e2c95bdb02588af6c4eb00b6f279"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\components\\ScratchCard.jsx": {
+    "mtime": 1777628899.1277826,
+    "hash": "deadc758d340f55eaf0d6986d99381c1"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\components\\SplashScreen.jsx": {
+    "mtime": 1778058023.1332355,
+    "hash": "1006f886ad83147b0c41dea0721e1512"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\config\\firebase.js": {
+    "mtime": 1776932951.7997987,
+    "hash": "033e830fe574a100dee90f546ca46de5"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\ApplyNGO.jsx": {
+    "mtime": 1776926448.2930307,
+    "hash": "15208136c1687b3aef05a08865ffffe1"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\Dashboard.jsx": {
+    "mtime": 1776862143.3447595,
+    "hash": "c13f5365bc682b2c759280d8d65844c4"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\Donations.jsx": {
+    "mtime": 1778058703.5798857,
+    "hash": "92b60afd5569bb1d145daba96f896b1b"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\EditProfile.jsx": {
+    "mtime": 1776926257.9346747,
+    "hash": "5a54af5842c2cf6811ed384ce4e51592"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\Events.jsx": {
+    "mtime": 1777633639.3870692,
+    "hash": "b211f8af89e9bd6e5e092c23954415fe"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\HeroLanding.jsx": {
+    "mtime": 1777627406.902709,
+    "hash": "c388587a04686bad71238ad01347c6a6"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\Leaderboard.jsx": {
+    "mtime": 1776862197.5853274,
+    "hash": "cd54732ad3fd6855058dc6915d63fc5f"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\Login.jsx": {
+    "mtime": 1776927549.1696281,
+    "hash": "d7f6e19c26c510bd05dca164ef3c8142"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\NGOCommandCenter.jsx": {
+    "mtime": 1777633698.721755,
+    "hash": "0f0fd35644f1654c8ce974a5cf4c2b4b"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\RewardStore.jsx": {
+    "mtime": 1777629078.1694126,
+    "hash": "016cba0bfc12ae2932fb708a7510989a"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\SocialFeed.jsx": {
+    "mtime": 1776924270.3898408,
+    "hash": "8b7b840e5ee79551bea5b0311c722051"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\UserProfile.jsx": {
+    "mtime": 1776926453.4117718,
+    "hash": "4bf638e3996e3d916db83255d0098e53"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\admin\\AdminActivityManagement.jsx": {
+    "mtime": 1776928861.7354257,
+    "hash": "19d6af151a8372fdfbf7084fcaff7c33"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\admin\\AdminDashboard.jsx": {
+    "mtime": 1776928710.6534867,
+    "hash": "0b1f2608b67b8d133f15daf2e86f412c"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\admin\\AdminLayout.jsx": {
+    "mtime": 1776928668.6893039,
+    "hash": "a6b2ff33449ee56bb1776fbe30364642"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\admin\\AdminNGOApprovals.jsx": {
+    "mtime": 1778057988.0740926,
+    "hash": "91890ef311c00ecdea208e5a22857b62"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\admin\\AdminShopVerification.jsx": {
+    "mtime": 1776928795.3207002,
+    "hash": "9f405d00f155c821fdc48f41d5a11a95"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\ngo\\CreateEvent.jsx": {
+    "mtime": 1777632249.369895,
+    "hash": "c371b04190bef0ff3957fb97a4fc2fae"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\ngo\\NGOAnalytics.jsx": {
+    "mtime": 1777631895.79069,
+    "hash": "7dbee35159477a8a2c654e339dc65ee1"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\ngo\\NGODashboard.jsx": {
+    "mtime": 1778058525.6920886,
+    "hash": "a238fff591a551ac6a187cdab54fb900"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\ngo\\NGODonations.jsx": {
+    "mtime": 1777631647.33084,
+    "hash": "0ac24b8d24b65893e091ca6f4e24ba9a"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\ngo\\NGOSocial.jsx": {
+    "mtime": 1777633689.42278,
+    "hash": "12dc543f1f381b0f26294539cb53498f"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\ngo\\VolunteerManagement.jsx": {
+    "mtime": 1777631588.794098,
+    "hash": "9a7cb7da77e82497fbb6dbda4233bd8f"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\shopkeeper\\ShopkeeperDashboard.jsx": {
+    "mtime": 1777630266.9676554,
+    "hash": "d88cc289c57a1e64dd49550729188236"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\services\\api.js": {
+    "mtime": 1776861823.435652,
+    "hash": "238a1a909fdbfd3593bba7db0f0f0a5c"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\utils\\eventStatus.js": {
+    "mtime": 1777633418.3364115,
+    "hash": "ceaf8dbf571640580b47a23c715c4d6c"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\NGO_Event_Management_PRD.md": {
+    "mtime": 1776421379.424058,
+    "hash": "9dccc78724a23014b83f7fa851d57115"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\NGO_Follow_Posts_PRD.md": {
+    "mtime": 1776668990.052882,
+    "hash": "c0edd89fe61993278b5840414dfc598b"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\NGO_Volunteer_Profile_View_PRD.md": {
+    "mtime": 1776666612.8571823,
+    "hash": "dcab1401b1d7bb7b0a00dcaf0718eda2"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\PRD_CONTENT.txt": {
+    "mtime": 1776416554.153183,
+    "hash": "046496ec9ff1680fa8702e6ce4171594"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\graphify-out\\converted\\Shopkeeper_Verification_Portal_PRD_1_b7daa63f.md": {
+    "mtime": 1778059280.4593391,
+    "hash": "83cbdd89429348ce6c41ca592cc915e6"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\index.html": {
+    "mtime": 1776860872.5929067,
+    "hash": "20ab4a100bc8c8f7726fd0cee14063e2"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\README.md": {
+    "mtime": 1776860725.480593,
+    "hash": "1dfcb98fb0236ca209793b23d90c2d2a"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\EditProfile.html": {
+    "mtime": 1776924985.0609765,
+    "hash": "32ee56862286d34c57bca3c880dc74b4"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\pages\\UserProfile.html": {
+    "mtime": 1776924983.9489574,
+    "hash": "12dabae44333ba162066b765f2cc25cf"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\stitch\\activity_management.html": {
+    "mtime": 1776928415.19574,
+    "hash": "2794721661438fd757b85b7112f1146b"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\stitch\\ngo_approvals.html": {
+    "mtime": 1776928408.8887477,
+    "hash": "b39cf4f0d2ff6fd965068ada73e3395d"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\stitch\\partner_management.html": {
+    "mtime": 1776928404.3818603,
+    "hash": "8c1dd9417c3bf69747feaa86e8d18952"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\stitch\\shopkeeper_dashboard.html": {
+    "mtime": 1776930265.7627861,
+    "hash": "b56cd200c75d5c08e0c330bd40df5c29"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\stitch\\shop_verification.html": {
+    "mtime": 1776928413.3733017,
+    "hash": "4e0b67ceb2566bbaec4d96c01aa65ddb"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\stitch_designs\\events_list.html": {
+    "mtime": 1776860667.5480757,
+    "hash": "5ecd2c32e9ff00f71a3bb1b821a1c654"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\stitch_designs\\hero_landing.html": {
+    "mtime": 1776860684.0715175,
+    "hash": "8ca7e6a7b76e3e2a08f5622d04b90918"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\stitch_designs\\leaderboard.html": {
+    "mtime": 1776860690.5378208,
+    "hash": "b7d081535aa300883fb8e97e07391fd4"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\stitch_designs\\login_register.html": {
+    "mtime": 1776860665.619684,
+    "hash": "261501cdac81896efdbdca3ff58f4b70"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\stitch_designs\\ngo_command_center.html": {
+    "mtime": 1776860685.942174,
+    "hash": "cf247ea580018f10c436733f09d9d0fa"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\stitch_designs\\reward_store.html": {
+    "mtime": 1776860688.2191353,
+    "hash": "b7de0369fd0c2b051904d6c6774bf796"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\stitch_designs\\social_feed.html": {
+    "mtime": 1776860670.8954334,
+    "hash": "a73e8916e828e83ae828ca1432f3fd2d"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\stitch_designs\\user_dashboard.html": {
+    "mtime": 1776860669.4356685,
+    "hash": "75d95667924316e2708ad429f7014d80"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\uploads\\1775505506312-20250430_184434 edited.png": {
+    "mtime": 1775505506.3415606,
+    "hash": "76867b70fd7ce1e326f4f95374b32b44"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\uploads\\1775554303077-WhatsApp Image 2026-04-05 at 02.17.35.jpeg": {
+    "mtime": 1775554303.0810971,
+    "hash": "fc17b727ba4a39074d3b93642253aebd"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\backend\\uploads\\1775652533841-ChatGPT Image Apr 28, 2025, 05_59_56 PM.png": {
+    "mtime": 1775652533.8676145,
+    "hash": "22def05cb76d0f9276101babe1e4a8e9"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\public\\vite.svg": {
+    "mtime": 1776860725.5766728,
+    "hash": "8e3a10e157f75ada21ab742c022d5430"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\assets\\react.svg": {
+    "mtime": 1776860725.53962,
+    "hash": "f0402b67b6ce880f65666bb49e841696"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\src\\stitch\\screenshot_partner.png": {
+    "mtime": 1776929005.7647886,
+    "hash": "7e8e6acd2d06f40e3283f2539011196a"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\stitch_designs\\events_list.png": {
+    "mtime": 1776860668.731235,
+    "hash": "08f483f810b9e026f9cffd83bfafe915"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\stitch_designs\\hero_landing.png": {
+    "mtime": 1776860684.9351447,
+    "hash": "42c77b98d557574312d6cf7991cac23e"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\stitch_designs\\leaderboard.png": {
+    "mtime": 1776860691.1842718,
+    "hash": "835c84c8a524f082f42229b8e8b2d831"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\stitch_designs\\login_register.png": {
+    "mtime": 1776860666.7001855,
+    "hash": "c56f5cbeb6252bdbcde94ef54d1af499"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\stitch_designs\\ngo_command_center.png": {
+    "mtime": 1776860687.2885182,
+    "hash": "574619e1e27a4913ca51e96a0f82c60a"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\stitch_designs\\reward_store.png": {
+    "mtime": 1776860689.639997,
+    "hash": "7563c8913ee15a97137d7b2ce4f338db"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\stitch_designs\\social_feed.png": {
+    "mtime": 1776860671.77022,
+    "hash": "78a331ba5947ca1ac7c2ec72dbf6b0cf"
+  },
+  "D:\\WORK\\SOCIAL-APP\\app\\social-impact-app\\social-impact-frontend\\stitch_designs\\user_dashboard.png": {
+    "mtime": 1776860670.1766536,
+    "hash": "30fa2f99d2eafe1a3d057376f59ee617"
+  }
+}

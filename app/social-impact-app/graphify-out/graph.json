@@ -1,0 +1,3195 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "read_prd.py",
+      "file_type": "code",
+      "source_file": "read_prd.py",
+      "source_location": "L1",
+      "id": "read_prd_py",
+      "community": 16,
+      "norm_label": "read_prd.py"
+    },
+    {
+      "label": "read_docx()",
+      "file_type": "code",
+      "source_file": "read_prd.py",
+      "source_location": "L4",
+      "id": "social_impact_app_read_prd_read_docx",
+      "community": 16,
+      "norm_label": "read_docx()"
+    },
+    {
+      "label": "seed_shopkeeper.js",
+      "file_type": "code",
+      "source_file": "seed_shopkeeper.js",
+      "source_location": "L1",
+      "id": "seed_shopkeeper_js",
+      "community": 17,
+      "norm_label": "seed_shopkeeper.js"
+    },
+    {
+      "label": "createShopkeeper()",
+      "file_type": "code",
+      "source_file": "seed_shopkeeper.js",
+      "source_location": "L8",
+      "id": "social_impact_app_seed_shopkeeper_createshopkeeper",
+      "community": 17,
+      "norm_label": "createshopkeeper()"
+    },
+    {
+      "label": "server.js",
+      "file_type": "code",
+      "source_file": "server.js",
+      "source_location": "L1",
+      "id": "server_js",
+      "community": 49,
+      "norm_label": "server.js"
+    },
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "backend/index.js",
+      "source_location": "L1",
+      "id": "backend_index_js",
+      "community": 50,
+      "norm_label": "index.js"
+    },
+    {
+      "label": "test-connection.js",
+      "file_type": "code",
+      "source_file": "backend/test-connection.js",
+      "source_location": "L1",
+      "id": "backend_test_connection_js",
+      "community": 10,
+      "norm_label": "test-connection.js"
+    },
+    {
+      "label": "testMongoDB()",
+      "file_type": "code",
+      "source_file": "backend/test-connection.js",
+      "source_location": "L7",
+      "id": "backend_test_connection_testmongodb",
+      "community": 10,
+      "norm_label": "testmongodb()"
+    },
+    {
+      "label": "testFirebase()",
+      "file_type": "code",
+      "source_file": "backend/test-connection.js",
+      "source_location": "L21",
+      "id": "backend_test_connection_testfirebase",
+      "community": 10,
+      "norm_label": "testfirebase()"
+    },
+    {
+      "label": "runTests()",
+      "file_type": "code",
+      "source_file": "backend/test-connection.js",
+      "source_location": "L35",
+      "id": "backend_test_connection_runtests",
+      "community": 10,
+      "norm_label": "runtests()"
+    },
+    {
+      "label": "cloudinary.js",
+      "file_type": "code",
+      "source_file": "backend/config/cloudinary.js",
+      "source_location": "L1",
+      "id": "backend_config_cloudinary_js",
+      "community": 51,
+      "norm_label": "cloudinary.js"
+    },
+    {
+      "label": "db.js",
+      "file_type": "code",
+      "source_file": "backend/config/db.js",
+      "source_location": "L1",
+      "id": "backend_config_db_js",
+      "community": 18,
+      "norm_label": "db.js"
+    },
+    {
+      "label": "connectDB()",
+      "file_type": "code",
+      "source_file": "backend/config/db.js",
+      "source_location": "L3",
+      "id": "config_db_connectdb",
+      "community": 18,
+      "norm_label": "connectdb()"
+    },
+    {
+      "label": "firebase.js",
+      "file_type": "code",
+      "source_file": "backend/config/firebase.js",
+      "source_location": "L1",
+      "id": "backend_config_firebase_js",
+      "community": 52,
+      "norm_label": "firebase.js"
+    },
+    {
+      "label": "activityController.js",
+      "file_type": "code",
+      "source_file": "backend/controllers/activityController.js",
+      "source_location": "L1",
+      "id": "backend_controllers_activitycontroller_js",
+      "community": 6,
+      "norm_label": "activitycontroller.js"
+    },
+    {
+      "label": "submitActivity()",
+      "file_type": "code",
+      "source_file": "backend/controllers/activityController.js",
+      "source_location": "L7",
+      "id": "controllers_activitycontroller_submitactivity",
+      "community": 6,
+      "norm_label": "submitactivity()"
+    },
+    {
+      "label": "getMyActivities()",
+      "file_type": "code",
+      "source_file": "backend/controllers/activityController.js",
+      "source_location": "L29",
+      "id": "controllers_activitycontroller_getmyactivities",
+      "community": 6,
+      "norm_label": "getmyactivities()"
+    },
+    {
+      "label": "getActivityById()",
+      "file_type": "code",
+      "source_file": "backend/controllers/activityController.js",
+      "source_location": "L61",
+      "id": "controllers_activitycontroller_getactivitybyid",
+      "community": 6,
+      "norm_label": "getactivitybyid()"
+    },
+    {
+      "label": "updateActivityStatus()",
+      "file_type": "code",
+      "source_file": "backend/controllers/activityController.js",
+      "source_location": "L74",
+      "id": "controllers_activitycontroller_updateactivitystatus",
+      "community": 6,
+      "norm_label": "updateactivitystatus()"
+    },
+    {
+      "label": "getPendingActivities()",
+      "file_type": "code",
+      "source_file": "backend/controllers/activityController.js",
+      "source_location": "L108",
+      "id": "controllers_activitycontroller_getpendingactivities",
+      "community": 6,
+      "norm_label": "getpendingactivities()"
+    },
+    {
+      "label": "adminController.js",
+      "file_type": "code",
+      "source_file": "backend/controllers/adminController.js",
+      "source_location": "L1",
+      "id": "backend_controllers_admincontroller_js",
+      "community": 13,
+      "norm_label": "admincontroller.js"
+    },
+    {
+      "label": "getPendingNGOs()",
+      "file_type": "code",
+      "source_file": "backend/controllers/adminController.js",
+      "source_location": "L6",
+      "id": "controllers_admincontroller_getpendingngos",
+      "community": 13,
+      "norm_label": "getpendingngos()"
+    },
+    {
+      "label": "verifyNGO()",
+      "file_type": "code",
+      "source_file": "backend/controllers/adminController.js",
+      "source_location": "L17",
+      "id": "controllers_admincontroller_verifyngo",
+      "community": 13,
+      "norm_label": "verifyngo()"
+    },
+    {
+      "label": "authController.js",
+      "file_type": "code",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L1",
+      "id": "backend_controllers_authcontroller_js",
+      "community": 3,
+      "norm_label": "authcontroller.js"
+    },
+    {
+      "label": "generateToken()",
+      "file_type": "code",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L6",
+      "id": "controllers_authcontroller_generatetoken",
+      "community": 3,
+      "norm_label": "generatetoken()"
+    },
+    {
+      "label": "registerUser()",
+      "file_type": "code",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L11",
+      "id": "controllers_authcontroller_registeruser",
+      "community": 3,
+      "norm_label": "registeruser()"
+    },
+    {
+      "label": "loginUser()",
+      "file_type": "code",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L51",
+      "id": "controllers_authcontroller_loginuser",
+      "community": 3,
+      "norm_label": "loginuser()"
+    },
+    {
+      "label": "googleLogin()",
+      "file_type": "code",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L97",
+      "id": "controllers_authcontroller_googlelogin",
+      "community": 3,
+      "norm_label": "googlelogin()"
+    },
+    {
+      "label": "forgotPassword()",
+      "file_type": "code",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L133",
+      "id": "controllers_authcontroller_forgotpassword",
+      "community": 3,
+      "norm_label": "forgotpassword()"
+    },
+    {
+      "label": "getProfile()",
+      "file_type": "code",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L153",
+      "id": "controllers_authcontroller_getprofile",
+      "community": 3,
+      "norm_label": "getprofile()"
+    },
+    {
+      "label": "updateProfile()",
+      "file_type": "code",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L163",
+      "id": "controllers_authcontroller_updateprofile",
+      "community": 3,
+      "norm_label": "updateprofile()"
+    },
+    {
+      "label": "resetPassword()",
+      "file_type": "code",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L194",
+      "id": "controllers_authcontroller_resetpassword",
+      "community": 3,
+      "norm_label": "resetpassword()"
+    },
+    {
+      "label": "uploadProfilePhoto()",
+      "file_type": "code",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L218",
+      "id": "controllers_authcontroller_uploadprofilephoto",
+      "community": 3,
+      "norm_label": "uploadprofilephoto()"
+    },
+    {
+      "label": "donationController.js",
+      "file_type": "code",
+      "source_file": "backend/controllers/donationController.js",
+      "source_location": "L1",
+      "id": "backend_controllers_donationcontroller_js",
+      "community": 7,
+      "norm_label": "donationcontroller.js"
+    },
+    {
+      "label": "submitDonation()",
+      "file_type": "code",
+      "source_file": "backend/controllers/donationController.js",
+      "source_location": "L7",
+      "id": "controllers_donationcontroller_submitdonation",
+      "community": 7,
+      "norm_label": "submitdonation()"
+    },
+    {
+      "label": "getMyDonations()",
+      "file_type": "code",
+      "source_file": "backend/controllers/donationController.js",
+      "source_location": "L31",
+      "id": "controllers_donationcontroller_getmydonations",
+      "community": 7,
+      "norm_label": "getmydonations()"
+    },
+    {
+      "label": "getNGOPendingDonations()",
+      "file_type": "code",
+      "source_file": "backend/controllers/donationController.js",
+      "source_location": "L44",
+      "id": "controllers_donationcontroller_getngopendingdonations",
+      "community": 7,
+      "norm_label": "getngopendingdonations()"
+    },
+    {
+      "label": "handleDonationAction()",
+      "file_type": "code",
+      "source_file": "backend/controllers/donationController.js",
+      "source_location": "L60",
+      "id": "controllers_donationcontroller_handledonationaction",
+      "community": 7,
+      "norm_label": "handledonationaction()"
+    },
+    {
+      "label": "getNGODonationStats()",
+      "file_type": "code",
+      "source_file": "backend/controllers/donationController.js",
+      "source_location": "L95",
+      "id": "controllers_donationcontroller_getngodonationstats",
+      "community": 7,
+      "norm_label": "getngodonationstats()"
+    },
+    {
+      "label": "eventController.js",
+      "file_type": "code",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L1",
+      "id": "backend_controllers_eventcontroller_js",
+      "community": 1,
+      "norm_label": "eventcontroller.js"
+    },
+    {
+      "label": "autoCompleteEvents()",
+      "file_type": "code",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L11",
+      "id": "controllers_eventcontroller_autocompleteevents",
+      "community": 1,
+      "norm_label": "autocompleteevents()"
+    },
+    {
+      "label": "getEvents()",
+      "file_type": "code",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L67",
+      "id": "controllers_eventcontroller_getevents",
+      "community": 1,
+      "norm_label": "getevents()"
+    },
+    {
+      "label": "createEvent()",
+      "file_type": "code",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L96",
+      "id": "controllers_eventcontroller_createevent",
+      "community": 1,
+      "norm_label": "createevent()"
+    },
+    {
+      "label": "getEventById()",
+      "file_type": "code",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L174",
+      "id": "controllers_eventcontroller_geteventbyid",
+      "community": 1,
+      "norm_label": "geteventbyid()"
+    },
+    {
+      "label": "updateEvent()",
+      "file_type": "code",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L190",
+      "id": "controllers_eventcontroller_updateevent",
+      "community": 1,
+      "norm_label": "updateevent()"
+    },
+    {
+      "label": "deleteEvent()",
+      "file_type": "code",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L207",
+      "id": "controllers_eventcontroller_deleteevent",
+      "community": 1,
+      "norm_label": "deleteevent()"
+    },
+    {
+      "label": "joinEvent()",
+      "file_type": "code",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L224",
+      "id": "controllers_eventcontroller_joinevent",
+      "community": 1,
+      "norm_label": "joinevent()"
+    },
+    {
+      "label": "leaveEvent()",
+      "file_type": "code",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L267",
+      "id": "controllers_eventcontroller_leaveevent",
+      "community": 1,
+      "norm_label": "leaveevent()"
+    },
+    {
+      "label": "addComment()",
+      "file_type": "code",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L283",
+      "id": "controllers_eventcontroller_addcomment",
+      "community": 1,
+      "norm_label": "addcomment()"
+    },
+    {
+      "label": "getComments()",
+      "file_type": "code",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L297",
+      "id": "controllers_eventcontroller_getcomments",
+      "community": 1,
+      "norm_label": "getcomments()"
+    },
+    {
+      "label": "handleJoinRequest()",
+      "file_type": "code",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L308",
+      "id": "controllers_eventcontroller_handlejoinrequest",
+      "community": 1,
+      "norm_label": "handlejoinrequest()"
+    },
+    {
+      "label": "ngoController.js",
+      "file_type": "code",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L1",
+      "id": "backend_controllers_ngocontroller_js",
+      "community": 0,
+      "norm_label": "ngocontroller.js"
+    },
+    {
+      "label": "registerNGO()",
+      "file_type": "code",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L8",
+      "id": "controllers_ngocontroller_registerngo",
+      "community": 0,
+      "norm_label": "registerngo()"
+    },
+    {
+      "label": "getNGOProfile()",
+      "file_type": "code",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L37",
+      "id": "controllers_ngocontroller_getngoprofile",
+      "community": 0,
+      "norm_label": "getngoprofile()"
+    },
+    {
+      "label": "getPublicNGOProfile()",
+      "file_type": "code",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L59",
+      "id": "controllers_ngocontroller_getpublicngoprofile",
+      "community": 0,
+      "norm_label": "getpublicngoprofile()"
+    },
+    {
+      "label": "updateNGOProfile()",
+      "file_type": "code",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L90",
+      "id": "controllers_ngocontroller_updatengoprofile",
+      "community": 0,
+      "norm_label": "updatengoprofile()"
+    },
+    {
+      "label": "getVolunteerProfile()",
+      "file_type": "code",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L109",
+      "id": "controllers_ngocontroller_getvolunteerprofile",
+      "community": 0,
+      "norm_label": "getvolunteerprofile()"
+    },
+    {
+      "label": "getNGOAnalytics()",
+      "file_type": "code",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L201",
+      "id": "controllers_ngocontroller_getngoanalytics",
+      "community": 0,
+      "norm_label": "getngoanalytics()"
+    },
+    {
+      "label": "createNGOEvent()",
+      "file_type": "code",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L292",
+      "id": "controllers_ngocontroller_createngoevent",
+      "community": 0,
+      "norm_label": "createngoevent()"
+    },
+    {
+      "label": "getNGOEvents()",
+      "file_type": "code",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L336",
+      "id": "controllers_ngocontroller_getngoevents",
+      "community": 0,
+      "norm_label": "getngoevents()"
+    },
+    {
+      "label": "updateNGOEvent()",
+      "file_type": "code",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L357",
+      "id": "controllers_ngocontroller_updatengoevent",
+      "community": 0,
+      "norm_label": "updatengoevent()"
+    },
+    {
+      "label": "deleteNGOEvent()",
+      "file_type": "code",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L374",
+      "id": "controllers_ngocontroller_deletengoevent",
+      "community": 0,
+      "norm_label": "deletengoevent()"
+    },
+    {
+      "label": "getEventJoinRequests()",
+      "file_type": "code",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L388",
+      "id": "controllers_ngocontroller_geteventjoinrequests",
+      "community": 0,
+      "norm_label": "geteventjoinrequests()"
+    },
+    {
+      "label": "handleJoinRequest()",
+      "file_type": "code",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L407",
+      "id": "controllers_ngocontroller_handlejoinrequest",
+      "community": 0,
+      "norm_label": "handlejoinrequest()"
+    },
+    {
+      "label": "getNGODashboard()",
+      "file_type": "code",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L431",
+      "id": "controllers_ngocontroller_getngodashboard",
+      "community": 0,
+      "norm_label": "getngodashboard()"
+    },
+    {
+      "label": "rewardController.js",
+      "file_type": "code",
+      "source_file": "backend/controllers/rewardController.js",
+      "source_location": "L1",
+      "id": "backend_controllers_rewardcontroller_js",
+      "community": 11,
+      "norm_label": "rewardcontroller.js"
+    },
+    {
+      "label": "getBalance()",
+      "file_type": "code",
+      "source_file": "backend/controllers/rewardController.js",
+      "source_location": "L5",
+      "id": "controllers_rewardcontroller_getbalance",
+      "community": 11,
+      "norm_label": "getbalance()"
+    },
+    {
+      "label": "getTransactions()",
+      "file_type": "code",
+      "source_file": "backend/controllers/rewardController.js",
+      "source_location": "L15",
+      "id": "controllers_rewardcontroller_gettransactions",
+      "community": 11,
+      "norm_label": "gettransactions()"
+    },
+    {
+      "label": "getLeaderboard()",
+      "file_type": "code",
+      "source_file": "backend/controllers/rewardController.js",
+      "source_location": "L26",
+      "id": "controllers_rewardcontroller_getleaderboard",
+      "community": 11,
+      "norm_label": "getleaderboard()"
+    },
+    {
+      "label": "shopkeeperController.js",
+      "file_type": "code",
+      "source_file": "backend/controllers/shopkeeperController.js",
+      "source_location": "L1",
+      "id": "backend_controllers_shopkeepercontroller_js",
+      "community": 4,
+      "norm_label": "shopkeepercontroller.js"
+    },
+    {
+      "label": "verifyCoupon()",
+      "file_type": "code",
+      "source_file": "backend/controllers/shopkeeperController.js",
+      "source_location": "L8",
+      "id": "controllers_shopkeepercontroller_verifycoupon",
+      "community": 4,
+      "norm_label": "verifycoupon()"
+    },
+    {
+      "label": "redeemCoupon()",
+      "file_type": "code",
+      "source_file": "backend/controllers/shopkeeperController.js",
+      "source_location": "L43",
+      "id": "controllers_shopkeepercontroller_redeemcoupon",
+      "community": 4,
+      "norm_label": "redeemcoupon()"
+    },
+    {
+      "label": "getShopkeeperHistory()",
+      "file_type": "code",
+      "source_file": "backend/controllers/shopkeeperController.js",
+      "source_location": "L76",
+      "id": "controllers_shopkeepercontroller_getshopkeeperhistory",
+      "community": 4,
+      "norm_label": "getshopkeeperhistory()"
+    },
+    {
+      "label": "updateShopProfile()",
+      "file_type": "code",
+      "source_file": "backend/controllers/shopkeeperController.js",
+      "source_location": "L94",
+      "id": "controllers_shopkeepercontroller_updateshopprofile",
+      "community": 4,
+      "norm_label": "updateshopprofile()"
+    },
+    {
+      "label": "createShopCoupon()",
+      "file_type": "code",
+      "source_file": "backend/controllers/shopkeeperController.js",
+      "source_location": "L115",
+      "id": "controllers_shopkeepercontroller_createshopcoupon",
+      "community": 4,
+      "norm_label": "createshopcoupon()"
+    },
+    {
+      "label": "adminGetAllShopkeepers()",
+      "file_type": "code",
+      "source_file": "backend/controllers/shopkeeperController.js",
+      "source_location": "L143",
+      "id": "controllers_shopkeepercontroller_admingetallshopkeepers",
+      "community": 4,
+      "norm_label": "admingetallshopkeepers()"
+    },
+    {
+      "label": "adminCreateShopkeeper()",
+      "file_type": "code",
+      "source_file": "backend/controllers/shopkeeperController.js",
+      "source_location": "L154",
+      "id": "controllers_shopkeepercontroller_admincreateshopkeeper",
+      "community": 4,
+      "norm_label": "admincreateshopkeeper()"
+    },
+    {
+      "label": "adminDeleteShopkeeper()",
+      "file_type": "code",
+      "source_file": "backend/controllers/shopkeeperController.js",
+      "source_location": "L186",
+      "id": "controllers_shopkeepercontroller_admindeleteshopkeeper",
+      "community": 4,
+      "norm_label": "admindeleteshopkeeper()"
+    },
+    {
+      "label": "socialController.js",
+      "file_type": "code",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L1",
+      "id": "backend_controllers_socialcontroller_js",
+      "community": 2,
+      "norm_label": "socialcontroller.js"
+    },
+    {
+      "label": "followNGO()",
+      "file_type": "code",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L12",
+      "id": "controllers_socialcontroller_followngo",
+      "community": 2,
+      "norm_label": "followngo()"
+    },
+    {
+      "label": "unfollowNGO()",
+      "file_type": "code",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L42",
+      "id": "controllers_socialcontroller_unfollowngo",
+      "community": 2,
+      "norm_label": "unfollowngo()"
+    },
+    {
+      "label": "getFollowing()",
+      "file_type": "code",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L69",
+      "id": "controllers_socialcontroller_getfollowing",
+      "community": 2,
+      "norm_label": "getfollowing()"
+    },
+    {
+      "label": "createPost()",
+      "file_type": "code",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L81",
+      "id": "controllers_socialcontroller_createpost",
+      "community": 2,
+      "norm_label": "createpost()"
+    },
+    {
+      "label": "commentOnPost()",
+      "file_type": "code",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L120",
+      "id": "controllers_socialcontroller_commentonpost",
+      "community": 2,
+      "norm_label": "commentonpost()"
+    },
+    {
+      "label": "getFeed()",
+      "file_type": "code",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L147",
+      "id": "controllers_socialcontroller_getfeed",
+      "community": 2,
+      "norm_label": "getfeed()"
+    },
+    {
+      "label": "getNGOPosts()",
+      "file_type": "code",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L165",
+      "id": "controllers_socialcontroller_getngoposts",
+      "community": 2,
+      "norm_label": "getngoposts()"
+    },
+    {
+      "label": "likePost()",
+      "file_type": "code",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L178",
+      "id": "controllers_socialcontroller_likepost",
+      "community": 2,
+      "norm_label": "likepost()"
+    },
+    {
+      "label": "getNotifications()",
+      "file_type": "code",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L199",
+      "id": "controllers_socialcontroller_getnotifications",
+      "community": 2,
+      "norm_label": "getnotifications()"
+    },
+    {
+      "label": "markAsRead()",
+      "file_type": "code",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L212",
+      "id": "controllers_socialcontroller_markasread",
+      "community": 2,
+      "norm_label": "markasread()"
+    },
+    {
+      "label": "storeController.js",
+      "file_type": "code",
+      "source_file": "backend/controllers/storeController.js",
+      "source_location": "L1",
+      "id": "backend_controllers_storecontroller_js",
+      "community": 5,
+      "norm_label": "storecontroller.js"
+    },
+    {
+      "label": "getStoreItems()",
+      "file_type": "code",
+      "source_file": "backend/controllers/storeController.js",
+      "source_location": "L7",
+      "id": "controllers_storecontroller_getstoreitems",
+      "community": 5,
+      "norm_label": "getstoreitems()"
+    },
+    {
+      "label": "getStoreItemById()",
+      "file_type": "code",
+      "source_file": "backend/controllers/storeController.js",
+      "source_location": "L21",
+      "id": "controllers_storecontroller_getstoreitembyid",
+      "community": 5,
+      "norm_label": "getstoreitembyid()"
+    },
+    {
+      "label": "redeemItem()",
+      "file_type": "code",
+      "source_file": "backend/controllers/storeController.js",
+      "source_location": "L32",
+      "id": "controllers_storecontroller_redeemitem",
+      "community": 5,
+      "norm_label": "redeemitem()"
+    },
+    {
+      "label": "getMyRedemptions()",
+      "file_type": "code",
+      "source_file": "backend/controllers/storeController.js",
+      "source_location": "L88",
+      "id": "controllers_storecontroller_getmyredemptions",
+      "community": 5,
+      "norm_label": "getmyredemptions()"
+    },
+    {
+      "label": "createStoreItem()",
+      "file_type": "code",
+      "source_file": "backend/controllers/storeController.js",
+      "source_location": "L101",
+      "id": "controllers_storecontroller_createstoreitem",
+      "community": 5,
+      "norm_label": "createstoreitem()"
+    },
+    {
+      "label": "updateStoreItem()",
+      "file_type": "code",
+      "source_file": "backend/controllers/storeController.js",
+      "source_location": "L111",
+      "id": "controllers_storecontroller_updatestoreitem",
+      "community": 5,
+      "norm_label": "updatestoreitem()"
+    },
+    {
+      "label": "deleteStoreItem()",
+      "file_type": "code",
+      "source_file": "backend/controllers/storeController.js",
+      "source_location": "L122",
+      "id": "controllers_storecontroller_deletestoreitem",
+      "community": 5,
+      "norm_label": "deletestoreitem()"
+    },
+    {
+      "label": "authMiddleware.js",
+      "file_type": "code",
+      "source_file": "backend/middleware/authMiddleware.js",
+      "source_location": "L1",
+      "id": "backend_middleware_authmiddleware_js",
+      "community": 12,
+      "norm_label": "authmiddleware.js"
+    },
+    {
+      "label": "protect()",
+      "file_type": "code",
+      "source_file": "backend/middleware/authMiddleware.js",
+      "source_location": "L4",
+      "id": "middleware_authmiddleware_protect",
+      "community": 12,
+      "norm_label": "protect()"
+    },
+    {
+      "label": "adminOnly()",
+      "file_type": "code",
+      "source_file": "backend/middleware/authMiddleware.js",
+      "source_location": "L26",
+      "id": "middleware_authmiddleware_adminonly",
+      "community": 12,
+      "norm_label": "adminonly()"
+    },
+    {
+      "label": "shopkeeperOnly()",
+      "file_type": "code",
+      "source_file": "backend/middleware/authMiddleware.js",
+      "source_location": "L34",
+      "id": "middleware_authmiddleware_shopkeeperonly",
+      "community": 12,
+      "norm_label": "shopkeeperonly()"
+    },
+    {
+      "label": "Activity.js",
+      "file_type": "code",
+      "source_file": "backend/models/Activity.js",
+      "source_location": "L1",
+      "id": "backend_models_activity_js",
+      "community": 53,
+      "norm_label": "activity.js"
+    },
+    {
+      "label": "Donation.js",
+      "file_type": "code",
+      "source_file": "backend/models/Donation.js",
+      "source_location": "L1",
+      "id": "backend_models_donation_js",
+      "community": 54,
+      "norm_label": "donation.js"
+    },
+    {
+      "label": "Event.js",
+      "file_type": "code",
+      "source_file": "backend/models/Event.js",
+      "source_location": "L1",
+      "id": "backend_models_event_js",
+      "community": 55,
+      "norm_label": "event.js"
+    },
+    {
+      "label": "NGO.js",
+      "file_type": "code",
+      "source_file": "backend/models/NGO.js",
+      "source_location": "L1",
+      "id": "backend_models_ngo_js",
+      "community": 56,
+      "norm_label": "ngo.js"
+    },
+    {
+      "label": "NGOFollow.js",
+      "file_type": "code",
+      "source_file": "backend/models/NGOFollow.js",
+      "source_location": "L1",
+      "id": "backend_models_ngofollow_js",
+      "community": 57,
+      "norm_label": "ngofollow.js"
+    },
+    {
+      "label": "NGOPost.js",
+      "file_type": "code",
+      "source_file": "backend/models/NGOPost.js",
+      "source_location": "L1",
+      "id": "backend_models_ngopost_js",
+      "community": 58,
+      "norm_label": "ngopost.js"
+    },
+    {
+      "label": "Notification.js",
+      "file_type": "code",
+      "source_file": "backend/models/Notification.js",
+      "source_location": "L1",
+      "id": "backend_models_notification_js",
+      "community": 59,
+      "norm_label": "notification.js"
+    },
+    {
+      "label": "Redemption.js",
+      "file_type": "code",
+      "source_file": "backend/models/Redemption.js",
+      "source_location": "L1",
+      "id": "backend_models_redemption_js",
+      "community": 60,
+      "norm_label": "redemption.js"
+    },
+    {
+      "label": "Store.js",
+      "file_type": "code",
+      "source_file": "backend/models/Store.js",
+      "source_location": "L1",
+      "id": "backend_models_store_js",
+      "community": 61,
+      "norm_label": "store.js"
+    },
+    {
+      "label": "Transaction.js",
+      "file_type": "code",
+      "source_file": "backend/models/Transaction.js",
+      "source_location": "L1",
+      "id": "backend_models_transaction_js",
+      "community": 62,
+      "norm_label": "transaction.js"
+    },
+    {
+      "label": "User.js",
+      "file_type": "code",
+      "source_file": "backend/models/User.js",
+      "source_location": "L1",
+      "id": "backend_models_user_js",
+      "community": 63,
+      "norm_label": "user.js"
+    },
+    {
+      "label": "activityRoutes.js",
+      "file_type": "code",
+      "source_file": "backend/routes/activityRoutes.js",
+      "source_location": "L1",
+      "id": "backend_routes_activityroutes_js",
+      "community": 64,
+      "norm_label": "activityroutes.js"
+    },
+    {
+      "label": "adminRoutes.js",
+      "file_type": "code",
+      "source_file": "backend/routes/adminRoutes.js",
+      "source_location": "L1",
+      "id": "backend_routes_adminroutes_js",
+      "community": 65,
+      "norm_label": "adminroutes.js"
+    },
+    {
+      "label": "authRoutes.js",
+      "file_type": "code",
+      "source_file": "backend/routes/authRoutes.js",
+      "source_location": "L1",
+      "id": "backend_routes_authroutes_js",
+      "community": 66,
+      "norm_label": "authroutes.js"
+    },
+    {
+      "label": "donationRoutes.js",
+      "file_type": "code",
+      "source_file": "backend/routes/donationRoutes.js",
+      "source_location": "L1",
+      "id": "backend_routes_donationroutes_js",
+      "community": 67,
+      "norm_label": "donationroutes.js"
+    },
+    {
+      "label": "eventRoutes.js",
+      "file_type": "code",
+      "source_file": "backend/routes/eventRoutes.js",
+      "source_location": "L1",
+      "id": "backend_routes_eventroutes_js",
+      "community": 68,
+      "norm_label": "eventroutes.js"
+    },
+    {
+      "label": "ngoRoutes.js",
+      "file_type": "code",
+      "source_file": "backend/routes/ngoRoutes.js",
+      "source_location": "L1",
+      "id": "backend_routes_ngoroutes_js",
+      "community": 69,
+      "norm_label": "ngoroutes.js"
+    },
+    {
+      "label": "rewardRoutes.js",
+      "file_type": "code",
+      "source_file": "backend/routes/rewardRoutes.js",
+      "source_location": "L1",
+      "id": "backend_routes_rewardroutes_js",
+      "community": 70,
+      "norm_label": "rewardroutes.js"
+    },
+    {
+      "label": "shopkeeperRoutes.js",
+      "file_type": "code",
+      "source_file": "backend/routes/shopkeeperRoutes.js",
+      "source_location": "L1",
+      "id": "backend_routes_shopkeeperroutes_js",
+      "community": 71,
+      "norm_label": "shopkeeperroutes.js"
+    },
+    {
+      "label": "socialRoutes.js",
+      "file_type": "code",
+      "source_file": "backend/routes/socialRoutes.js",
+      "source_location": "L1",
+      "id": "backend_routes_socialroutes_js",
+      "community": 72,
+      "norm_label": "socialroutes.js"
+    },
+    {
+      "label": "storeRoutes.js",
+      "file_type": "code",
+      "source_file": "backend/routes/storeRoutes.js",
+      "source_location": "L1",
+      "id": "backend_routes_storeroutes_js",
+      "community": 73,
+      "norm_label": "storeroutes.js"
+    },
+    {
+      "label": "check-db.js",
+      "file_type": "code",
+      "source_file": "backend/scratch/check-db.js",
+      "source_location": "L1",
+      "id": "backend_scratch_check_db_js",
+      "community": 19,
+      "norm_label": "check-db.js"
+    },
+    {
+      "label": "checkData()",
+      "file_type": "code",
+      "source_file": "backend/scratch/check-db.js",
+      "source_location": "L4",
+      "id": "scratch_check_db_checkdata",
+      "community": 19,
+      "norm_label": "checkdata()"
+    },
+    {
+      "label": "createTestShopkeeper.js",
+      "file_type": "code",
+      "source_file": "backend/scripts/createTestShopkeeper.js",
+      "source_location": "L1",
+      "id": "backend_scripts_createtestshopkeeper_js",
+      "community": 20,
+      "norm_label": "createtestshopkeeper.js"
+    },
+    {
+      "label": "createShopkeeper()",
+      "file_type": "code",
+      "source_file": "backend/scripts/createTestShopkeeper.js",
+      "source_location": "L26",
+      "id": "scripts_createtestshopkeeper_createshopkeeper",
+      "community": 20,
+      "norm_label": "createshopkeeper()"
+    },
+    {
+      "label": "createTestUser.js",
+      "file_type": "code",
+      "source_file": "backend/scripts/createTestUser.js",
+      "source_location": "L1",
+      "id": "backend_scripts_createtestuser_js",
+      "community": 21,
+      "norm_label": "createtestuser.js"
+    },
+    {
+      "label": "createTestUser()",
+      "file_type": "code",
+      "source_file": "backend/scripts/createTestUser.js",
+      "source_location": "L19",
+      "id": "scripts_createtestuser_createtestuser",
+      "community": 21,
+      "norm_label": "createtestuser()"
+    },
+    {
+      "label": "postcss.config.js",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/postcss.config.js",
+      "source_location": "L1",
+      "id": "social_impact_frontend_postcss_config_js",
+      "community": 74,
+      "norm_label": "postcss.config.js"
+    },
+    {
+      "label": "tailwind.config.js",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/tailwind.config.js",
+      "source_location": "L1",
+      "id": "social_impact_frontend_tailwind_config_js",
+      "community": 75,
+      "norm_label": "tailwind.config.js"
+    },
+    {
+      "label": "vite.config.js",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/vite.config.js",
+      "source_location": "L1",
+      "id": "social_impact_frontend_vite_config_js",
+      "community": 76,
+      "norm_label": "vite.config.js"
+    },
+    {
+      "label": "App.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/App.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_app_jsx",
+      "community": 22,
+      "norm_label": "app.jsx"
+    },
+    {
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/App.jsx",
+      "source_location": "L26",
+      "id": "src_app_app",
+      "community": 22,
+      "norm_label": "app()"
+    },
+    {
+      "label": "main.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/main.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_main_jsx",
+      "community": 77,
+      "norm_label": "main.jsx"
+    },
+    {
+      "label": "Background.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/components/Background.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_components_background_jsx",
+      "community": 23,
+      "norm_label": "background.jsx"
+    },
+    {
+      "label": "Background()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/components/Background.jsx",
+      "source_location": "L3",
+      "id": "components_background_background",
+      "community": 23,
+      "norm_label": "background()"
+    },
+    {
+      "label": "EventDetail.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/components/EventDetail.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_components_eventdetail_jsx",
+      "community": 8,
+      "norm_label": "eventdetail.jsx"
+    },
+    {
+      "label": "EventDetail()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/components/EventDetail.jsx",
+      "source_location": "L12",
+      "id": "components_eventdetail_eventdetail",
+      "community": 8,
+      "norm_label": "eventdetail()"
+    },
+    {
+      "label": "LeafLoader.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/components/LeafLoader.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_components_leafloader_jsx",
+      "community": 24,
+      "norm_label": "leafloader.jsx"
+    },
+    {
+      "label": "LeafLoader()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/components/LeafLoader.jsx",
+      "source_location": "L4",
+      "id": "components_leafloader_leafloader",
+      "community": 24,
+      "norm_label": "leafloader()"
+    },
+    {
+      "label": "Loader.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/components/Loader.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_components_loader_jsx",
+      "community": 25,
+      "norm_label": "loader.jsx"
+    },
+    {
+      "label": "Loader()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/components/Loader.jsx",
+      "source_location": "L5",
+      "id": "components_loader_loader",
+      "community": 25,
+      "norm_label": "loader()"
+    },
+    {
+      "label": "Navbar.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/components/Navbar.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_components_navbar_jsx",
+      "community": 26,
+      "norm_label": "navbar.jsx"
+    },
+    {
+      "label": "Navbar()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/components/Navbar.jsx",
+      "source_location": "L4",
+      "id": "components_navbar_navbar",
+      "community": 26,
+      "norm_label": "navbar()"
+    },
+    {
+      "label": "ScratchCard.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/components/ScratchCard.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_components_scratchcard_jsx",
+      "community": 27,
+      "norm_label": "scratchcard.jsx"
+    },
+    {
+      "label": "ScratchCard()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/components/ScratchCard.jsx",
+      "source_location": "L4",
+      "id": "components_scratchcard_scratchcard",
+      "community": 27,
+      "norm_label": "scratchcard()"
+    },
+    {
+      "label": "SplashScreen.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/components/SplashScreen.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_components_splashscreen_jsx",
+      "community": 28,
+      "norm_label": "splashscreen.jsx"
+    },
+    {
+      "label": "SplashScreen()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/components/SplashScreen.jsx",
+      "source_location": "L5",
+      "id": "components_splashscreen_splashscreen",
+      "community": 28,
+      "norm_label": "splashscreen()"
+    },
+    {
+      "label": "firebase.js",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/config/firebase.js",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_config_firebase_js",
+      "community": 78,
+      "norm_label": "firebase.js"
+    },
+    {
+      "label": "ApplyNGO.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ApplyNGO.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_applyngo_jsx",
+      "community": 29,
+      "norm_label": "applyngo.jsx"
+    },
+    {
+      "label": "ApplyNGO()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ApplyNGO.jsx",
+      "source_location": "L5",
+      "id": "pages_applyngo_applyngo",
+      "community": 29,
+      "norm_label": "applyngo()"
+    },
+    {
+      "label": "Dashboard.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/Dashboard.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_dashboard_jsx",
+      "community": 30,
+      "norm_label": "dashboard.jsx"
+    },
+    {
+      "label": "Dashboard()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/Dashboard.jsx",
+      "source_location": "L4",
+      "id": "pages_dashboard_dashboard",
+      "community": 30,
+      "norm_label": "dashboard()"
+    },
+    {
+      "label": "Donations.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/Donations.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_donations_jsx",
+      "community": 31,
+      "norm_label": "donations.jsx"
+    },
+    {
+      "label": "Donations()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/Donations.jsx",
+      "source_location": "L13",
+      "id": "pages_donations_donations",
+      "community": 31,
+      "norm_label": "donations()"
+    },
+    {
+      "label": "EditProfile.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/EditProfile.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_editprofile_jsx",
+      "community": 32,
+      "norm_label": "editprofile.jsx"
+    },
+    {
+      "label": "EditProfile()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/EditProfile.jsx",
+      "source_location": "L5",
+      "id": "pages_editprofile_editprofile",
+      "community": 32,
+      "norm_label": "editprofile()"
+    },
+    {
+      "label": "Events.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/Events.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_events_jsx",
+      "community": 33,
+      "norm_label": "events.jsx"
+    },
+    {
+      "label": "Events()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/Events.jsx",
+      "source_location": "L5",
+      "id": "pages_events_events",
+      "community": 33,
+      "norm_label": "events()"
+    },
+    {
+      "label": "HeroLanding.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/HeroLanding.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_herolanding_jsx",
+      "community": 34,
+      "norm_label": "herolanding.jsx"
+    },
+    {
+      "label": "HeroLanding()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/HeroLanding.jsx",
+      "source_location": "L4",
+      "id": "pages_herolanding_herolanding",
+      "community": 34,
+      "norm_label": "herolanding()"
+    },
+    {
+      "label": "Leaderboard.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/Leaderboard.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_leaderboard_jsx",
+      "community": 35,
+      "norm_label": "leaderboard.jsx"
+    },
+    {
+      "label": "Leaderboard()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/Leaderboard.jsx",
+      "source_location": "L4",
+      "id": "pages_leaderboard_leaderboard",
+      "community": 35,
+      "norm_label": "leaderboard()"
+    },
+    {
+      "label": "Login.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/Login.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_login_jsx",
+      "community": 36,
+      "norm_label": "login.jsx"
+    },
+    {
+      "label": "Login()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/Login.jsx",
+      "source_location": "L7",
+      "id": "pages_login_login",
+      "community": 36,
+      "norm_label": "login()"
+    },
+    {
+      "label": "NGOCommandCenter.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/NGOCommandCenter.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_ngocommandcenter_jsx",
+      "community": 37,
+      "norm_label": "ngocommandcenter.jsx"
+    },
+    {
+      "label": "NGOCommandCenter()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/NGOCommandCenter.jsx",
+      "source_location": "L19",
+      "id": "pages_ngocommandcenter_ngocommandcenter",
+      "community": 37,
+      "norm_label": "ngocommandcenter()"
+    },
+    {
+      "label": "RewardStore.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/RewardStore.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_rewardstore_jsx",
+      "community": 38,
+      "norm_label": "rewardstore.jsx"
+    },
+    {
+      "label": "RewardStore()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/RewardStore.jsx",
+      "source_location": "L7",
+      "id": "pages_rewardstore_rewardstore",
+      "community": 38,
+      "norm_label": "rewardstore()"
+    },
+    {
+      "label": "SocialFeed.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/SocialFeed.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_socialfeed_jsx",
+      "community": 39,
+      "norm_label": "socialfeed.jsx"
+    },
+    {
+      "label": "SocialFeed()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/SocialFeed.jsx",
+      "source_location": "L4",
+      "id": "pages_socialfeed_socialfeed",
+      "community": 39,
+      "norm_label": "socialfeed()"
+    },
+    {
+      "label": "UserProfile.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/UserProfile.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_userprofile_jsx",
+      "community": 40,
+      "norm_label": "userprofile.jsx"
+    },
+    {
+      "label": "UserProfile()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/UserProfile.jsx",
+      "source_location": "L4",
+      "id": "pages_userprofile_userprofile",
+      "community": 40,
+      "norm_label": "userprofile()"
+    },
+    {
+      "label": "AdminActivityManagement.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/admin/AdminActivityManagement.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_admin_adminactivitymanagement_jsx",
+      "community": 41,
+      "norm_label": "adminactivitymanagement.jsx"
+    },
+    {
+      "label": "AdminActivityManagement()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/admin/AdminActivityManagement.jsx",
+      "source_location": "L5",
+      "id": "admin_adminactivitymanagement_adminactivitymanagement",
+      "community": 41,
+      "norm_label": "adminactivitymanagement()"
+    },
+    {
+      "label": "AdminDashboard.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/admin/AdminDashboard.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_admin_admindashboard_jsx",
+      "community": 42,
+      "norm_label": "admindashboard.jsx"
+    },
+    {
+      "label": "AdminDashboard()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/admin/AdminDashboard.jsx",
+      "source_location": "L5",
+      "id": "admin_admindashboard_admindashboard",
+      "community": 42,
+      "norm_label": "admindashboard()"
+    },
+    {
+      "label": "AdminLayout.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/admin/AdminLayout.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_admin_adminlayout_jsx",
+      "community": 43,
+      "norm_label": "adminlayout.jsx"
+    },
+    {
+      "label": "AdminLayout()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/admin/AdminLayout.jsx",
+      "source_location": "L12",
+      "id": "admin_adminlayout_adminlayout",
+      "community": 43,
+      "norm_label": "adminlayout()"
+    },
+    {
+      "label": "AdminNGOApprovals.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/admin/AdminNGOApprovals.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_admin_adminngoapprovals_jsx",
+      "community": 44,
+      "norm_label": "adminngoapprovals.jsx"
+    },
+    {
+      "label": "AdminNGOApprovals()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/admin/AdminNGOApprovals.jsx",
+      "source_location": "L6",
+      "id": "admin_adminngoapprovals_adminngoapprovals",
+      "community": 44,
+      "norm_label": "adminngoapprovals()"
+    },
+    {
+      "label": "AdminShopVerification.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/admin/AdminShopVerification.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_admin_adminshopverification_jsx",
+      "community": 45,
+      "norm_label": "adminshopverification.jsx"
+    },
+    {
+      "label": "AdminShopVerification()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/admin/AdminShopVerification.jsx",
+      "source_location": "L5",
+      "id": "admin_adminshopverification_adminshopverification",
+      "community": 45,
+      "norm_label": "adminshopverification()"
+    },
+    {
+      "label": "CreateEvent.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ngo/CreateEvent.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_ngo_createevent_jsx",
+      "community": 9,
+      "norm_label": "createevent.jsx"
+    },
+    {
+      "label": "Field()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ngo/CreateEvent.jsx",
+      "source_location": "L17",
+      "id": "ngo_createevent_field",
+      "community": 9,
+      "norm_label": "field()"
+    },
+    {
+      "label": "Input()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ngo/CreateEvent.jsx",
+      "source_location": "L24",
+      "id": "ngo_createevent_input",
+      "community": 9,
+      "norm_label": "input()"
+    },
+    {
+      "label": "Textarea()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ngo/CreateEvent.jsx",
+      "source_location": "L31",
+      "id": "ngo_createevent_textarea",
+      "community": 9,
+      "norm_label": "textarea()"
+    },
+    {
+      "label": "CreateEvent()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ngo/CreateEvent.jsx",
+      "source_location": "L38",
+      "id": "ngo_createevent_createevent",
+      "community": 9,
+      "norm_label": "createevent()"
+    },
+    {
+      "label": "NGOAnalytics.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ngo/NGOAnalytics.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_ngo_ngoanalytics_jsx",
+      "community": 14,
+      "norm_label": "ngoanalytics.jsx"
+    },
+    {
+      "label": "Bar()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ngo/NGOAnalytics.jsx",
+      "source_location": "L4",
+      "id": "ngo_ngoanalytics_bar",
+      "community": 14,
+      "norm_label": "bar()"
+    },
+    {
+      "label": "NGOAnalytics()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ngo/NGOAnalytics.jsx",
+      "source_location": "L20",
+      "id": "ngo_ngoanalytics_ngoanalytics",
+      "community": 14,
+      "norm_label": "ngoanalytics()"
+    },
+    {
+      "label": "NGODashboard.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ngo/NGODashboard.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_ngo_ngodashboard_jsx",
+      "community": 8,
+      "norm_label": "ngodashboard.jsx"
+    },
+    {
+      "label": "NGODashboard()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ngo/NGODashboard.jsx",
+      "source_location": "L15",
+      "id": "ngo_ngodashboard_ngodashboard",
+      "community": 8,
+      "norm_label": "ngodashboard()"
+    },
+    {
+      "label": "NGODonations.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ngo/NGODonations.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_ngo_ngodonations_jsx",
+      "community": 15,
+      "norm_label": "ngodonations.jsx"
+    },
+    {
+      "label": "StatCard()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ngo/NGODonations.jsx",
+      "source_location": "L14",
+      "id": "ngo_ngodonations_statcard",
+      "community": 15,
+      "norm_label": "statcard()"
+    },
+    {
+      "label": "NGODonations()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ngo/NGODonations.jsx",
+      "source_location": "L25",
+      "id": "ngo_ngodonations_ngodonations",
+      "community": 15,
+      "norm_label": "ngodonations()"
+    },
+    {
+      "label": "NGOSocial.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ngo/NGOSocial.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_ngo_ngosocial_jsx",
+      "community": 46,
+      "norm_label": "ngosocial.jsx"
+    },
+    {
+      "label": "NGOSocial()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ngo/NGOSocial.jsx",
+      "source_location": "L4",
+      "id": "ngo_ngosocial_ngosocial",
+      "community": 46,
+      "norm_label": "ngosocial()"
+    },
+    {
+      "label": "VolunteerManagement.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ngo/VolunteerManagement.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_ngo_volunteermanagement_jsx",
+      "community": 47,
+      "norm_label": "volunteermanagement.jsx"
+    },
+    {
+      "label": "VolunteerManagement()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/ngo/VolunteerManagement.jsx",
+      "source_location": "L6",
+      "id": "ngo_volunteermanagement_volunteermanagement",
+      "community": 47,
+      "norm_label": "volunteermanagement()"
+    },
+    {
+      "label": "ShopkeeperDashboard.jsx",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/shopkeeper/ShopkeeperDashboard.jsx",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_pages_shopkeeper_shopkeeperdashboard_jsx",
+      "community": 48,
+      "norm_label": "shopkeeperdashboard.jsx"
+    },
+    {
+      "label": "ShopkeeperDashboard()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/pages/shopkeeper/ShopkeeperDashboard.jsx",
+      "source_location": "L5",
+      "id": "shopkeeper_shopkeeperdashboard_shopkeeperdashboard",
+      "community": 48,
+      "norm_label": "shopkeeperdashboard()"
+    },
+    {
+      "label": "api.js",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/services/api.js",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_services_api_js",
+      "community": 79,
+      "norm_label": "api.js"
+    },
+    {
+      "label": "eventStatus.js",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/utils/eventStatus.js",
+      "source_location": "L1",
+      "id": "social_impact_frontend_src_utils_eventstatus_js",
+      "community": 8,
+      "norm_label": "eventstatus.js"
+    },
+    {
+      "label": "getEventStatus()",
+      "file_type": "code",
+      "source_file": "social-impact-frontend/src/utils/eventStatus.js",
+      "source_location": "L8",
+      "id": "utils_eventstatus_geteventstatus",
+      "community": 8,
+      "norm_label": "geteventstatus()"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "read_prd.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "read_prd_py",
+      "target": "social_impact_app_read_prd_read_docx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "seed_shopkeeper.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "seed_shopkeeper_js",
+      "target": "social_impact_app_seed_shopkeeper_createshopkeeper",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/test-connection.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "backend_test_connection_js",
+      "target": "backend_test_connection_testmongodb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/test-connection.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "backend_test_connection_js",
+      "target": "backend_test_connection_testfirebase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/test-connection.js",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "backend_test_connection_js",
+      "target": "backend_test_connection_runtests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/test-connection.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "backend_test_connection_runtests",
+      "target": "backend_test_connection_testmongodb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/test-connection.js",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "backend_test_connection_runtests",
+      "target": "backend_test_connection_testfirebase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/config/db.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_config_db_js",
+      "target": "config_db_connectdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/activityController.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "backend_controllers_activitycontroller_js",
+      "target": "controllers_activitycontroller_submitactivity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/activityController.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "backend_controllers_activitycontroller_js",
+      "target": "controllers_activitycontroller_getmyactivities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/activityController.js",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "backend_controllers_activitycontroller_js",
+      "target": "controllers_activitycontroller_getactivitybyid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/activityController.js",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "backend_controllers_activitycontroller_js",
+      "target": "controllers_activitycontroller_updateactivitystatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/activityController.js",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "backend_controllers_activitycontroller_js",
+      "target": "controllers_activitycontroller_getpendingactivities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/adminController.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_controllers_admincontroller_js",
+      "target": "controllers_admincontroller_getpendingngos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/adminController.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "backend_controllers_admincontroller_js",
+      "target": "controllers_admincontroller_verifyngo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_controllers_authcontroller_js",
+      "target": "controllers_authcontroller_generatetoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "backend_controllers_authcontroller_js",
+      "target": "controllers_authcontroller_registeruser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "backend_controllers_authcontroller_js",
+      "target": "controllers_authcontroller_loginuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "backend_controllers_authcontroller_js",
+      "target": "controllers_authcontroller_googlelogin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L133",
+      "weight": 1.0,
+      "source": "backend_controllers_authcontroller_js",
+      "target": "controllers_authcontroller_forgotpassword",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "backend_controllers_authcontroller_js",
+      "target": "controllers_authcontroller_getprofile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "backend_controllers_authcontroller_js",
+      "target": "controllers_authcontroller_updateprofile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L194",
+      "weight": 1.0,
+      "source": "backend_controllers_authcontroller_js",
+      "target": "controllers_authcontroller_resetpassword",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L218",
+      "weight": 1.0,
+      "source": "backend_controllers_authcontroller_js",
+      "target": "controllers_authcontroller_uploadprofilephoto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "controllers_authcontroller_registeruser",
+      "target": "controllers_authcontroller_generatetoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "controllers_authcontroller_loginuser",
+      "target": "controllers_authcontroller_generatetoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/authController.js",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "controllers_authcontroller_googlelogin",
+      "target": "controllers_authcontroller_generatetoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/donationController.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "backend_controllers_donationcontroller_js",
+      "target": "controllers_donationcontroller_submitdonation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/donationController.js",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "backend_controllers_donationcontroller_js",
+      "target": "controllers_donationcontroller_getmydonations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/donationController.js",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "backend_controllers_donationcontroller_js",
+      "target": "controllers_donationcontroller_getngopendingdonations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/donationController.js",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "backend_controllers_donationcontroller_js",
+      "target": "controllers_donationcontroller_handledonationaction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/donationController.js",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "backend_controllers_donationcontroller_js",
+      "target": "controllers_donationcontroller_getngodonationstats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "backend_controllers_eventcontroller_js",
+      "target": "controllers_eventcontroller_autocompleteevents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "backend_controllers_eventcontroller_js",
+      "target": "controllers_eventcontroller_getevents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "backend_controllers_eventcontroller_js",
+      "target": "controllers_eventcontroller_createevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L174",
+      "weight": 1.0,
+      "source": "backend_controllers_eventcontroller_js",
+      "target": "controllers_eventcontroller_geteventbyid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "backend_controllers_eventcontroller_js",
+      "target": "controllers_eventcontroller_updateevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L207",
+      "weight": 1.0,
+      "source": "backend_controllers_eventcontroller_js",
+      "target": "controllers_eventcontroller_deleteevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L224",
+      "weight": 1.0,
+      "source": "backend_controllers_eventcontroller_js",
+      "target": "controllers_eventcontroller_joinevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L267",
+      "weight": 1.0,
+      "source": "backend_controllers_eventcontroller_js",
+      "target": "controllers_eventcontroller_leaveevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L283",
+      "weight": 1.0,
+      "source": "backend_controllers_eventcontroller_js",
+      "target": "controllers_eventcontroller_addcomment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L297",
+      "weight": 1.0,
+      "source": "backend_controllers_eventcontroller_js",
+      "target": "controllers_eventcontroller_getcomments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L308",
+      "weight": 1.0,
+      "source": "backend_controllers_eventcontroller_js",
+      "target": "controllers_eventcontroller_handlejoinrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "controllers_eventcontroller_getevents",
+      "target": "controllers_eventcontroller_autocompleteevents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/eventController.js",
+      "source_location": "L176",
+      "weight": 1.0,
+      "source": "controllers_eventcontroller_geteventbyid",
+      "target": "controllers_eventcontroller_autocompleteevents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "backend_controllers_ngocontroller_js",
+      "target": "controllers_ngocontroller_registerngo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "backend_controllers_ngocontroller_js",
+      "target": "controllers_ngocontroller_getngoprofile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "backend_controllers_ngocontroller_js",
+      "target": "controllers_ngocontroller_getpublicngoprofile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "backend_controllers_ngocontroller_js",
+      "target": "controllers_ngocontroller_updatengoprofile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "backend_controllers_ngocontroller_js",
+      "target": "controllers_ngocontroller_getvolunteerprofile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "backend_controllers_ngocontroller_js",
+      "target": "controllers_ngocontroller_getngoanalytics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L292",
+      "weight": 1.0,
+      "source": "backend_controllers_ngocontroller_js",
+      "target": "controllers_ngocontroller_createngoevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L336",
+      "weight": 1.0,
+      "source": "backend_controllers_ngocontroller_js",
+      "target": "controllers_ngocontroller_getngoevents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L357",
+      "weight": 1.0,
+      "source": "backend_controllers_ngocontroller_js",
+      "target": "controllers_ngocontroller_updatengoevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L374",
+      "weight": 1.0,
+      "source": "backend_controllers_ngocontroller_js",
+      "target": "controllers_ngocontroller_deletengoevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L388",
+      "weight": 1.0,
+      "source": "backend_controllers_ngocontroller_js",
+      "target": "controllers_ngocontroller_geteventjoinrequests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L407",
+      "weight": 1.0,
+      "source": "backend_controllers_ngocontroller_js",
+      "target": "controllers_ngocontroller_handlejoinrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/ngoController.js",
+      "source_location": "L431",
+      "weight": 1.0,
+      "source": "backend_controllers_ngocontroller_js",
+      "target": "controllers_ngocontroller_getngodashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/rewardController.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "backend_controllers_rewardcontroller_js",
+      "target": "controllers_rewardcontroller_getbalance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/rewardController.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "backend_controllers_rewardcontroller_js",
+      "target": "controllers_rewardcontroller_gettransactions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/rewardController.js",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "backend_controllers_rewardcontroller_js",
+      "target": "controllers_rewardcontroller_getleaderboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/shopkeeperController.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "backend_controllers_shopkeepercontroller_js",
+      "target": "controllers_shopkeepercontroller_verifycoupon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/shopkeeperController.js",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "backend_controllers_shopkeepercontroller_js",
+      "target": "controllers_shopkeepercontroller_redeemcoupon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/shopkeeperController.js",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "backend_controllers_shopkeepercontroller_js",
+      "target": "controllers_shopkeepercontroller_getshopkeeperhistory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/shopkeeperController.js",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "backend_controllers_shopkeepercontroller_js",
+      "target": "controllers_shopkeepercontroller_updateshopprofile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/shopkeeperController.js",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "backend_controllers_shopkeepercontroller_js",
+      "target": "controllers_shopkeepercontroller_createshopcoupon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/shopkeeperController.js",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "backend_controllers_shopkeepercontroller_js",
+      "target": "controllers_shopkeepercontroller_admingetallshopkeepers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/shopkeeperController.js",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "backend_controllers_shopkeepercontroller_js",
+      "target": "controllers_shopkeepercontroller_admincreateshopkeeper",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/shopkeeperController.js",
+      "source_location": "L186",
+      "weight": 1.0,
+      "source": "backend_controllers_shopkeepercontroller_js",
+      "target": "controllers_shopkeepercontroller_admindeleteshopkeeper",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "backend_controllers_socialcontroller_js",
+      "target": "controllers_socialcontroller_followngo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "backend_controllers_socialcontroller_js",
+      "target": "controllers_socialcontroller_unfollowngo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "backend_controllers_socialcontroller_js",
+      "target": "controllers_socialcontroller_getfollowing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "backend_controllers_socialcontroller_js",
+      "target": "controllers_socialcontroller_createpost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "backend_controllers_socialcontroller_js",
+      "target": "controllers_socialcontroller_commentonpost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "backend_controllers_socialcontroller_js",
+      "target": "controllers_socialcontroller_getfeed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "backend_controllers_socialcontroller_js",
+      "target": "controllers_socialcontroller_getngoposts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L178",
+      "weight": 1.0,
+      "source": "backend_controllers_socialcontroller_js",
+      "target": "controllers_socialcontroller_likepost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L199",
+      "weight": 1.0,
+      "source": "backend_controllers_socialcontroller_js",
+      "target": "controllers_socialcontroller_getnotifications",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/socialController.js",
+      "source_location": "L212",
+      "weight": 1.0,
+      "source": "backend_controllers_socialcontroller_js",
+      "target": "controllers_socialcontroller_markasread",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/storeController.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "backend_controllers_storecontroller_js",
+      "target": "controllers_storecontroller_getstoreitems",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/storeController.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "backend_controllers_storecontroller_js",
+      "target": "controllers_storecontroller_getstoreitembyid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/storeController.js",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "backend_controllers_storecontroller_js",
+      "target": "controllers_storecontroller_redeemitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/storeController.js",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "backend_controllers_storecontroller_js",
+      "target": "controllers_storecontroller_getmyredemptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/storeController.js",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "backend_controllers_storecontroller_js",
+      "target": "controllers_storecontroller_createstoreitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/storeController.js",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "backend_controllers_storecontroller_js",
+      "target": "controllers_storecontroller_updatestoreitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/controllers/storeController.js",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "backend_controllers_storecontroller_js",
+      "target": "controllers_storecontroller_deletestoreitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/middleware/authMiddleware.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_middleware_authmiddleware_js",
+      "target": "middleware_authmiddleware_protect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/middleware/authMiddleware.js",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "backend_middleware_authmiddleware_js",
+      "target": "middleware_authmiddleware_adminonly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/middleware/authMiddleware.js",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "backend_middleware_authmiddleware_js",
+      "target": "middleware_authmiddleware_shopkeeperonly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/scratch/check-db.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "backend_scratch_check_db_js",
+      "target": "scratch_check_db_checkdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/scripts/createTestShopkeeper.js",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "backend_scripts_createtestshopkeeper_js",
+      "target": "scripts_createtestshopkeeper_createshopkeeper",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/scripts/createTestUser.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "backend_scripts_createtestuser_js",
+      "target": "scripts_createtestuser_createtestuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/App.jsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_app_jsx",
+      "target": "src_app_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/components/Background.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_components_background_jsx",
+      "target": "components_background_background",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/components/EventDetail.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_components_eventdetail_jsx",
+      "target": "utils_eventstatus_geteventstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/components/EventDetail.jsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_components_eventdetail_jsx",
+      "target": "components_eventdetail_eventdetail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "social-impact-frontend/src/components/EventDetail.jsx",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "components_eventdetail_eventdetail",
+      "target": "utils_eventstatus_geteventstatus"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/components/LeafLoader.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_components_leafloader_jsx",
+      "target": "components_leafloader_leafloader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/components/Loader.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_components_loader_jsx",
+      "target": "components_loader_loader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/components/Navbar.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_components_navbar_jsx",
+      "target": "components_navbar_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/components/ScratchCard.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_components_scratchcard_jsx",
+      "target": "components_scratchcard_scratchcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/components/SplashScreen.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_components_splashscreen_jsx",
+      "target": "components_splashscreen_splashscreen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/ApplyNGO.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_applyngo_jsx",
+      "target": "pages_applyngo_applyngo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/Dashboard.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_dashboard_jsx",
+      "target": "pages_dashboard_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/Donations.jsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_donations_jsx",
+      "target": "pages_donations_donations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/EditProfile.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_editprofile_jsx",
+      "target": "pages_editprofile_editprofile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/Events.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_events_jsx",
+      "target": "pages_events_events",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/HeroLanding.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_herolanding_jsx",
+      "target": "pages_herolanding_herolanding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/Leaderboard.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_leaderboard_jsx",
+      "target": "pages_leaderboard_leaderboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/Login.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_login_jsx",
+      "target": "pages_login_login",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/NGOCommandCenter.jsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_ngocommandcenter_jsx",
+      "target": "pages_ngocommandcenter_ngocommandcenter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/RewardStore.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_rewardstore_jsx",
+      "target": "pages_rewardstore_rewardstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/SocialFeed.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_socialfeed_jsx",
+      "target": "pages_socialfeed_socialfeed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/UserProfile.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_userprofile_jsx",
+      "target": "pages_userprofile_userprofile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/admin/AdminActivityManagement.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_admin_adminactivitymanagement_jsx",
+      "target": "admin_adminactivitymanagement_adminactivitymanagement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/admin/AdminDashboard.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_admin_admindashboard_jsx",
+      "target": "admin_admindashboard_admindashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/admin/AdminLayout.jsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_admin_adminlayout_jsx",
+      "target": "admin_adminlayout_adminlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/admin/AdminNGOApprovals.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_admin_adminngoapprovals_jsx",
+      "target": "admin_adminngoapprovals_adminngoapprovals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/admin/AdminShopVerification.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_admin_adminshopverification_jsx",
+      "target": "admin_adminshopverification_adminshopverification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/ngo/CreateEvent.jsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_ngo_createevent_jsx",
+      "target": "ngo_createevent_field",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/ngo/CreateEvent.jsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_ngo_createevent_jsx",
+      "target": "ngo_createevent_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/ngo/CreateEvent.jsx",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_ngo_createevent_jsx",
+      "target": "ngo_createevent_textarea",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/ngo/CreateEvent.jsx",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_ngo_createevent_jsx",
+      "target": "ngo_createevent_createevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/ngo/NGOAnalytics.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_ngo_ngoanalytics_jsx",
+      "target": "ngo_ngoanalytics_bar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/ngo/NGOAnalytics.jsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_ngo_ngoanalytics_jsx",
+      "target": "ngo_ngoanalytics_ngoanalytics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/ngo/NGODashboard.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_ngo_ngodashboard_jsx",
+      "target": "utils_eventstatus_geteventstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/ngo/NGODashboard.jsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_ngo_ngodashboard_jsx",
+      "target": "ngo_ngodashboard_ngodashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/ngo/NGODonations.jsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_ngo_ngodonations_jsx",
+      "target": "ngo_ngodonations_statcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/ngo/NGODonations.jsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_ngo_ngodonations_jsx",
+      "target": "ngo_ngodonations_ngodonations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/ngo/NGOSocial.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_ngo_ngosocial_jsx",
+      "target": "ngo_ngosocial_ngosocial",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/ngo/VolunteerManagement.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_ngo_volunteermanagement_jsx",
+      "target": "ngo_volunteermanagement_volunteermanagement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/pages/shopkeeper/ShopkeeperDashboard.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_pages_shopkeeper_shopkeeperdashboard_jsx",
+      "target": "shopkeeper_shopkeeperdashboard_shopkeeperdashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "social-impact-frontend/src/utils/eventStatus.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "social_impact_frontend_src_utils_eventstatus_js",
+      "target": "utils_eventstatus_geteventstatus",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}

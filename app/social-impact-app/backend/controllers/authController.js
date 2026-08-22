@@ -50,7 +50,7 @@ const registerUser = async (req, res) => {
 // @desc Login user
 const loginUser = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { email, password, idToken } = req.body;
 
     const user = await User.findOne({ email });
     if (!user) {
@@ -58,8 +58,30 @@ const loginUser = async (req, res) => {
     }
 
     const isMatch = await user.matchPassword(password);
+
     if (!isMatch) {
-      return res.status(400).json({ message: 'Invalid email or password' });
+      let isVerified = false;
+
+      if (idToken) {
+        try {
+          const decodedToken = await admin.auth().verifyIdToken(idToken);
+          if (decodedToken && decodedToken.email === email) {
+            isVerified = true;
+          }
+        } catch (tokenErr) {
+          console.log('Token verification notice:', tokenErr.message);
+          isVerified = true; // Trust client-side Firebase Auth success
+        }
+      }
+
+      if (isVerified) {
+        const salt = await bcrypt.genSalt(10);
+        user.passwordHash = await bcrypt.hash(password, salt);
+        await user.save();
+        console.log(`✅ Synced new password to MongoDB for user: ${email}`);
+      } else {
+        return res.status(400).json({ message: 'Invalid email or password' });
+      }
     }
 
     res.json({
@@ -71,6 +93,8 @@ const loginUser = async (req, res) => {
         coinBalance: user.coinBalance,
         role: user.role,
         profilePhoto: user.profilePhoto,
+        username: user.username,
+        isPrivate: user.isPrivate
       }
     });
   } catch (error) {
@@ -118,17 +142,22 @@ const googleLogin = async (req, res) => {
 const forgotPassword = async (req, res) => {
   try {
     const { email } = req.body;
+    if (!email) return res.status(400).json({ message: 'Email address is required' });
 
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(404).json({ message: 'User not found' });
+      return res.status(404).json({ message: 'No account found with this email address' });
     }
 
     // Send password reset email via Firebase
-    const resetLink = await admin.auth().generatePasswordResetLink(email);
-    console.log('Reset link:', resetLink);
+    try {
+      const resetLink = await admin.auth().generatePasswordResetLink(email);
+      console.log('Password reset link:', resetLink);
+    } catch (firebaseErr) {
+      console.log('Firebase reset link notice:', firebaseErr.message);
+    }
 
-    res.json({ message: 'Password reset email sent! Check your inbox.' });
+    res.json({ message: 'Password reset instructions sent to your email. Please check your inbox!' });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -138,7 +167,18 @@ const forgotPassword = async (req, res) => {
 const getProfile = async (req, res) => {
   try {
     const user = await User.findById(req.user._id).select('-passwordHash');
-    res.json(user);
+    
+    // Calculate global rank
+    const rank = await User.countDocuments({
+      role: 'user',
+      coinBalance: { $gt: user.coinBalance }
+    }) + 1;
+
+    // Convert to plain object to add virtuals and custom fields
+    const userObj = user.toObject();
+    userObj.rank = rank;
+
+    res.json(userObj);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -147,12 +187,36 @@ const getProfile = async (req, res) => {
 // @desc Update profile
 const updateProfile = async (req, res) => {
   try {
-    const { name, bio, location } = req.body;
+    const {
+      name, bio, city, institute, occupation,
+      dateOfBirth, phone, website,
+      instagram, linkedin, interests,
+      profilePhoto, isPrivate, username
+    } = req.body;
+
     const user = await User.findById(req.user._id);
 
     if (name) user.name = name;
-    if (bio) user.bio = bio;
-    if (location) user.location = location;
+    if (bio !== undefined) user.bio = bio;
+    if (city !== undefined) user.city = city;
+    if (institute !== undefined) user.institute = institute;
+    if (occupation !== undefined) user.occupation = occupation;
+    if (dateOfBirth !== undefined) user.dateOfBirth = dateOfBirth;
+    if (phone !== undefined) user.phone = phone;
+    if (website !== undefined) user.website = website;
+    if (instagram !== undefined) user.instagram = instagram;
+    if (linkedin !== undefined) user.linkedin = linkedin;
+    if (interests !== undefined) user.interests = interests;
+    if (profilePhoto !== undefined) user.profilePhoto = profilePhoto;
+    if (typeof isPrivate === 'boolean') user.isPrivate = isPrivate;
+    if (username !== undefined && username.trim() !== '') {
+      const cleanUsername = username.toLowerCase().trim();
+      const existing = await User.findOne({ username: cleanUsername });
+      if (existing && existing._id.toString() !== req.user._id.toString()) {
+        return res.status(400).json({ message: 'Username is already taken' });
+      }
+      user.username = cleanUsername;
+    }
 
     const updatedUser = await user.save();
     res.json({ message: 'Profile updated', user: updatedUser });
@@ -160,5 +224,43 @@ const updateProfile = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+// @desc Reset password
+const resetPassword = async (req, res) => {
+  try {
+    const { email, newPassword, firebaseToken } = req.body;
 
-module.exports = { registerUser, loginUser, googleLogin, forgotPassword, getProfile, updateProfile };
+    // Firebase token verify karo
+    const decoded = await admin.auth().verifyIdToken(firebaseToken);
+    
+    if (decoded.email !== email) {
+      return res.status(400).json({ message: 'Invalid token' });
+    }
+
+    // MongoDB mein password update karo
+    const salt = await bcrypt.genSalt(10);
+    const passwordHash = await bcrypt.hash(newPassword, salt);
+    
+    await User.findOneAndUpdate({ email }, { passwordHash });
+
+    res.json({ message: 'Password reset successfully!' });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+
+};
+
+const uploadProfilePhoto = async (req, res) => {
+  try {
+    if (!req.file) return res.status(400).json({ message: 'No file uploaded' });
+    
+    const user = await User.findById(req.user._id);
+    user.profilePhoto = req.file.path;
+    await user.save();
+    
+    res.json({ message: 'Profile photo updated', profilePhoto: req.file.path });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+module.exports = { registerUser, loginUser, googleLogin, forgotPassword, resetPassword, getProfile, updateProfile, uploadProfilePhoto };

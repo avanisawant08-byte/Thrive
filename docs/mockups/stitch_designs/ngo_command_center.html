@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#00e478",
+                    "surface-container-high": "#2a2a2a",
+                    "tertiary": "#fffaf7",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#7eda96",
+                    "on-tertiary-container": "#795f01",
+                    "on-secondary-fixed": "#00210c",
+                    "on-primary": "#003919",
+                    "background": "#131313",
+                    "primary-fixed": "#60ff98",
+                    "on-background": "#e5e2e1",
+                    "tertiary-fixed": "#ffe08d",
+                    "secondary": "#7eda96",
+                    "inverse-on-surface": "#313030",
+                    "tertiary-container": "#ffdb79",
+                    "on-tertiary-fixed-variant": "#584400",
+                    "on-surface": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-bright": "#3a3939",
+                    "on-secondary-container": "#94f0aa",
+                    "tertiary-fixed-dim": "#e5c364",
+                    "inverse-primary": "#006d36",
+                    "inverse-surface": "#e5e2e1",
+                    "on-error": "#690005",
+                    "outline-variant": "#3b4b3d",
+                    "secondary-container": "#017038",
+                    "secondary-fixed": "#9af7b0",
+                    "surface-container-highest": "#353534",
+                    "surface-container": "#201f1f",
+                    "on-secondary-fixed-variant": "#005227",
+                    "on-tertiary-fixed": "#241a00",
+                    "on-primary-container": "#007138",
+                    "error-container": "#93000a",
+                    "primary-fixed-dim": "#00e478",
+                    "surface": "#131313",
+                    "surface-variant": "#353534",
+                    "on-tertiary": "#3d2f00",
+                    "error": "#ffb4ab",
+                    "on-secondary": "#003919",
+                    "surface-dim": "#131313",
+                    "primary": "#f1ffef",
+                    "outline": "#849585",
+                    "on-primary-fixed-variant": "#005227",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-surface-variant": "#b9cbb9",
+                    "primary-container": "#00ff87",
+                    "on-primary-fixed": "#00210c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #131313; color: #e5e2e1; }
+        .glass-panel { background: rgba(53, 53, 52, 0.4); backdrop-filter: blur(20px); }
+        .glow-green { filter: drop-shadow(0 0 8px rgba(0, 255, 135, 0.3)); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- New Navigation Bar (IMPACT PULSE) -->
+<header class="sticky top-0 z-50 w-full bg-zinc-900/40 backdrop-blur-[20px] shadow-[0_8px_32px_rgba(0,0,0,0.3)] shadow-[0_0_40px_rgba(0,255,135,0.05)] border-b border-zinc-800/10">
+<div class="flex justify-between items-center px-8 h-20 w-full max-w-screen-2xl mx-auto">
+<!-- Logo -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-[#00ff87]/20 rounded-lg flex items-center justify-center border border-[#00ff87]/30">
+<span class="material-symbols-outlined text-[#00ff87]" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+<h2 class="text-xl font-black tracking-[-0.05em] text-[#f1ffef]">IMPACT PULSE</h2>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-1">
+<a class="px-5 py-2 font-inter text-sm font-bold tracking-[-0.02em] text-[#00ff87] hover:bg-[#00ff87]/10 transition-all rounded-full active:scale-95 duration-200" href="#">Dashboard</a>
+<a class="px-5 py-2 font-inter text-sm font-medium tracking-[-0.02em] text-zinc-400 hover:bg-[#00ff87]/10 hover:text-[#00ff87] transition-all rounded-full active:scale-95 duration-200" href="#">Events</a>
+<a class="px-5 py-2 font-inter text-sm font-medium tracking-[-0.02em] text-zinc-400 hover:bg-[#00ff87]/10 hover:text-[#00ff87] transition-all rounded-full active:scale-95 duration-200" href="#">Impact</a>
+<a class="px-5 py-2 font-inter text-sm font-medium tracking-[-0.02em] text-zinc-400 hover:bg-[#00ff87]/10 hover:text-[#00ff87] transition-all rounded-full active:scale-95 duration-200" href="#">Rewards</a>
+</nav>
+<!-- Profile & Theme Area -->
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-zinc-400 hover:text-[#00ff87] transition-colors" title="Toggle Theme">light_mode</button>
+<button class="material-symbols-outlined text-zinc-400 hover:text-[#00ff87] transition-colors">notifications</button>
+<div class="h-8 w-px bg-zinc-800/10"></div>
+<div class="flex items-center gap-3 group cursor-pointer">
+<div class="text-right hidden sm:block">
+<p class="text-xs font-bold text-[#f1ffef]">Alex Rivera</p>
+<p class="text-[10px] text-zinc-500 uppercase tracking-widest font-black">Admin</p>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-[#00ff87]/20 p-0.5 group-hover:border-[#00ff87]/50 transition-all">
+<img alt="User profile" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWqyJloEGnIg51m6EzBBgz7i1l9Ehjqw61nLx2XzaIevglh5d2hNG2S9SjzCx1WONM-EBX_3yyQ1DqakOsW-staz9oMHuofJcxpSzmmlV5Pi4cdfjY1ENbwZZKuddGOarxJ_jMLNSmbYEx9PpoKNKPVuPvFG5wrsZ9ogriPC2TH01lAvq3bLeUeOgJjeI4yfdLxLJqVaDdsP3yHmhdkOez4jaxiHQJ9W5jbEO8Q1cGY1RNd0fY6oRbztEWtJIn0oc1W6YvaFDWXm-W"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="min-h-screen">
+<div class="p-10 space-y-10 max-w-7xl mx-auto">
+<!-- Hero Impact Section -->
+<section class="relative overflow-hidden rounded-[2rem] bg-surface-container-low p-1">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/10 to-transparent"></div>
+<div class="relative glass-panel rounded-[1.9rem] p-10 flex flex-col md:flex-row gap-10 items-center border border-white/5">
+<div class="w-32 h-32 rounded-3xl bg-surface-container-highest flex items-center justify-center border border-outline-variant/20 shadow-2xl relative">
+<img alt="PureStream Global Logo" class="w-20 h-20 object-contain" data-alt="Abstract eco-friendly organization logo with stylized water droplet and leaf in green and white colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL0uoKBSuhmoMlwTI2TX3-zhea7WPfZtjwvgtmJS0ZtZ9p5RlsR02duXHw2m1U1C__cS__xDAryY2a0zS_yyzTR4Qv5iYUvAYPZW4r8nJh_3Z68xYux-Cy8CZPXhbNf0gHA1yYKM93lti8u00VRlKsuau97JNrHvTbsBUXDEp6MIeI4zzAt5l-H3K2WUR3lsdd72zivCQvOwPmqc4eCehA13EcH6YrABpdzOwvGP8DwHIOm2Ti2kpzTfL9Z6qBxzbo2UuKqmHp5PlF"/>
+<div class="absolute -bottom-2 -right-2 bg-primary-container text-on-primary-container rounded-full p-1 border-4 border-surface shadow-lg">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1 text-center md:text-left">
+<div class="flex items-center justify-center md:justify-start gap-3 mb-2">
+<span class="px-3 py-1 bg-primary-container/10 text-primary-container text-[10px] font-black uppercase tracking-widest rounded-full border border-primary-container/20">Premier Organization</span>
+<span class="text-on-surface-variant text-sm flex items-center gap-1"><span class="material-symbols-outlined text-sm">public</span> Geneva, HQ</span>
+</div>
+<h2 class="text-5xl font-black tracking-tighter text-on-surface mb-4">PureStream Global</h2>
+<p class="text-on-surface-variant max-w-xl leading-relaxed">Pioneering water purification systems for remote communities through decentralized volunteer networks. Driving social equity since 2018.</p>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface-container-highest/50 p-6 rounded-2xl border border-white/5 text-center min-w-[140px]">
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-1">Impact Score</p>
+<p class="text-4xl font-black text-primary-container glow-green">98.4</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Stats -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-low p-8 rounded-3xl border border-white/5 group hover:bg-surface-container-high transition-all">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined">event</span>
+</div>
+<span class="text-primary-container text-xs font-bold">+12% this mo</span>
+</div>
+<p class="text-on-surface-variant text-sm font-bold uppercase tracking-widest mb-1">Total Events</p>
+<h3 class="text-4xl font-black text-on-surface">1,402</h3>
+</div>
+<div class="bg-surface-container-low p-8 rounded-3xl border border-white/5 group hover:bg-surface-container-high transition-all">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined">volunteer_activism</span>
+</div>
+<span class="text-primary-container text-xs font-bold">Live Now</span>
+</div>
+<p class="text-on-surface-variant text-sm font-bold uppercase tracking-widest mb-1">Active Volunteers</p>
+<h3 class="text-4xl font-black text-on-surface">8,920</h3>
+</div>
+<div class="bg-surface-container-low p-8 rounded-3xl border border-white/5 group hover:bg-surface-container-high transition-all">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">token</span>
+</div>
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full border-2 border-surface bg-gray-600"></div>
+<div class="w-6 h-6 rounded-full border-2 border-surface bg-gray-500"></div>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm font-bold uppercase tracking-widest mb-1">Impact Coins Distributed</p>
+<h3 class="text-4xl font-black text-primary-container">42.5M</h3>
+</div>
+</section>
+<!-- Bottom Content: Events & Actions -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+<!-- Active Events Section -->
+<div class="lg:col-span-2 space-y-6">
+<div class="flex justify-between items-center">
+<h3 class="text-2xl font-black tracking-tight flex items-center gap-3">
+                            Active Events
+                            <span class="px-2 py-0.5 bg-surface-container-highest text-[10px] text-on-surface-variant rounded-md">0</span>
+</h3>
+<button class="text-primary-container text-sm font-bold flex items-center gap-2 hover:translate-x-1 transition-transform">
+                            Create New Event <span class="material-symbols-outlined text-lg">add_circle</span>
+</button>
+</div>
+<div class="relative bg-surface-container-low rounded-[2rem] p-16 flex flex-col items-center justify-center text-center border border-dashed border-outline-variant/30 overflow-hidden">
+<div class="absolute inset-0 opacity-5 pointer-events-none">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#00ff87_0%,transparent_50%)]"></div>
+</div>
+<div class="w-24 h-24 bg-surface-container-highest rounded-full flex items-center justify-center mb-8 shadow-2xl relative z-10">
+<span class="material-symbols-outlined text-5xl text-on-surface-variant opacity-20">celebration</span>
+</div>
+<h4 class="text-xl font-bold text-on-surface mb-2 relative z-10">Ready for a new mission?</h4>
+<p class="text-on-surface-variant max-w-sm mb-8 relative z-10">There are no active events currently running. Start a new campaign to begin tracking global impact in real-time.</p>
+<button class="px-8 py-3 bg-surface-container-highest text-primary-container font-bold rounded-xl hover:bg-primary-container hover:text-on-primary-container transition-all relative z-10">
+                            Schedule First Event
+                        </button>
+</div>
+</div>
+<!-- Quick Actions Panel -->
+<aside class="space-y-6">
+<h3 class="text-2xl font-black tracking-tight">Quick Actions</h3>
+<div class="space-y-4">
+<button class="w-full flex items-center justify-between p-5 bg-surface-container-low rounded-2xl border border-white/5 hover:bg-surface-container-high transition-colors group text-left">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined">manage_accounts</span>
+</div>
+<div>
+<p class="font-bold text-sm">Manage Volunteers</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Verify applications</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-5 bg-surface-container-low rounded-2xl border border-white/5 hover:bg-surface-container-high transition-colors group text-left">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<div>
+<p class="font-bold text-sm">View Analytics</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Growth reports</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-5 bg-surface-container-low rounded-2xl border border-white/5 hover:bg-surface-container-high transition-colors group text-left">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined">history</span>
+</div>
+<div>
+<p class="font-bold text-sm">Broadcast History</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Last sent 2h ago</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+<!-- Small Promotional Glass Card -->
+<div class="glass-panel p-6 rounded-3xl border border-primary-container/20 mt-10 relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-primary-container/20 rounded-full blur-2xl group-hover:scale-150 transition-transform"></div>
+<h4 class="text-sm font-black text-primary-container mb-2">UPGRADE COMMAND</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-4">Unlock satellite mapping and real-time biometric volunteer tracking for advanced operations.</p>
+<a class="inline-flex items-center gap-2 text-xs font-bold text-on-surface hover:text-primary-container transition-colors" href="#">
+                            Explore Premium <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</aside>
+</div>
+</div>
+</main>
+</body></html>

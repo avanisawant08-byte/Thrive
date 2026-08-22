@@ -10,7 +10,7 @@ const transactionSchema = new mongoose.Schema({
   amount: { type: Number, required: true },
   source: {
     type: String,
-    enum: ['activity_approval', 'store_redemption'],
+    enum: ['activity_approval', 'store_redemption', 'event_completion'],
     required: true
   },
   referenceId: { type: mongoose.Schema.Types.ObjectId, required: true },

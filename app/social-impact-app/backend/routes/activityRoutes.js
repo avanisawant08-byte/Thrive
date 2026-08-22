@@ -5,27 +5,17 @@ const {
   getMyActivities,
   getActivityById,
   updateActivityStatus,
-  getPendingActivities
+  getPendingActivities,
+  getNearbyActivities
 } = require('../controllers/activityController');
 const { protect, adminOnly } = require('../middleware/authMiddleware');
-const multer = require('multer');
+const { upload } = require('../config/cloudinary');
 
-// Multer — memory storage (no local files)
-const upload = multer({ storage: multer.memoryStorage() });
-
-// POST /activities — Submit activity (URLs already uploaded to Firebase from frontend)
-router.post('/', protect, upload.none(), submitActivity);
-
-// GET /activities/me — Get my activities
+router.post('/', protect, upload.array('proofMedia', 5), submitActivity);
 router.get('/me', protect, getMyActivities);
-
-// GET /activities/pending — Admin only
-router.get('/pending', protect, adminOnly, getPendingActivities);
-
-// GET /activities/:id — Get single activity
+router.get('/pending', protect, getPendingActivities);
+router.get('/nearby', getNearbyActivities);
 router.get('/:id', protect, getActivityById);
-
-// PUT /activities/:id/status — Admin approve/reject
-router.put('/:id/status', protect, adminOnly, updateActivityStatus);
+router.put('/:id/status', protect, updateActivityStatus);
 
 module.exports = router;

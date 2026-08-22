@@ -12,6 +12,7 @@ const storeSchema = new mongoose.Schema({
   imageUrl: { type: String, default: '' },
   stock: { type: Number, default: -1 },
   isActive: { type: Boolean, default: true },
+  vendorId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', default: null },
 }, { timestamps: true });
 
 module.exports = mongoose.model('Store', storeSchema);

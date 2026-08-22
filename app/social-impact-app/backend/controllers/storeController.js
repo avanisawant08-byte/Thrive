@@ -1,6 +1,7 @@
 const Store = require('../models/Store');
 const User = require('../models/User');
 const Transaction = require('../models/Transaction');
+const Redemption = require('../models/Redemption');
 
 // @desc Get all store items
 const getStoreItems = async (req, res) => {
@@ -34,14 +35,14 @@ const redeemItem = async (req, res) => {
     if (!item) return res.status(404).json({ message: 'Item not found' });
     if (!item.isActive) return res.status(400).json({ message: 'Item not available' });
 
-    const user = await User.findById(req.user._id);
-    if (user.coinBalance < item.coinCost) {
-      return res.status(400).json({ message: 'Insufficient coins' });
+    const user = await User.findOneAndUpdate(
+      { _id: req.user._id, coinBalance: { $gte: item.coinCost } },
+      { $inc: { coinBalance: -item.coinCost } },
+      { new: true }
+    );
+    if (!user) {
+      return res.status(400).json({ message: 'Insufficient balance' });
     }
-
-    // Deduct coins
-    user.coinBalance -= item.coinCost;
-    await user.save();
 
     // Reduce stock
     if (item.stock !== -1) {
@@ -61,6 +62,17 @@ const redeemItem = async (req, res) => {
 
     // Generate coupon code
     const couponCode = 'SI-' + Math.random().toString(36).substring(2, 10).toUpperCase();
+
+    // Create Redemption record
+    const expiresAt = new Date();
+    expiresAt.setDate(expiresAt.getDate() + 7); // 7 days expiry
+
+    await Redemption.create({
+      userId: user._id,
+      itemId: item._id,
+      couponCode,
+      expiresAt
+    });
 
     res.json({
       message: 'Item redeemed successfully!',

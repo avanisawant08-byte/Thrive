@@ -34,7 +34,7 @@ const getLeaderboard = async (req, res) => {
       matchQuery.createdAt = { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) };
     }
 
-    const leaderboard = await User.find({})
+    const leaderboard = await User.find({ role: 'user' })
       .select('name profilePhoto coinBalance location')
       .sort({ coinBalance: -1 })
       .limit(50);

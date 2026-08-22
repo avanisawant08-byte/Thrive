@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EcoPulse Admin Console</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#201f1f",
+                    "primary-container": "#00ff87",
+                    "background": "#131313",
+                    "error-container": "#93000a",
+                    "surface-variant": "#353534",
+                    "surface-dim": "#131313",
+                    "on-error": "#690005",
+                    "secondary": "#7eda96",
+                    "secondary-fixed-dim": "#7eda96",
+                    "on-tertiary-fixed": "#241a00",
+                    "surface-bright": "#3a3939",
+                    "on-secondary-fixed-variant": "#005227",
+                    "outline": "#849585",
+                    "on-primary-fixed": "#00210c",
+                    "on-secondary-fixed": "#00210c",
+                    "on-primary": "#003919",
+                    "on-tertiary-container": "#795f01",
+                    "tertiary-fixed-dim": "#e5c364",
+                    "inverse-on-surface": "#313030",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container-highest": "#353534",
+                    "on-primary-fixed-variant": "#005227",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-container": "#94f0aa",
+                    "secondary-container": "#017038",
+                    "on-surface": "#e5e2e1",
+                    "surface-container-lowest": "#0e0e0e",
+                    "error": "#ffb4ab",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-high": "#2a2a2a",
+                    "on-primary-container": "#007138",
+                    "surface-tint": "#00e478",
+                    "tertiary-container": "#ffdb79",
+                    "surface": "#131313",
+                    "on-tertiary": "#3d2f00",
+                    "on-background": "#e5e2e1",
+                    "tertiary-fixed": "#ffe08d",
+                    "primary-fixed-dim": "#00e478",
+                    "primary": "#f1ffef",
+                    "outline-variant": "#3b4b3d",
+                    "on-surface-variant": "#b9cbb9",
+                    "inverse-primary": "#006d36",
+                    "on-tertiary-fixed-variant": "#584400",
+                    "tertiary": "#fffaf7",
+                    "secondary-fixed": "#9af7b0",
+                    "primary-fixed": "#60ff98",
+                    "on-secondary": "#003919"
+            },
+            "fontFamily": {
+                    "headline": ["Inter", "sans-serif"],
+                    "display": ["Inter", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(53, 53, 52, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .glow-border:hover {
+            box-shadow: 0 0 20px rgba(0, 255, 135, 0.15);
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 h-16 bg-zinc-950/40 backdrop-blur-[20px] shadow-[0_20px_40px_rgba(0,255,135,0.05)] bg-zinc-900 flex items-center justify-between px-8 w-full font-['Inter'] antialiased tracking-[-0.02em]">
+<div class="flex items-center gap-4">
+<span class="text-xl font-black tracking-[-0.05em] text-[#f1ffef]">EcoPulse Admin</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center gap-2 bg-zinc-800/50 px-4 py-1.5 rounded-full border border-outline-variant/15">
+<span class="material-symbols-outlined text-zinc-400 text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-on-surface placeholder-zinc-500 w-48" placeholder="Search logs..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="material-symbols-outlined text-zinc-400 hover:text-[#00ff87] transition-all duration-300 active:scale-95 transform transition-transform">notifications</button>
+<button class="material-symbols-outlined text-zinc-400 hover:text-[#00ff87] transition-all duration-300 active:scale-95 transform transition-transform">settings</button>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-primary-container/20 ring-2 ring-primary-container/5">
+<img alt="Admin profile photo" class="w-full h-full object-cover" data-alt="Professional headshot of a confident executive man in a dark suit with soft studio lighting and neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMrGpZlNna3ZGxXOMheT5E-cZIVZYBmV_uBwYyEJw5ffQ5kE4NUjLdwNhKFqYSpzGf6mWCU6dIsaPUucCSFaSqIkf_nK3xwzjEfVHqx04XxKWI8ZRFP91dQDsA4jfBE4G72d_deF7gpQcwXjdSgzjJvvZYUNbo_86Cx40eyMs6sNPsCfxO8NG1tTiiLcNF5XMyd2oEl5UYcfnPqVilKJuyi0YR0A0X-3kFQWvpVbi0HCua8tGmPxDpfs45GvwFBA9SWta_R9hyhIaP"/>
+</div>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-72 bg-[#131313] flex flex-col gap-2 p-6 overflow-y-auto font-['Inter'] text-sm tracking-[0.05em] uppercase border-r border-white/5">
+<div class="mb-8 flex items-center gap-3">
+<div class="w-10 h-10 bg-gradient-to-br from-primary-container to-secondary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-fixed" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div>
+<div class="text-on-surface font-black tracking-tight normal-case text-base">Impact Console</div>
+<div class="text-zinc-500 text-[10px] tracking-widest uppercase">Admin v1.0</div>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="text-[#00ff87] font-bold bg-[#353534]/50 rounded-lg px-4 py-3 border-r-4 border-[#00ff87] flex items-center gap-3 hover:translate-x-1 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+<a class="text-zinc-500 font-medium px-4 py-3 flex items-center gap-3 hover:bg-[#353534] hover:text-[#f1ffef] transition-colors duration-200 hover:translate-x-1 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined">fact_check</span>
+                Activity Queue
+            </a>
+<a class="text-zinc-500 font-medium px-4 py-3 flex items-center gap-3 hover:bg-[#353534] hover:text-[#f1ffef] transition-colors duration-200 hover:translate-x-1 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined">verified_user</span>
+                NGO Approvals
+            </a>
+<a class="text-zinc-500 font-medium px-4 py-3 flex items-center gap-3 hover:bg-[#353534] hover:text-[#f1ffef] transition-colors duration-200 hover:translate-x-1 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined">storefront</span>
+                Shop Verification
+            </a>
+<a class="text-zinc-500 font-medium px-4 py-3 flex items-center gap-3 hover:bg-[#353534] hover:text-[#f1ffef] transition-colors duration-200 hover:translate-x-1 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+                Analytics
+            </a>
+</nav>
+<div class="mt-auto pt-6 border-t border-outline-variant/10">
+<button class="w-full bg-gradient-to-r from-primary-container to-secondary py-3 rounded-xl text-on-primary-fixed font-black tracking-normal normal-case mb-6 active:scale-95 transition-transform">
+                New Campaign
+            </button>
+<div class="flex flex-col gap-1">
+<a class="text-zinc-500 font-medium px-4 py-2 flex items-center gap-3 hover:text-[#f1ffef] transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">terminal</span>
+                    System Logs
+                </a>
+<a class="text-zinc-500 font-medium px-4 py-2 flex items-center gap-3 hover:text-[#f1ffef] transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+                    Support
+                </a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="ml-72 pt-24 px-8 pb-12">
+<!-- Platform Health Overview -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+<div class="glass-card p-6 rounded-[2rem] border border-white/5 glow-border transition-all">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-[#00ff87] bg-[#00ff87]/10 p-2 rounded-xl">group</span>
+<span class="text-xs font-bold text-[#00ff87]">+12%</span>
+</div>
+<div class="text-3xl font-black text-on-surface mb-1">12,482</div>
+<div class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Total Users</div>
+</div>
+<div class="glass-card p-6 rounded-[2rem] border border-white/5 glow-border transition-all">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-secondary-container bg-secondary-container/10 p-2 rounded-xl">pending_actions</span>
+<span class="text-xs font-bold text-secondary-container">24 New</span>
+</div>
+<div class="text-3xl font-black text-on-surface mb-1">156</div>
+<div class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Pending Approvals</div>
+</div>
+<div class="glass-card p-6 rounded-[2rem] border border-white/5 glow-border transition-all">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-tertiary-fixed-dim bg-tertiary-fixed-dim/10 p-2 rounded-xl">campaign</span>
+<span class="text-xs font-bold text-tertiary-fixed-dim">8 Active</span>
+</div>
+<div class="text-3xl font-black text-on-surface mb-1">42</div>
+<div class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Active Campaigns</div>
+</div>
+<div class="glass-card p-6 rounded-[2rem] border border-white/5 glow-border transition-all relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-[#00ff87]/5 rounded-full blur-2xl"></div>
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-[#00ff87] bg-[#00ff87]/10 p-2 rounded-xl" style="font-variation-settings: 'FILL' 1;">monetization_on</span>
+</div>
+<div class="text-3xl font-black text-on-surface mb-1">842.5K</div>
+<div class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Coins Distributed</div>
+</div>
+</section>
+<!-- NGO Approvals & Shop Verification -->
+<section class="grid grid-cols-1 gap-12 mb-12">
+<!-- NGO Approvals Section -->
+<div>
+<div class="flex items-center justify-between mb-6 px-2">
+<h2 class="text-2xl font-black tracking-tight flex items-center gap-3">
+<span class="w-1.5 h-8 bg-secondary rounded-full"></span>
+                        NGO Approvals
+                    </h2>
+<span class="bg-secondary/10 text-secondary text-xs font-bold px-3 py-1 rounded-full border border-secondary/20">12 Pending Applications</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="glass-card p-8 rounded-[2.5rem] border border-white/5 hover:bg-[#353534]/60 transition-all group">
+<div class="flex flex-col h-full">
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl">volunteer_activism</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-on-surface">Green Future Alliance</h4>
+<p class="text-xs text-secondary font-bold uppercase tracking-widest">Environmental Conservation</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2.5 rounded-xl bg-zinc-800 text-zinc-400 hover:text-white transition-colors" title="View Document">
+<span class="material-symbols-outlined text-lg">description</span>
+</button>
+</div>
+</div>
+<div class="mb-6">
+<div class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-2">Organization Mission</div>
+<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-3">
+                                Committed to restoring urban biodiversity through community-led reforestation projects and sustainable water management systems in developing metropolitan areas.
+                            </p>
+</div>
+<div class="mb-8 grid grid-cols-2 gap-4">
+<div class="p-4 bg-background/40 rounded-2xl border border-white/5">
+<div class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-1">Registration ID</div>
+<div class="text-sm font-mono text-secondary">NGO-2023-8842-AX</div>
+</div>
+<div class="p-4 bg-background/40 rounded-2xl border border-white/5">
+<div class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-1">Documents</div>
+<div class="text-sm font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary-container">check_circle</span>
+                                Verified Tax ID
+                            </div>
+</div>
+</div>
+<div class="mt-auto flex items-center gap-3">
+<button class="flex-1 py-3 rounded-xl bg-primary-container text-on-primary-fixed text-xs font-black uppercase tracking-wider hover:opacity-90 transition-all">Approve NGO</button>
+<button class="flex-1 py-3 rounded-xl bg-error-container/20 text-error text-xs font-black uppercase tracking-wider hover:bg-error-container/40 transition-all">Reject</button>
+</div>
+</div>
+</div>
+<div class="glass-card p-8 rounded-[2.5rem] border border-white/5 hover:bg-[#353534]/60 transition-all group">
+<div class="flex flex-col h-full">
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl">medical_services</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-on-surface">Universal Care Found.</h4>
+<p class="text-xs text-secondary font-bold uppercase tracking-widest">Public Healthcare</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2.5 rounded-xl bg-zinc-800 text-zinc-400 hover:text-white transition-colors" title="View Document">
+<span class="material-symbols-outlined text-lg">description</span>
+</button>
+</div>
+</div>
+<div class="mb-6">
+<div class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-2">Organization Mission</div>
+<p class="text-sm text-on-surface-variant leading-relaxed line-clamp-3">
+                                Providing essential medical supplies and mobile health clinics to underserved remote communities, focusing on maternal health and preventative care education.
+                            </p>
+</div>
+<div class="mb-8 grid grid-cols-2 gap-4">
+<div class="p-4 bg-background/40 rounded-2xl border border-white/5">
+<div class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-1">Registration ID</div>
+<div class="text-sm font-mono text-secondary">MED-INT-4491-ZZ</div>
+</div>
+<div class="p-4 bg-background/40 rounded-2xl border border-white/5">
+<div class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-1">Documents</div>
+<div class="text-sm font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary-container">check_circle</span>
+                                Audit Ready
+                            </div>
+</div>
+</div>
+<div class="mt-auto flex items-center gap-3">
+<button class="flex-1 py-3 rounded-xl bg-primary-container text-on-primary-fixed text-xs font-black uppercase tracking-wider hover:opacity-90 transition-all">Approve NGO</button>
+<button class="flex-1 py-3 rounded-xl bg-error-container/20 text-error text-xs font-black uppercase tracking-wider hover:bg-error-container/40 transition-all">Reject</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Shop Verification Section -->
+<div>
+<div class="flex items-center justify-between mb-6 px-2">
+<h2 class="text-2xl font-black tracking-tight flex items-center gap-3">
+<span class="w-1.5 h-8 bg-primary-container rounded-full"></span>
+                        Shop Verification
+                    </h2>
+<span class="bg-primary-container/10 text-primary-container text-xs font-bold px-3 py-1 rounded-full border border-primary-container/20">8 Pending Shops</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="glass-card p-8 rounded-[2.5rem] border border-white/5 hover:bg-[#353534]/60 transition-all">
+<div class="flex flex-col h-full">
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-primary-container/10 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-3xl">shopping_bag</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-on-surface">Purely Organic Co.</h4>
+<p class="text-xs text-primary-container font-bold uppercase tracking-widest">Sustainability &amp; Goods</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="p-4 bg-background/40 rounded-2xl border border-white/5">
+<div class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-1">Category</div>
+<div class="text-sm font-bold">Eco-Lifestyle</div>
+</div>
+<div class="p-4 bg-background/40 rounded-2xl border border-white/5">
+<div class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-1">Reward Type</div>
+<div class="text-sm font-bold">Product Voucher</div>
+</div>
+</div>
+<div class="mb-8">
+<div class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-2">Proposed Impact Reward</div>
+<div class="flex items-center justify-between p-4 bg-primary-container/5 rounded-2xl border border-primary-container/20">
+<span class="text-sm font-medium">10% Off Entire Store</span>
+<span class="text-sm font-black text-primary-container">150 CC</span>
+</div>
+</div>
+<div class="mt-auto flex items-center gap-3">
+<button class="flex-1 py-3 rounded-xl bg-primary-container text-on-primary-fixed text-xs font-black uppercase tracking-wider hover:opacity-90 transition-all">Verify Store</button>
+<button class="flex-1 py-3 rounded-xl bg-error-container/20 text-error text-xs font-black uppercase tracking-wider hover:bg-error-container/40 transition-all">Reject</button>
+</div>
+</div>
+</div>
+<div class="glass-card p-8 rounded-[2.5rem] border border-white/5 hover:bg-[#353534]/60 transition-all">
+<div class="flex flex-col h-full">
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-primary-container/10 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-3xl">electric_car</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-on-surface">VoltCharge Hubs</h4>
+<p class="text-xs text-primary-container font-bold uppercase tracking-widest">Energy &amp; Transit</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="p-4 bg-background/40 rounded-2xl border border-white/5">
+<div class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-1">Category</div>
+<div class="text-sm font-bold">EV Infrastructure</div>
+</div>
+<div class="p-4 bg-background/40 rounded-2xl border border-white/5">
+<div class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-1">Reward Type</div>
+<div class="text-sm font-bold">Usage Credits</div>
+</div>
+</div>
+<div class="mb-8">
+<div class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-2">Proposed Impact Reward</div>
+<div class="flex items-center justify-between p-4 bg-primary-container/5 rounded-2xl border border-primary-container/20">
+<span class="text-sm font-medium">50kW Rapid Charge</span>
+<span class="text-sm font-black text-primary-container">500 CC</span>
+</div>
+</div>
+<div class="mt-auto flex items-center gap-3">
+<button class="flex-1 py-3 rounded-xl bg-primary-container text-on-primary-fixed text-xs font-black uppercase tracking-wider hover:opacity-90 transition-all">Verify Store</button>
+<button class="flex-1 py-3 rounded-xl bg-error-container/20 text-error text-xs font-black uppercase tracking-wider hover:bg-error-container/40 transition-all">Reject</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Activity Review Queue -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-6 px-2">
+<h2 class="text-2xl font-black tracking-tight flex items-center gap-3">
+<span class="w-1.5 h-8 bg-primary-container rounded-full"></span>
+                    Activity Review Queue
+                </h2>
+<button class="text-sm font-bold text-[#00ff87] flex items-center gap-1 hover:underline">
+                    View All Queue
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+<!-- Queue Item 1 -->
+<div class="glass-card p-6 rounded-[2.5rem] border border-white/5 flex flex-col md:flex-row gap-6 hover:bg-[#353534]/60 transition-colors">
+<div class="w-full md:w-48 h-48 rounded-3xl overflow-hidden flex-shrink-0">
+<img alt="Tree plantation proof" class="w-full h-full object-cover" data-alt="Young person kneeling in a forest clearing planting a small sapling into rich dark soil, vibrant green foliage and soft morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKLbMZD9eCaHX-_EkcbbOMbWxbtc8TMsbkg9AgmFRgKaRnyfTDtKATzOuyf7lIC2nxfDVdirPiz79KafffZaCTZGBPhLO67thNNXkfoqa3lgzokcHt9FaQBas2dMKqR_06udSO2xThz_UJHojbKlVomK1cXj3Pzwn1J77IydbE6LSfoIcU9XAsBMSs39dTT0tiCX6s8lhr7189_y70_81yPznX5MBX0lgyGg-Lw6c4PTms4rNk2B_vziiSNRAW4mzmwK4mtL1smvla"/>
+</div>
+<div class="flex-1 flex flex-col">
+<div class="flex items-center gap-3 mb-3">
+<img alt="User avatar" class="w-10 h-10 rounded-full object-cover border border-primary-container/30" data-alt="Smiling young woman with vibrant curly hair in a professional studio portrait with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6SmrSrkZSsEv6PndXBYnPiCuIRX9_v0qExrP5dS_z2kkE9ApdKdiqivE6hWSPOy6-aAE78GBLmjrrYHhccLnzA8VoFNYGPbBOVXx_Ne-KNmc7XxjT2iqOSXKltHnEhxS1ExxFKlpHQV5tZQv2sULfEoaa35BZXwkZGANS429SFk8sZOM8WB5Z4o2l_mTbuY4ftP-5RVSt5xz4OCx8YZ_7wE6buWYixMiim6BMkYXWiLFdPRHuKnAajAfj2alxJdPspSQ4JdUAMJws"/>
+<div>
+<div class="text-sm font-bold text-on-surface">Elena Rodriguez</div>
+<div class="text-[10px] uppercase tracking-widest text-[#00ff87] font-black">Tree Plantation</div>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6 line-clamp-2">
+                            Successfully planted 5 indigenous saplings in the Metropolitan Green Belt. Used biodegradable mulch and provided initial irrigation...
+                        </p>
+<div class="mt-auto flex items-center gap-3">
+<button class="flex-1 py-2.5 rounded-xl bg-primary-container text-on-primary-fixed text-xs font-black uppercase tracking-wider hover:opacity-90 transition-all">Approve</button>
+<button class="flex-1 py-2.5 rounded-xl bg-error-container/20 text-error text-xs font-black uppercase tracking-wider hover:bg-error-container/40 transition-all">Reject</button>
+<button class="p-2.5 rounded-xl bg-zinc-800 text-zinc-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Queue Item 2 -->
+<div class="glass-card p-6 rounded-[2.5rem] border border-white/5 flex flex-col md:flex-row gap-6 hover:bg-[#353534]/60 transition-colors">
+<div class="w-full md:w-48 h-48 rounded-3xl overflow-hidden flex-shrink-0">
+<img alt="Blood donation proof" class="w-full h-full object-cover" data-alt="Close-up of a clinical setting with a medical bag of donated blood resting on a stainless steel surface, clean and sterile aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbYIht0gWzSfeGsBs3_KW3xq4OkeWLD67p8QW4EmDsOWc2b9jtziokykcLQy-c6KUkaRPKvJzXuBFQ5X2RMpRdgidh_KhE_-lO5_THxUPY4o9psXrbrMkJGlMlEWm9u-cbesCWN9nF-GeRQi-XrBA52rdpWmLG3kD7dqzVeVlS0Ty3yi5KdyHxRZTIzEWlvWs53sZ_gkYwdDx9XgxHn5kIxNMqnc8Fc9aO5QuT8YxFIGNSj2QWDxBDKY6_LnCQ0LS-exrUOIQfNtZ-"/>
+</div>
+<div class="flex-1 flex flex-col">
+<div class="flex items-center gap-3 mb-3">
+<img alt="User avatar" class="w-10 h-10 rounded-full object-cover border border-primary-container/30" data-alt="Portrait of a young man with a friendly smile, outdoor natural lighting with greenery in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAAwHS0UwwTT_cZPZS68ZTSzVQGIsj4tI8M2DSUvo-w6QSpbVV8U21jSB9h20_t7Nu-D-CQzcAzR0l7X2LEB-WJg1fJYZ9FfHkeLOUYyBw6sAUzZ8NOGsxRrAK4IeUhNyRgwV-k-fpfVuqU8V9iCX-NZTCsmUOnUlZu43-CLdcObNQvrUNBMLNQSuja06p_d8Yi0ifAi6QTNkk31ZwEvk7MzmtVfkY5Db3zeaffTitgKawAgiuIlF1fBnDfRc8YSYUk6IxIaxppOSM"/>
+<div>
+<div class="text-sm font-bold text-on-surface">Marcus Chen</div>
+<div class="text-[10px] uppercase tracking-widest text-[#00ff87] font-black">Blood Donation</div>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6 line-clamp-2">
+                            Quarterly donation at Red Cross Center #42. Donor ID: 8829-X. Feeling great and ready to help save lives!
+                        </p>
+<div class="mt-auto flex items-center gap-3">
+<button class="flex-1 py-2.5 rounded-xl bg-primary-container text-on-primary-fixed text-xs font-black uppercase tracking-wider hover:opacity-90 transition-all">Approve</button>
+<button class="flex-1 py-2.5 rounded-xl bg-error-container/20 text-error text-xs font-black uppercase tracking-wider hover:bg-error-container/40 transition-all">Reject</button>
+<button class="p-2.5 rounded-xl bg-zinc-800 text-zinc-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Store Management & Bento Secondary -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Store Management -->
+<div class="lg:col-span-2 glass-card p-8 rounded-[2.5rem] border border-white/5">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h3 class="text-xl font-bold mb-1">Store Inventory</h3>
+<p class="text-xs text-on-surface-variant">Manage rewards and stock levels</p>
+</div>
+<button class="bg-[#353534] hover:bg-[#454544] text-[#00ff87] px-5 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">add</span>
+                        Add New Item
+                    </button>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 bg-background/40 rounded-2xl border border-white/5 group hover:border-[#00ff87]/30 transition-all">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-[#00ff87]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#00ff87]">eco</span>
+</div>
+<div>
+<div class="text-sm font-bold">Sustainable Kit</div>
+<div class="text-[10px] text-zinc-500">12 items remaining</div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="text-right">
+<div class="text-sm font-black text-[#00ff87]">2500 CC</div>
+<div class="text-[10px] text-zinc-500 uppercase tracking-tighter">Price</div>
+</div>
+<div class="w-24 h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+<div class="w-1/4 h-full bg-error-container"></div>
+</div>
+<button class="material-symbols-outlined text-zinc-600 hover:text-white">edit</button>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 bg-background/40 rounded-2xl border border-white/5 group hover:border-[#00ff87]/30 transition-all">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-container">local_gas_station</span>
+</div>
+<div>
+<div class="text-sm font-bold">EV Charger Voucher</div>
+<div class="text-[10px] text-zinc-500">85 items remaining</div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="text-right">
+<div class="text-sm font-black text-[#00ff87]">500 CC</div>
+<div class="text-[10px] text-zinc-500 uppercase tracking-tighter">Price</div>
+</div>
+<div class="w-24 h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+<div class="w-4/5 h-full bg-secondary-container"></div>
+</div>
+<button class="material-symbols-outlined text-zinc-600 hover:text-white">edit</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent System Events -->
+<div class="glass-card p-8 rounded-[2.5rem] border border-white/5 flex flex-col">
+<h3 class="text-xl font-bold mb-6">Recent Activity</h3>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="w-1 h-10 bg-primary-container rounded-full mt-1"></div>
+<div>
+<div class="text-xs text-on-surface-variant font-bold mb-1">2 mins ago</div>
+<div class="text-sm font-medium">New high-value activity submitted by <span class="text-[#00ff87]">@EcoWarrior_99</span></div>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-1 h-10 bg-secondary rounded-full mt-1"></div>
+<div>
+<div class="text-xs text-on-surface-variant font-bold mb-1">15 mins ago</div>
+<div class="text-sm font-medium">Reward store restock: <span class="text-secondary">Solar Backpacks</span> (+10)</div>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-1 h-10 bg-error rounded-full mt-1"></div>
+<div>
+<div class="text-xs text-on-surface-variant font-bold mb-1">1 hour ago</div>
+<div class="text-sm font-medium">System Alert: Database load spike detected in <span class="text-error">EU-West-1</span></div>
+</div>
+</div>
+</div>
+<div class="mt-auto pt-6">
+<button class="w-full py-3 bg-zinc-800/50 hover:bg-zinc-800 rounded-2xl text-xs font-bold transition-all">
+                        Open Event Explorer
+                    </button>
+</div>
+</div>
+</section>
+</main>
+</body></html>

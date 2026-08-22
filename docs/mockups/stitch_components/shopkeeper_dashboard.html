@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pulse Partner | Shopkeeper Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#131313",
+                    "secondary-container": "#017038",
+                    "on-primary-container": "#007138",
+                    "on-secondary": "#003919",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-fixed": "#00210c",
+                    "on-error": "#690005",
+                    "primary-fixed": "#60ff98",
+                    "primary-fixed-dim": "#00e478",
+                    "on-secondary-container": "#94f0aa",
+                    "surface-variant": "#353534",
+                    "surface-container-low": "#1c1b1b",
+                    "tertiary-container": "#ffdb79",
+                    "on-primary-fixed-variant": "#005227",
+                    "on-surface": "#e5e2e1",
+                    "surface-bright": "#3a3939",
+                    "primary-container": "#00ff87",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary-fixed-variant": "#584400",
+                    "on-surface-variant": "#b9cbb9",
+                    "surface-container-highest": "#353534",
+                    "outline-variant": "#3b4b3d",
+                    "secondary": "#7eda96",
+                    "inverse-primary": "#006d36",
+                    "on-primary": "#003919",
+                    "on-tertiary": "#3d2f00",
+                    "tertiary-fixed-dim": "#e5c364",
+                    "primary": "#f1ffef",
+                    "on-background": "#e5e2e1",
+                    "on-primary-fixed": "#00210c",
+                    "on-tertiary-fixed": "#241a00",
+                    "on-error-container": "#ffdad6",
+                    "tertiary": "#fffaf7",
+                    "tertiary-fixed": "#ffe08d",
+                    "secondary-fixed": "#9af7b0",
+                    "secondary-fixed-dim": "#7eda96",
+                    "inverse-surface": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "outline": "#849585",
+                    "on-secondary-fixed-variant": "#005227",
+                    "surface-container": "#201f1f",
+                    "error": "#ffb4ab",
+                    "on-tertiary-container": "#795f01",
+                    "background": "#131313",
+                    "surface-tint": "#00e478",
+                    "surface": "#131313",
+                    "error-container": "#93000a"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "display": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(53, 53, 52, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 30px rgba(0, 255, 135, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- Sidebar Navigation -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#131313] flex flex-col p-4 gap-2 z-40 hidden md:flex">
+<div class="mb-8 px-2 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div>
+<h1 class="text-[#00ff87] font-black tracking-tight leading-tight">Pulse Partner</h1>
+<p class="font-['Inter'] text-[10px] tracking-widest uppercase text-on-surface-variant">Retail Partner</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-[#00ff87] bg-[#353534] rounded-lg font-['Inter'] text-sm tracking-wide uppercase transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbb9] hover:text-white hover:bg-[#1c1b1b] rounded-lg font-['Inter'] text-sm tracking-wide uppercase transition-all" href="#">
+<span class="material-symbols-outlined">qr_code</span>
+                Verify Coupon
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbb9] hover:text-white hover:bg-[#1c1b1b] rounded-lg font-['Inter'] text-sm tracking-wide uppercase transition-all" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+                Create Coupon
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbb9] hover:text-white hover:bg-[#1c1b1b] rounded-lg font-['Inter'] text-sm tracking-wide uppercase transition-all" href="#">
+<span class="material-symbols-outlined">history</span>
+                Redemptions
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbb9] hover:text-white hover:bg-[#1c1b1b] rounded-lg font-['Inter'] text-sm tracking-wide uppercase transition-all" href="#">
+<span class="material-symbols-outlined">storefront</span>
+                Shop Profile
+            </a>
+</nav>
+<div class="mt-auto p-4 rounded-2xl bg-surface-container-low border border-outline-variant/10">
+<p class="text-[10px] uppercase tracking-tighter text-on-surface-variant mb-2">Partner Support</p>
+<button class="w-full bg-surface-variant/40 hover:bg-surface-variant/60 py-2 rounded-lg text-xs font-bold transition-all scale-95 active:scale-90">Get Help</button>
+</div>
+</aside>
+<!-- Main Wrapper -->
+<main class="md:ml-64 flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 left-0 md:left-64 z-50 bg-[#131313]/80 backdrop-blur-md shadow-[0_4px_30px_rgba(0,255,135,0.05)]">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4 flex-1 max-w-xl">
+<div class="relative w-full group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary-container transition-colors">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl pl-10 pr-4 py-2 text-sm focus:ring-1 focus:ring-primary-container/30 transition-all text-on-surface" placeholder="Search analytics or coupons..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4 ml-4">
+<button class="material-symbols-outlined p-2 rounded-full hover:bg-[#353534]/50 transition-colors text-[#b9cbb9] scale-95 active:scale-90">qr_code_scanner</button>
+<button class="material-symbols-outlined p-2 rounded-full hover:bg-[#353534]/50 transition-colors text-[#b9cbb9] relative scale-95 active:scale-90">
+                        notifications
+                        <span class="absolute top-2 right-2 w-2 h-2 bg-primary-container rounded-full ring-2 ring-surface"></span>
+</button>
+<div class="h-8 w-px bg-surface-container-high mx-2"></div>
+<div class="flex items-center gap-3 group cursor-pointer">
+<img alt="Shopkeeper Avatar" class="w-10 h-10 rounded-full object-cover ring-2 ring-transparent group-hover:ring-primary-container transition-all" data-alt="portrait of a professional shop owner with a friendly smile wearing a clean apron in a boutique setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6KOgYvDEv7wwYa5hPGaXY1FJ6Me1ivP-nWS4Y5danRPkriHZdmD20FvSDbOUbdfhiNe3fxs3qdBNtU78flBP6yRtO09HInJUETIlIFM6V0Mm8FT9i10eqq2aSUYOAjGA5y3A_vYk19OGeC7aUjYlKn9yzWRnP0Ekd_h1fiHYKuFMa3S-1EDIHRf8WetCC-5c-wWtunTrMXZkeNQZzmJvIioLeKTJBkcyFqLVmDuLV-xinJfazMqvvcsE02UbwT126IDgnmiqiNYP_"/>
+<div class="hidden sm:block">
+<p class="text-xs font-bold text-on-surface leading-none">Marcus Retail</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Manager</p>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="pt-24 px-6 pb-24 max-w-7xl mx-auto w-full space-y-8">
+<!-- Performance Metrics Row -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface-container-low p-6 rounded-3xl glow-hover transition-all">
+<p class="text-[10px] font-bold uppercase tracking-[0.1em] text-on-surface-variant mb-4">Total Redemptions</p>
+<div class="flex items-end justify-between">
+<h3 class="text-4xl font-black text-on-surface tracking-tighter leading-none">1,284</h3>
+<span class="text-primary-container text-xs font-bold bg-primary-container/10 px-2 py-1 rounded-full">+12%</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-3xl glow-hover transition-all">
+<p class="text-[10px] font-bold uppercase tracking-[0.1em] text-on-surface-variant mb-4">Coupons Created</p>
+<div class="flex items-end justify-between">
+<h3 class="text-4xl font-black text-on-surface tracking-tighter leading-none">42</h3>
+<span class="text-primary-container text-xs font-bold bg-primary-container/10 px-2 py-1 rounded-full">+4</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-3xl glow-hover transition-all">
+<p class="text-[10px] font-bold uppercase tracking-[0.1em] text-on-surface-variant mb-4">Revenue Generated</p>
+<div class="flex items-end justify-between">
+<h3 class="text-4xl font-black text-on-surface tracking-tighter leading-none">$8.4k</h3>
+<span class="text-primary-container text-xs font-bold bg-primary-container/10 px-2 py-1 rounded-full">+21%</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-3xl glow-hover transition-all border-none">
+<p class="text-[10px] font-bold uppercase tracking-[0.1em] text-on-surface-variant mb-4">Active Coupons</p>
+<div class="flex items-end justify-between">
+<h3 class="text-4xl font-black text-primary-container tracking-tighter leading-none">15</h3>
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container text-sm">bolt</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Area: Bento Style -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column -->
+<div class="lg:col-span-7 space-y-8">
+<!-- Verify Coupon Card -->
+<div class="glass-card p-8 rounded-[2.5rem] relative overflow-hidden">
+<div class="absolute top-0 right-0 -mt-12 -mr-12 w-48 h-48 bg-primary-container/5 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<h2 class="text-2xl font-bold tracking-tight mb-2">Verify Coupon</h2>
+<p class="text-on-surface-variant text-sm mb-6">Scan customer QR code or enter code manually to redeem rewards.</p>
+<div class="flex flex-col sm:flex-row gap-3">
+<div class="relative flex-1">
+<input class="w-full bg-surface-container-highest/60 border-none rounded-2xl px-5 py-4 text-lg font-mono focus:ring-2 focus:ring-primary-container transition-all" placeholder="Enter Coupon Code (e.g. GRN-992)" type="text"/>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-black px-8 py-4 rounded-2xl flex items-center justify-center gap-2 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                                    VERIFY
+                                </button>
+</div>
+</div>
+</div>
+<!-- Recent Redemptions -->
+<div class="bg-surface-container-low rounded-[2.5rem] overflow-hidden">
+<div class="p-8 pb-4 flex justify-between items-center">
+<h2 class="text-xl font-bold tracking-tight">Recent Redemptions</h2>
+<button class="text-primary-container text-xs font-bold uppercase tracking-widest hover:underline transition-all">View All</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-surface-container/50">
+<tr>
+<th class="px-8 py-4 text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">User</th>
+<th class="px-4 py-4 text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Reward</th>
+<th class="px-4 py-4 text-[10px] uppercase tracking-widest text-on-surface-variant font-bold text-center">Cost</th>
+<th class="px-8 py-4 text-[10px] uppercase tracking-widest text-on-surface-variant font-bold text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest/20">
+<tr class="hover:bg-surface-container-highest/30 transition-colors group">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-[10px] font-bold">JD</div>
+<span class="text-sm font-medium">Jane Doe</span>
+</div>
+</td>
+<td class="px-4 py-5">
+<span class="text-sm font-medium">Eco-Tote Bag</span>
+</td>
+<td class="px-4 py-5 text-center">
+<span class="text-xs font-mono text-primary-container">500 pts</span>
+</td>
+<td class="px-8 py-5 text-right">
+<span class="inline-flex items-center gap-1 bg-primary-container/10 text-primary-container text-[10px] font-bold px-2 py-1 rounded-full">
+<span class="w-1 h-1 bg-primary-container rounded-full"></span>
+                                                VERIFIED
+                                            </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-highest/30 transition-colors group">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-[10px] font-bold">RS</div>
+<span class="text-sm font-medium">Rick Smith</span>
+</div>
+</td>
+<td class="px-4 py-5">
+<span class="text-sm font-medium">15% Discount Voucher</span>
+</td>
+<td class="px-4 py-5 text-center">
+<span class="text-xs font-mono text-primary-container">1200 pts</span>
+</td>
+<td class="px-8 py-5 text-right">
+<span class="inline-flex items-center gap-1 bg-surface-variant/50 text-on-surface-variant text-[10px] font-bold px-2 py-1 rounded-full">
+<span class="w-1 h-1 bg-on-surface-variant rounded-full"></span>
+                                                REDEEMED
+                                            </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Right Column -->
+<div class="lg:col-span-5 space-y-8">
+<!-- Create Coupon Card -->
+<div class="bg-surface-container-low p-8 rounded-[2.5rem]">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary-container">add_circle</span>
+<h2 class="text-xl font-bold tracking-tight">Create Campaign</h2>
+</div>
+<form class="space-y-5">
+<div>
+<label class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant block mb-2">Campaign Title</label>
+<input class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm focus:ring-1 focus:ring-primary-container/50" placeholder="e.g. Weekend Sustainability Sale" type="text"/>
+</div>
+<div>
+<label class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant block mb-2">Description</label>
+<textarea class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm focus:ring-1 focus:ring-primary-container/50" placeholder="Describe the reward..." rows="3"></textarea>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant block mb-2">Coin Cost</label>
+<input class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm focus:ring-1 focus:ring-primary-container/50" placeholder="1000" type="number"/>
+</div>
+<div>
+<label class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant block mb-2">Expiry</label>
+<input class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 text-sm focus:ring-1 focus:ring-primary-container/50 text-on-surface-variant" type="date"/>
+</div>
+</div>
+<button class="w-full bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container border border-outline-variant/30 hover:border-transparent py-4 rounded-xl font-bold text-sm transition-all scale-95 active:scale-90 flex items-center justify-center gap-2" type="button">
+                                Launch Campaign
+                            </button>
+</form>
+</div>
+<!-- Shop Profile Card -->
+<div class="bg-surface-container-low rounded-[2.5rem] overflow-hidden">
+<div class="h-32 bg-cover bg-center" data-alt="interior view of a modern boutique clothing store with eco-friendly decor and wooden shelving in soft ambient lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSY3O1fuhPGwMZbjAKZe3woXqaEoRfYMjH2R9Y4F0-Dk2DKLHxiOkUpYHmJhG-2lRj6pZEz0w3Ysbu196KpJWU_Jk_cUwgIUCUcWrGD6Mhx8sBvh7YgvOs7l743EuqSa8K8WtGF5_kHe4ayw2xGd8pOiENCUaTNpD4OtlF0271WW4n6YFlLqoItkbXzhrG8EkkKjOoEMoVmc0SYCMS0-3VjVHY90ab_n_xoKnuM-4h79sw6P__HaD_Uav_dbh9KMFpw2KFgbTjwCnT')">
+</div>
+<div class="p-8 -mt-10 relative">
+<div class="w-20 h-20 bg-surface rounded-3xl overflow-hidden shadow-2xl p-1 mb-4 ring-2 ring-primary-container/20">
+<div class="w-full h-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+</div>
+<div class="flex justify-between items-start mb-6">
+<div>
+<h2 class="text-2xl font-black tracking-tighter">Green Leaf Boutique</h2>
+<p class="text-primary-container text-xs font-bold uppercase tracking-widest">Retail • Sustainable Fashion</p>
+</div>
+</div>
+<div class="space-y-4 mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">location_on</span>
+<span class="text-sm text-on-surface-variant">124 Artisan Alley, Eco District</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">schedule</span>
+<span class="text-sm text-on-surface-variant">Open • Closes 8:00 PM</span>
+</div>
+</div>
+<button class="w-full bg-primary-container/10 hover:bg-primary-container/20 text-primary-container py-4 rounded-2xl font-bold text-sm transition-all border border-primary-container/20 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">edit</span>
+                                Update Profile
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Mobile Navigation Shell -->
+<footer class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 md:hidden bg-[#131313]/90 backdrop-blur-lg rounded-t-2xl z-50 border-none shadow-[0_-8px_40px_rgba(0,255,135,0.08)]">
+<a class="flex flex-col items-center justify-center bg-[#00ff87] text-[#131313] rounded-xl px-4 py-1 scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-['Inter'] text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#b9cbb9] px-4 py-1 active:bg-[#353534] scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">qr_code_scanner</span>
+<span class="font-['Inter'] text-[10px] font-medium">Scan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#b9cbb9] px-4 py-1 active:bg-[#353534] scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">confirmation_number</span>
+<span class="font-['Inter'] text-[10px] font-medium">Coupons</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#b9cbb9] px-4 py-1 active:bg-[#353534] scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-['Inter'] text-[10px] font-medium">Profile</span>
+</a>
+</footer>
+</main>
+</body></html>

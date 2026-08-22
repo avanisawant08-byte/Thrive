@@ -1,0 +1,2 @@
+in store page containers apply images
+Interaction log is important ?
