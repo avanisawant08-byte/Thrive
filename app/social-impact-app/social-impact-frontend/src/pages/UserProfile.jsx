@@ -133,7 +133,7 @@ const UserProfile = () => {
           </div>
           <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-3">Sign in to view your Profile</h2>
           <p className="text-on-surface-variant text-sm mb-8 leading-relaxed">
-            Create an account or sign in to track your social impact points, manage volunteer activities, and customize your profile.
+            Create an account or sign in to track your Thrive impact points, manage volunteer activities, and customize your profile.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button

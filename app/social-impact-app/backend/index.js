@@ -51,7 +51,7 @@ const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 
 // Base route
 app.get('/', (req, res) => {
-  res.json({ message: 'Social Impact API Running!' });
+  res.json({ message: 'Thrive API Running!' });
 });
 
 // 404 & Error Handler
