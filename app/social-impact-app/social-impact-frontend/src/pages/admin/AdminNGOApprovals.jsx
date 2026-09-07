@@ -69,7 +69,7 @@ const AdminNGOApprovals = () => {
               NGO <span className="accent">Approvals</span>
             </h1>
             <p className="admin-hero-desc">
-              Review and verify organizations joining the Social Impact Ecosystem. Ensure all documentation meets our ethical transparency standards.
+              Review and verify organizations joining the Thrive Ecosystem. Ensure all documentation meets our ethical transparency standards.
             </p>
           </div>
           {!loading && (

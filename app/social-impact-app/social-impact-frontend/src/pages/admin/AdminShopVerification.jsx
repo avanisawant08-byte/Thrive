@@ -86,7 +86,7 @@ const AdminShopVerification = () => {
               Shop <span className="accent">Verification</span>
             </h1>
             <p className="admin-hero-desc">
-              Manage sustainable partners for the Impact Rewards program. Create, verify, and manage shopkeeper accounts.
+              Manage sustainable partners for the Thrive Rewards program. Create, verify, and manage shopkeeper accounts.
             </p>
           </div>
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
@@ -236,7 +236,7 @@ const AdminShopVerification = () => {
           }}>
             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem' }}>Create Shopkeeper</h3>
             <p style={{ color: 'var(--on-surface-variant)', fontSize: '0.875rem', marginBottom: '2rem' }}>
-              Add a new verified shop partner to the Impact ecosystem.
+              Add a new verified shop partner to the Thrive ecosystem.
             </p>
             <form onSubmit={handleCreate}>
               {[

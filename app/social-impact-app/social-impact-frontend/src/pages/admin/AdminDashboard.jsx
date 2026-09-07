@@ -65,7 +65,7 @@ const AdminDashboard = () => {
         <div style={{ position: 'relative', zIndex: 1 }}>
           <span className="admin-hero-label">Admin Control Center</span>
           <h1 className="admin-hero-title">
-            Impact <span className="accent">Console</span>
+            Thrive <span className="accent">Console</span>
           </h1>
           <p className="admin-hero-desc">
             Monitor platform health, approve NGOs, verify shops, and manage activity submissions from one unified command center.

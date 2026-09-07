@@ -45,7 +45,7 @@ const AdminLayout = ({ children }) => {
             <span className="material-symbols-outlined">eco</span>
           </div>
           <div>
-            <div className="admin-sidebar-brand-title">Impact Console</div>
+            <div className="admin-sidebar-brand-title">Thrive Console</div>
             <div className="admin-sidebar-brand-sub" style={{ fontSize: '8px', letterSpacing: '0.05em' }}>Connecting Good Deeds with Great Perks</div>
           </div>
         </div>
@@ -85,7 +85,7 @@ const AdminLayout = ({ children }) => {
 
       {/* Top Bar */}
       <header className="admin-topbar">
-        <div className="admin-topbar-title">Impact Admin</div>
+        <div className="admin-topbar-title">Thrive Admin</div>
         <div className="admin-topbar-actions">
           <div style={{ position: 'relative' }}>
             <span className="material-symbols-outlined" style={{
