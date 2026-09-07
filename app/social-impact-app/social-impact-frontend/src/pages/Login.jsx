@@ -67,7 +67,11 @@ const Login = () => {
         localStorage.setItem('user', JSON.stringify(response.data.user || { name }));
         
         const userRole = response.data.user?.role || 'user';
-        if (userRole === 'ngo') {
+        if (userRole === 'admin') {
+          navigate('/admin');
+        } else if (userRole === 'shopkeeper') {
+          navigate('/shopkeeper');
+        } else if (userRole === 'ngo') {
           navigate('/ngo-command');
         } else {
           navigate('/dashboard');
@@ -95,7 +99,11 @@ const Login = () => {
         localStorage.setItem('user', JSON.stringify(response.data.user));
         
         const userRole = response.data.user?.role || 'user';
-        if (userRole === 'ngo') {
+        if (userRole === 'admin') {
+          navigate('/admin');
+        } else if (userRole === 'shopkeeper') {
+          navigate('/shopkeeper');
+        } else if (userRole === 'ngo') {
           navigate('/ngo-command');
         } else {
           navigate('/dashboard');
