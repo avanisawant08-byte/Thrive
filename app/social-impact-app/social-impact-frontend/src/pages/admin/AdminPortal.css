@@ -26,6 +26,60 @@
   --tertiary-fixed-dim: #e5c364;
 }
 
+/* ===== Light Theme Overrides ===== */
+html:not(.dark) .admin-portal {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-container: #f1f5f9;
+  --surface-container-low: #ffffff;
+  --surface-container-high: #e2e8f0;
+  --surface-container-highest: #cbd5e1;
+  --surface-variant: #e2e8f0;
+  --surface-bright: #ffffff;
+  --on-surface: #0f172a;
+  --on-surface-variant: #475569;
+  --primary: #059669;
+  --primary-container: #059669;
+  --on-primary: #ffffff;
+  --on-primary-fixed: #ffffff;
+  --secondary: #10b981;
+  --secondary-container: #059669;
+  --error: #ef4444;
+  --error-container: #fee2e2;
+  --outline-variant: #cbd5e1;
+  --tertiary-container: #d97706;
+  --tertiary-fixed-dim: #b45309;
+}
+
+html:not(.dark) .admin-topbar {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+html:not(.dark) .admin-sidebar {
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
+}
+
+html:not(.dark) .stat-card,
+html:not(.dark) .glass-panel,
+html:not(.dark) .ngo-card,
+html:not(.dark) .shop-card,
+html:not(.dark) .activity-review-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+html:not(.dark) .ngo-card-image-overlay {
+  background: linear-gradient(to top, #ffffff, transparent);
+}
+
+html:not(.dark) .activity-card-desc {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
 /* ===== Base ===== */
 .admin-portal {
   font-family: 'Inter', sans-serif;

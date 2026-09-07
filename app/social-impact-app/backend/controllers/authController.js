@@ -149,15 +149,11 @@ const forgotPassword = async (req, res) => {
       return res.status(404).json({ message: 'No account found with this email address' });
     }
 
-    // Send password reset email via Firebase
-    try {
-      const resetLink = await admin.auth().generatePasswordResetLink(email);
-      console.log('Password reset link:', resetLink);
-    } catch (firebaseErr) {
-      console.log('Firebase reset link notice:', firebaseErr.message);
-    }
+    // Note: The frontend is currently handling the actual sending of the password reset 
+    // email using Firebase Client SDK's `sendPasswordResetEmail` function.
+    // This backend route is just used to verify the user exists in our MongoDB database.
 
-    res.json({ message: 'Password reset instructions sent to your email. Please check your inbox!' });
+    res.json({ message: 'User verified. The frontend will send the reset email.' });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

@@ -200,34 +200,36 @@ const ShopkeeperDashboard = () => {
   if (!user) return null;
 
   return (
-    <div className="bg-surface font-body text-on-surface min-h-screen flex">
+    <div className="bg-slate-50 dark:bg-surface font-body text-slate-900 dark:text-on-surface min-h-screen flex transition-colors">
       <style>{`
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        .glass-card { background: rgba(53, 53, 52, 0.4); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .glass-card { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        html:not(.dark) .glass-card { background: rgba(255, 255, 255, 0.85); border: 1px solid #e2e8f0; }
+        html.dark .glass-card { background: rgba(53, 53, 52, 0.4); }
         .glow-hover:hover { box-shadow: 0 0 30px rgba(0, 255, 135, 0.1); }
       `}</style>
       
       {/* Sidebar Navigation */}
-      <aside className="w-64 fixed left-0 top-0 h-screen bg-[#131313] flex-col p-4 gap-2 z-40 hidden md:flex border-r border-white/5">
+      <aside className="w-64 fixed left-0 top-0 h-screen bg-white dark:bg-[#131313] flex-col p-4 gap-2 z-40 hidden md:flex border-r border-slate-200 dark:border-white/5 transition-colors">
         <div className="mb-8 px-2 flex items-center gap-3">
-          <div className="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center text-on-primary">
+          <div className="w-10 h-10 bg-emerald-600 dark:bg-primary-container rounded-lg flex items-center justify-center text-white dark:text-on-primary">
             <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>eco</span>
           </div>
           <div>
-            <h1 className="text-[#00ff87] font-black tracking-tight leading-tight">Pulse Partner</h1>
-            <p className="font-['Inter'] text-[10px] tracking-widest uppercase text-on-surface-variant">Retail Partner</p>
+            <h1 className="text-emerald-700 dark:text-[#00ff87] font-black tracking-tight leading-tight">Pulse Partner</h1>
+            <p className="font-['Inter'] text-[10px] tracking-widest uppercase text-slate-500 dark:text-on-surface-variant">Retail Partner</p>
           </div>
         </div>
         <nav className="flex-1 flex flex-col gap-1">
-          <a className="flex items-center gap-3 px-4 py-3 text-[#00ff87] bg-[#353534] rounded-lg font-['Inter'] text-sm tracking-wide uppercase transition-all" href="#">
+          <a className="flex items-center gap-3 px-4 py-3 text-emerald-700 dark:text-[#00ff87] bg-emerald-50 dark:bg-[#353534] rounded-lg font-['Inter'] text-sm tracking-wide uppercase transition-all" href="#">
             <span className="material-symbols-outlined">dashboard</span>
             Dashboard
           </a>
         </nav>
-        <div className="mt-auto p-4 rounded-2xl bg-surface-container-low border border-outline-variant/10">
+        <div className="mt-auto p-4 rounded-2xl bg-slate-100 dark:bg-surface-container-low border border-slate-200 dark:border-outline-variant/10">
           <button 
             onClick={() => { localStorage.clear(); navigate('/login'); }}
-            className="w-full bg-error/10 hover:bg-error/20 text-error py-2 rounded-lg text-xs font-bold transition-all"
+            className="w-full bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-error py-2 rounded-lg text-xs font-bold transition-all"
           >
             Logout
           </button>
@@ -237,22 +239,22 @@ const ShopkeeperDashboard = () => {
       {/* Main Wrapper */}
       <main className="md:ml-64 flex flex-col min-h-screen w-full">
         {/* TopAppBar */}
-        <header className="fixed top-0 right-0 left-0 md:left-64 z-30 bg-[#131313]/80 backdrop-blur-md shadow-[0_4px_30px_rgba(0,255,135,0.05)]">
+        <header className="fixed top-0 right-0 left-0 md:left-64 z-30 bg-white/80 dark:bg-[#131313]/80 backdrop-blur-md border-b border-slate-200 dark:border-white/5 shadow-sm dark:shadow-[0_4px_30px_rgba(0,255,135,0.05)] transition-colors">
           <div className="flex justify-between items-center px-6 py-4 w-full">
             <div className="flex items-center gap-4 flex-1 max-w-xl">
               <div className="relative w-full group">
-                <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary-container transition-colors">search</span>
-                <input className="w-full bg-surface-container-low border-none rounded-xl pl-10 pr-4 py-2 text-sm focus:ring-1 focus:ring-primary-container/30 transition-all text-on-surface outline-none" placeholder="Search analytics or coupons..." type="text"/>
+                <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-on-surface-variant group-focus-within:text-emerald-600 dark:group-focus-within:text-primary-container transition-colors">search</span>
+                <input className="w-full bg-slate-100 dark:bg-surface-container-low border border-slate-200 dark:border-none rounded-xl pl-10 pr-4 py-2 text-sm focus:ring-1 focus:ring-emerald-500/30 transition-all text-slate-900 dark:text-on-surface outline-none" placeholder="Search analytics or coupons..." type="text"/>
               </div>
             </div>
             <div className="flex items-center gap-4 ml-4">
               <div className="flex items-center gap-3 group cursor-pointer">
-                <div className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container font-bold text-lg ring-2 ring-transparent group-hover:ring-primary-container transition-all">
+                <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-surface-container-high flex items-center justify-center text-emerald-600 dark:text-primary-container font-bold text-lg ring-2 ring-transparent group-hover:ring-emerald-500 transition-all">
                   {user.name?.charAt(0).toUpperCase()}
                 </div>
                 <div className="hidden sm:block">
-                  <p className="text-xs font-bold text-on-surface leading-none">{user.shopDetails?.shopName || user.name}</p>
-                  <p className="text-[10px] text-on-surface-variant uppercase tracking-tighter">Manager</p>
+                  <p className="text-xs font-bold text-slate-900 dark:text-on-surface leading-none">{user.shopDetails?.shopName || user.name}</p>
+                  <p className="text-[10px] text-slate-500 dark:text-on-surface-variant uppercase tracking-tighter">Manager</p>
                 </div>
               </div>
             </div>
@@ -263,16 +265,16 @@ const ShopkeeperDashboard = () => {
         <div className="pt-24 px-6 pb-24 max-w-7xl mx-auto w-full space-y-8">
           {/* Performance Metrics Row */}
           <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-surface-container-low p-6 rounded-3xl glow-hover transition-all">
-              <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-on-surface-variant mb-4">Total Redemptions</p>
+            <div className="bg-white dark:bg-surface-container-low p-6 rounded-3xl border border-slate-200 dark:border-none shadow-sm dark:shadow-none glow-hover transition-all">
+              <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-500 dark:text-on-surface-variant mb-4">Total Redemptions</p>
               <div className="flex items-end justify-between">
-                <h3 className="text-4xl font-black text-on-surface tracking-tighter leading-none">{stats.totalRedemptions}</h3>
+                <h3 className="text-4xl font-black text-slate-900 dark:text-on-surface tracking-tighter leading-none">{stats.totalRedemptions}</h3>
               </div>
             </div>
-            <div className="bg-surface-container-low p-6 rounded-3xl glow-hover transition-all">
-              <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-on-surface-variant mb-4">Total Revenue Generated</p>
+            <div className="bg-white dark:bg-surface-container-low p-6 rounded-3xl border border-slate-200 dark:border-none shadow-sm dark:shadow-none glow-hover transition-all">
+              <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-500 dark:text-on-surface-variant mb-4">Total Revenue Generated</p>
               <div className="flex items-end justify-between">
-                <h3 className="text-4xl font-black text-on-surface tracking-tighter leading-none">
+                <h3 className="text-4xl font-black text-slate-900 dark:text-on-surface tracking-tighter leading-none">
                   {stats.totalRevenuePoints} pts
                 </h3>
               </div>
