@@ -44,7 +44,7 @@ const Login = () => {
       let idToken = null;
 
       // If logging in, attempt Firebase sign-in to get fresh ID token and verify reset password
-      if (isLogin) {
+      if (isLogin && auth) {
         try {
           const firebaseRes = await signInWithEmailAndPassword(auth, email, password);
           if (firebaseRes.user) {
@@ -89,6 +89,11 @@ const Login = () => {
     try {
       setLoading(true);
       setError('');
+      if (!auth || !googleProvider) {
+        setError('Google Authentication service is not configured.');
+        setLoading(false);
+        return;
+      }
       const result = await signInWithPopup(auth, googleProvider);
       const idToken = await result.user.getIdToken();
       
@@ -126,6 +131,9 @@ const Login = () => {
     setForgotFeedback(null);
 
     try {
+      if (!auth) {
+        throw new Error('Authentication service is not available.');
+      }
       // Send reset email via Firebase Client Auth SDK
       await sendPasswordResetEmail(auth, targetEmail);
 
