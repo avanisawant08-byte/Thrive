@@ -151,12 +151,9 @@ const Login = () => {
       <div className="w-full max-w-[480px] space-y-10">
         {/* Branding Anchor */}
         <div className="flex flex-col items-center space-y-4">
-          <div className="w-14 h-14 bg-surface-container-high rounded-2xl glass-border flex items-center justify-center shadow-[0_0_30px_rgba(0,255,135,0.15)]">
-            <span className="material-symbols-outlined text-primary-container text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>eco</span>
-          </div>
           <div className="text-center">
-            <h1 className="font-headline font-black text-2xl tracking-[-0.05em] text-primary">IMPACT PULSE</h1>
-            <p className="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/60 mt-1">Social Responsibility Ecosystem</p>
+            <h1 className="font-headline font-black text-2xl tracking-[-0.05em] text-primary">THRIVE</h1>
+            <p className="font-label text-[11px] font-bold uppercase tracking-[0.18em] text-primary-container/90 mt-1">Connecting Good Deeds with Great Perks</p>
           </div>
         </div>
 

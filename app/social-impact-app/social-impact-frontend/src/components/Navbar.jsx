@@ -90,8 +90,13 @@ const Navbar = () => {
     <>
       <header className="bg-white/80 dark:bg-zinc-900/40 backdrop-blur-[20px] docked full-width top-0 sticky z-50 border-b border-slate-200/80 dark:border-white/5 shadow-[0_4px_20px_rgba(15,23,42,0.04)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.3)] transition-colors duration-300">
         <div className="flex justify-between items-center px-4 sm:px-8 h-16 sm:h-20 w-full max-w-screen-2xl mx-auto">
-          <Link to="/" className="text-lg sm:text-xl font-black tracking-[-0.05em] text-slate-900 dark:text-[#f1ffef] transition-colors flex-shrink-0">
-            IMPACT PULSE
+          <Link to="/" className="flex items-center gap-3 flex-shrink-0">
+            <span className="text-lg sm:text-xl font-black tracking-[-0.05em] text-slate-900 dark:text-[#f1ffef] transition-colors">
+              THRIVE
+            </span>
+            <span className="hidden lg:inline-flex items-center px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase bg-emerald-500/10 dark:bg-[#00ff87]/10 text-emerald-700 dark:text-[#00ff87] border border-emerald-500/20 dark:border-[#00ff87]/20">
+              Connecting Good Deeds with Great Perks
+            </span>
           </Link>
           <nav className="hidden md:flex gap-6 lg:gap-8">
             {navLinks.map((link) => (

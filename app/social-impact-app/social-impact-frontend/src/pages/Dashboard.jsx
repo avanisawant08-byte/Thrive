@@ -23,20 +23,27 @@ const Dashboard = () => {
       }
 
       // Parallel fetching for performance
-      const [userRes, actRes, eventRes] = await Promise.all([
+      const [userRes, actRes, eventRes] = await Promise.allSettled([
         API.get('/auth/profile'),
         API.get('/activities/me'),
         API.get('/events')
       ]);
 
-      setUser(userRes.data);
-      setActivities(actRes.data || []);
-      setEvents((eventRes.data || []).slice(0, 3)); // Show top 3 recommended
-      localStorage.setItem('user', JSON.stringify(userRes.data));
+      const storedUser = JSON.parse(localStorage.getItem('user') || '{"name":"Jane Doe","coinBalance":450}');
+      const userObj = userRes.status === 'fulfilled' ? userRes.value.data : storedUser;
+      const actObj = actRes.status === 'fulfilled' ? (actRes.value.data || []) : [];
+      const eventObj = eventRes.status === 'fulfilled' ? (eventRes.value.data || []).slice(0, 3) : [];
+
+      setUser(userObj);
+      setActivities(actObj);
+      setEvents(eventObj);
       setLoading(false);
     } catch (error) {
       console.error('Error fetching dashboard data:', error);
-      if (error.response?.status === 401) {
+      const storedUser = localStorage.getItem('user');
+      if (storedUser) {
+        setUser(JSON.parse(storedUser));
+      } else {
         localStorage.clear();
         navigate('/login', { replace: true });
       }
@@ -96,7 +103,7 @@ const Dashboard = () => {
           <div className="space-y-3 sm:space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200/80 dark:border-emerald-500/20">
               <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-[#00ff87] animate-pulse"></span>
-              <p className="text-emerald-700 dark:text-[#00ff87] font-label text-[10px] uppercase tracking-[0.2em] font-black">Active Citizen Profile</p>
+              <p className="text-emerald-700 dark:text-[#00ff87] font-label text-[10px] uppercase tracking-[0.18em] font-black">Connecting Good Deeds with Great Perks</p>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter text-slate-900 dark:text-white leading-[0.95] sm:leading-[0.9]">
               Welcome back, <br/>

@@ -46,7 +46,7 @@ const AdminLayout = ({ children }) => {
           </div>
           <div>
             <div className="admin-sidebar-brand-title">Impact Console</div>
-            <div className="admin-sidebar-brand-sub">Admin v1.0</div>
+            <div className="admin-sidebar-brand-sub" style={{ fontSize: '8px', letterSpacing: '0.05em' }}>Connecting Good Deeds with Great Perks</div>
           </div>
         </div>
 

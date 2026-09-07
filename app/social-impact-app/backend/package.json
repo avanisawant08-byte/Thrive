@@ -20,10 +20,12 @@
     "express": "^5.2.1",
     "express-async-handler": "^1.2.0",
     "firebase-admin": "^13.7.0",
+    "jimp": "^0.16.1",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.4.1",
     "multer": "^2.1.1",
-    "multer-storage-cloudinary": "^4.0.0"
+    "multer-storage-cloudinary": "^4.0.0",
+    "puppeteer": "^25.8.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"

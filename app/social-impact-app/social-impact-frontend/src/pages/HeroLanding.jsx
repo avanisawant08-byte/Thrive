@@ -46,16 +46,16 @@ const HeroLanding = () => {
       {/* Hero Section */}
       <section className="relative pt-12 sm:pt-20 pb-16 sm:pb-20 px-4 sm:px-8">
         <div className="max-w-screen-xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full glass-card mb-6 sm:mb-8">
-            <span className="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
-            <span className="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Live Impact Pulse Tracking</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6 sm:mb-8 border border-emerald-500/30 dark:border-[#00ff87]/30 shadow-sm">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 dark:bg-primary-container animate-pulse"></span>
+            <span className="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-emerald-700 dark:text-primary-container">Connecting Good Deeds with Great Perks</span>
           </div>
           <h1 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-[-0.03em] text-slate-900 dark:text-[#f1ffef] leading-[1.1] mb-6 sm:mb-8 transition-colors">
             Do Good. Earn <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-br from-emerald-600 via-teal-500 to-cyan-600 dark:from-[#f1ffef] dark:to-[#00ff87]">Rewards.</span> Make Impact.
           </h1>
           <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-on-surface-variant leading-relaxed mb-8 sm:mb-12">
-            The world's first social-action economy. Volunteer for causes you love, track your positive footprint, and unlock exclusive rewards from brands that care.
+            Connecting good deeds with great perks. Volunteer for causes you love, track your positive footprint, and unlock exclusive rewards from brands that care.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
             <button
