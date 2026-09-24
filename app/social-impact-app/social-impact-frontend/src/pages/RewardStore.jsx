@@ -103,8 +103,6 @@ const RewardStore = () => {
     ? items 
     : items.filter(item => item.category === category.toLowerCase().slice(0, -1) || item.category === category.toLowerCase());
 
-  if (loading) return <Loader loading={true} message="Loading Marketplace Rewards..." />;
-
   return (
     <main className="px-6 pt-8 max-w-7xl mx-auto relative z-10 pb-32">
       {/* Hero Section / Title */}
@@ -116,7 +114,13 @@ const RewardStore = () => {
         <div className="h-1 w-24 bg-gradient-to-r from-primary-container to-transparent rounded-full"></div>
       </div>
 
-      {/* Category Filter */}
+      {loading ? (
+        <div className="py-20">
+          <Loader loading={true} message="Loading Marketplace Rewards..." />
+        </div>
+      ) : (
+        <>
+          {/* Category Filter */}
       <section className="mb-12">
         <div className="flex gap-3 overflow-x-auto py-3 px-1.5 scrollbar-hide items-center">
           {['All Rewards', 'Coupons', 'Discounts', 'Products', 'Experiences'].map(cat => (
@@ -206,6 +210,8 @@ const RewardStore = () => {
           </div>
         </div>
       </div>
+      )}
+        </>
       )}
 
       <AnimatePresence>

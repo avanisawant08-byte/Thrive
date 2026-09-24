@@ -71,12 +71,12 @@ class TestAccessibility:
         ("/donations", 1),
         ("/reward-store", 1),
         ("/leaderboard", 1),
-        pytest.param("/social-feed", 1, marks=pytest.mark.xfail(reason="Bug: /social-feed lacks an <h1> heading", strict=True)),
+        ("/social-feed", 1),
     ])
     def test_h1_heading_count(self, driver, base_url, path, expected_count):
         """Core pages should feature exactly one main <h1> heading for proper semantic hierarchy."""
         driver.get(f"{base_url}{path}")
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "h1")))
 
         h1s = driver.find_elements(By.TAG_NAME, "h1")
         assert len(h1s) == expected_count, (

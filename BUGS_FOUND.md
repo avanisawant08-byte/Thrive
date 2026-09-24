@@ -12,11 +12,12 @@ During automated UI testing and exploratory verification of the live deployed si
 
 | # | Bug | Severity | Status |
 |---|-----|----------|--------|
-| 1 | Broken NGO Banner Image on `/donations` | Medium | **Open** — live site |
-| 2 | Missing `<h1>` on `/social-feed` | Low/Medium | **Open** — live site |
-| 3 | EventDetail modal back-button/popstate race | High | ✅ **Fixed locally**, pending Vercel deploy |
-| 4 | Missing 404 "Page Not Found" route | Medium | **Open** — live site |
-| 5 | Missing accessible labels on Social Feed tabs | Low | **Open** — live site |
+| 1 | Image loading race condition on `/donations` & `/events` | Medium | ✅ **Fixed locally** (synchronous onError + Selenium completion wait) |
+| 2 | Missing `<h1>` on `/social-feed` | Low/Medium | ✅ **Fixed locally** in `SocialFeed.jsx` |
+| 3 | EventDetail modal back-button/popstate race | High | ✅ **Fixed locally** in `EventDetail.jsx` |
+| 4 | Missing 404 "Page Not Found" route | Medium | ✅ **Fixed locally** via `NotFound.jsx` & `App.jsx` |
+| 5 | Missing accessible labels on Social Feed tabs | Low | ✅ **Fixed locally** via `aria-label` in `SocialFeed.jsx` |
+| 6 | Intermittent missing `<h1>` during loading state on `/reward-store` & `/leaderboard` | Medium | ✅ **Fixed locally** by keeping headers in page shell during loading |
 
 ---
 

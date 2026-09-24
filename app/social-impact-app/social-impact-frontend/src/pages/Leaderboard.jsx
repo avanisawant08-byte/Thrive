@@ -23,8 +23,6 @@ const Leaderboard = () => {
     fetchLeaderboard();
   }, []);
 
-  if (loading) return <Loader loading={true} message="Calculating Global Impact Rankings..." />;
-
   return (
     <main className="max-w-4xl mx-auto px-6 pt-12 pb-24 relative z-10">
       <div className="text-center mb-16">
@@ -33,7 +31,13 @@ const Leaderboard = () => {
         <div className="h-1.5 w-32 bg-primary-container mx-auto mt-6 rounded-full"></div>
       </div>
 
-      {/* Top 3 Podium */}
+      {loading ? (
+        <div className="py-20">
+          <Loader loading={true} message="Calculating Global Impact Rankings..." />
+        </div>
+      ) : (
+        <>
+          {/* Top 3 Podium */}
       <div className="grid grid-cols-3 gap-4 mb-16 items-end">
         {leaders.slice(0, 3).map((leader, index) => {
           const positions = [
@@ -98,6 +102,8 @@ const Leaderboard = () => {
           ))}
         </div>
       </div>
+        </>
+      )}
     </main>
   );
 };

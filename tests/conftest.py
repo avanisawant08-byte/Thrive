@@ -1,6 +1,10 @@
 import os
+import sys
 import time
 import pytest
+
+# Ensure project root is always in Python module search path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as ChromeOptions

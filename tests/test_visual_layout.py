@@ -11,9 +11,9 @@ class TestVisualLayout:
 
     @pytest.mark.parametrize("path", [
         "/",
-        pytest.param("/events", marks=pytest.mark.xfail(reason="Bug: Broken Cloudinary event images on /events", strict=True)),
+        "/events",
         "/reward-store",
-        pytest.param("/donations", marks=pytest.mark.xfail(reason="Bug: Broken Cloudinary NGO banner image on /donations", strict=True)),
+        "/donations",
     ])
     def test_images_loaded_not_broken(self, driver, base_url, path):
         """All images rendered on the page have loaded completely with non-zero natural dimensions."""
@@ -28,6 +28,13 @@ class TestVisualLayout:
         for img in images:
             # Check if displayed
             if img.is_displayed():
+                try:
+                    WebDriverWait(driver, 5).until(
+                        lambda d, el=img: d.execute_script("return arguments[0].complete;", el)
+                    )
+                except Exception:
+                    pass
+
                 is_loaded = driver.execute_script(
                     "return arguments[0].complete && "
                     "(typeof arguments[0].naturalWidth != 'undefined' && arguments[0].naturalWidth > 0);",

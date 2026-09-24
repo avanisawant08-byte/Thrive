@@ -210,7 +210,11 @@ const Events = () => {
                 alt={event.title} 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
                 src={getEventImageSrc(event, brokenImages[event._id])} 
-                onError={() => setBrokenImages(prev => ({ ...prev, [event._id]: true }))}
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = getEventImageSrc(event, true);
+                  setBrokenImages(prev => ({ ...prev, [event._id]: true }));
+                }}
               />
               <div className="absolute top-3.5 left-3.5 z-10">
                 {(() => {

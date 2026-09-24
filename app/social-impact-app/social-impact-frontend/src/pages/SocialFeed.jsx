@@ -302,6 +302,12 @@ const SocialFeed = () => {
   return (
     <main className="max-w-6xl mx-auto px-4 pt-6 pb-32 relative">
       
+      {/* Header & Title */}
+      <div className="mb-6">
+        <span className="text-[0.75rem] uppercase tracking-[0.1em] font-bold text-primary-container mb-1 block">Social Mobilization</span>
+        <h1 className="text-3xl sm:text-5xl font-black tracking-[-0.03em] text-slate-900 dark:text-primary transition-colors">Community Feed</h1>
+      </div>
+
       {/* Top Stories / Changemaker Spotlight Bar */}
       <section className="mb-8">
         <div className="flex items-center gap-4 overflow-x-auto pb-4 pt-2 scrollbar-none">
@@ -376,6 +382,7 @@ const SocialFeed = () => {
               <button
                 key={t.id}
                 onClick={() => setTab(t.id)}
+                aria-label={t.label}
                 className={`flex-1 py-3.5 sm:py-2.5 px-2 sm:px-3 rounded-xl font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer ${
                   tab === t.id 
                     ? 'gradient-button shadow-lg scale-[1.02]' 
@@ -656,6 +663,7 @@ const SocialFeed = () => {
                               alt="Impact visual" 
                               className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700" 
                               src={post.imageUrl || post.mediaUrls[0]} 
+                              onError={(e) => { e.currentTarget.style.display = 'none'; }}
                             />
                             
                             {/* Floating Heart Animation */}

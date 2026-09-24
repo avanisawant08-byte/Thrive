@@ -19,6 +19,7 @@ const UserProfile = lazy(() => import('./pages/UserProfile'));
 const EditProfile = lazy(() => import('./pages/EditProfile'));
 const ApplyNGO = lazy(() => import('./pages/ApplyNGO'));
 const MapPage = lazy(() => import('./pages/MapPage'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Lazy-loaded Admin Pages
 const AdminDashboard = lazy(() => import('./pages/admin/AdminDashboard'));
@@ -74,6 +75,7 @@ function App() {
                         <Route path="/profile/:userId" element={<UserProfile />} />
                         <Route path="/edit-profile" element={<EditProfile />} />
                         <Route path="/apply-ngo" element={<ApplyNGO />} />
+                        <Route path="*" element={<NotFound />} />
                       </Routes>
                     </Suspense>
                   </div>

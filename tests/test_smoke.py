@@ -79,7 +79,6 @@ class TestSmoke:
         href = favicons[0].get_attribute("href")
         assert href and len(href) > 0, "Favicon href attribute is empty"
 
-    @pytest.mark.xfail(reason="Bug: Unknown URLs render a blank container instead of a dedicated 404 page", strict=True)
     def test_unknown_url_renders_404_page(self, driver, base_url):
         """Routing to an unknown URL should present a dedicated 404 error page / message."""
         driver.get(f"{base_url}/non-existent-page-404-test")

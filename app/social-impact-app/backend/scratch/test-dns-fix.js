@@ -1,9 +1,10 @@
 const dns = require('dns');
 dns.setServers(['8.8.8.8', '8.8.4.4']);
 
+require('dotenv').config({ path: require('path').join(__dirname, '../.env') });
 const mongoose = require('mongoose');
 
-const uri = "mongodb+srv://pr:REDACTED_PASSWORD@cluster0.v4afw4e.mongodb.net/socialimpact?appName=Cluster0";
+const uri = process.env.MONGO_URI;
 
 console.log("Attempting to connect with Google DNS...");
 mongoose.connect(uri, { family: 4 })

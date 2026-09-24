@@ -1,6 +1,7 @@
+require('dotenv').config({ path: require('path').join(__dirname, '../.env') });
 const mongoose = require('mongoose');
 
-const uri = "mongodb://pr:REDACTED_PASSWORD@ac-hvcehdy-shard-00-00.v4afw4e.mongodb.net:27017,ac-hvcehdy-shard-00-01.v4afw4e.mongodb.net:27017,ac-hvcehdy-shard-00-02.v4afw4e.mongodb.net:27017/socialimpact?ssl=true&replicaSet=atlas-hvcehdy-shard-0&authSource=admin&retryWrites=true&w=majority";
+const uri = process.env.MONGO_URI;
 
 mongoose.connect(uri)
   .then(() => {
