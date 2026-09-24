@@ -23,6 +23,8 @@ class TestAccessibility:
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
 
         images = driver.find_elements(By.TAG_NAME, "img")
+        if len(images) == 0:
+            pytest.skip(f"No <img> elements on {path} (page uses SVG/CSS backgrounds)")
         missing_alt = []
 
         for img in images:
@@ -43,6 +45,8 @@ class TestAccessibility:
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "form")))
 
         inputs = driver.find_elements(By.CSS_SELECTOR, "form input")
+        assert len(inputs) > 0, "No inputs found in form to validate accessible labels"
+
         for inp in inputs:
             inp_type = inp.get_attribute("type")
             if inp_type in ["hidden", "submit", "button"]:
@@ -67,6 +71,7 @@ class TestAccessibility:
         ("/donations", 1),
         ("/reward-store", 1),
         ("/leaderboard", 1),
+        pytest.param("/social-feed", 1, marks=pytest.mark.xfail(reason="Bug: /social-feed lacks an <h1> heading", strict=True)),
     ])
     def test_h1_heading_count(self, driver, base_url, path, expected_count):
         """Core pages should feature exactly one main <h1> heading for proper semantic hierarchy."""
@@ -79,11 +84,12 @@ class TestAccessibility:
         )
 
     def test_keyboard_tab_focus_navigable(self, driver, base_url):
-        """Page is navigable via keyboard TAB key and document.activeElement changes."""
-        driver.get(base_url)
+        """Page is navigable via keyboard TAB key and focus moves to interactive elements."""
+        driver.get(f"{base_url}/login")
         body = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
         body.click()
 
+        # Tab through header/form elements
         body.send_keys(Keys.TAB)
         active1 = driver.execute_script("return document.activeElement ? document.activeElement.tagName : null;")
 
@@ -91,12 +97,16 @@ class TestAccessibility:
         active2 = driver.execute_script("return document.activeElement ? document.activeElement.tagName : null;")
 
         assert active1 is not None and active2 is not None
+        assert any(t in ["INPUT", "BUTTON", "A"] for t in [active1.upper(), active2.upper()]), (
+            f"Expected focus to move to an interactive element, but got {active1} and {active2}"
+        )
 
     def test_axe_core_audit_home(self, driver, base_url):
         """Inject axe-core script and run accessibility evaluation on the home page."""
         driver.get(base_url)
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "h1")))
 
+        critical_violations = []
         try:
             # Inject axe-core via script tag
             driver.execute_script(f"""
@@ -123,7 +133,8 @@ class TestAccessibility:
             if results and "violations" in results:
                 violations = results["violations"]
                 critical_violations = [v for v in violations if v.get("impact") == "critical"]
-                assert len(critical_violations) == 0, f"Critical a11y violations found: {critical_violations}"
         except Exception as e:
             # If axe CDN is blocked or unavailable, record soft note
             pytest.skip(f"Axe-core injection skipped or CDN unavailable: {e}")
+
+        assert len(critical_violations) == 0, f"Critical a11y violations found: {critical_violations}"

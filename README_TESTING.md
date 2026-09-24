@@ -67,9 +67,33 @@ python -m pytest tests/test_performance.py -v
 # Console errors (SEVERE runtime errors and mixed content detection)
 python -m pytest tests/test_console_errors.py -v
 
-# Cross-browser tests (Chrome & Edge compatibility)
+# Cross-browser tests (Chrome, Edge & Firefox compatibility)
 python -m pytest tests/test_cross_browser.py -v
+
+# Authenticated flow tests (login, logout, redirect, register form)
+python -m pytest tests/test_authenticated_flows.py -v
 ```
+
+### Run Authenticated Flow Tests
+
+The `test_authenticated_flows.py` module includes two categories:
+
+1. **Form-only tests** (always run): password toggle, tabs, empty submission, forgot-password modal, error on wrong credentials.
+2. **Real-login tests** (require env vars): login redirect, token storage, auto-redirect if authenticated, logout.
+
+To run real-login tests, supply valid test-account credentials:
+
+```bash
+# Windows PowerShell:
+$env:TEST_EMAIL="your-test-user@example.com"
+$env:TEST_PASSWORD="YourPassword123!"
+python -m pytest tests/test_authenticated_flows.py -v
+
+# Linux / macOS:
+TEST_EMAIL="your-test-user@example.com" TEST_PASSWORD="YourPassword123!" python -m pytest tests/test_authenticated_flows.py -v
+```
+
+> **⚠️ Never hardcode credentials or commit `.env` files containing them.**
 
 ---
 
@@ -152,7 +176,8 @@ tests/
 ├── test_accessibility.py     # Alt tags, labels, H1 count, axe-core audit
 ├── test_performance.py       # Load timing, DOMContentLoaded, oversized assets
 ├── test_console_errors.py    # Unhandled SEVERE JS exceptions, mixed content
-└── test_cross_browser.py     # Multi-browser cross validation (Chrome & Edge)
+├── test_cross_browser.py     # Multi-browser cross validation (Chrome, Edge & Firefox)
+└── test_authenticated_flows.py # Login, logout, redirect, register form validation
 ```
 
 ---

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import API from '../services/api';
 import { getEventStatus, STATUS_STYLES } from '../utils/eventStatus';
 import { getEventImageSrc } from '../utils/eventImageHelper';
@@ -26,30 +26,38 @@ const EventDetail = ({ event, onClose }) => {
 
   const user = JSON.parse(localStorage.getItem('user') || 'null');
 
+  const onCloseRef = useRef(onClose);
+  useEffect(() => {
+    onCloseRef.current = onClose;
+  }, [onClose]);
+
   useEffect(() => {
     setLocalEvent(event);
   }, [event]);
 
   useEffect(() => {
-    // Push history state so mobile hardware & browser back button dismisses modal
-    window.history.pushState({ isEventDetailModal: true }, '');
+    const mountTime = Date.now();
+    if (!window.history.state?.isEventDetailModal) {
+      window.history.pushState({ isEventDetailModal: true }, '');
+    }
 
-    let closedByPop = false;
+    let isPopped = false;
 
     const handlePopState = () => {
-      closedByPop = true;
-      onClose();
+      isPopped = true;
+      if (onCloseRef.current) onCloseRef.current();
     };
 
     window.addEventListener('popstate', handlePopState);
 
     return () => {
       window.removeEventListener('popstate', handlePopState);
-      if (!closedByPop && window.history.state?.isEventDetailModal) {
+      const isQuickDevUnmount = (Date.now() - mountTime) < 50;
+      if (!isQuickDevUnmount && !isPopped && window.history.state?.isEventDetailModal) {
         window.history.back();
       }
     };
-  }, [onClose]);
+  }, []);
 
   useEffect(() => {
     // Fetch NGO that created the event

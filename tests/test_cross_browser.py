@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-SUPPORTED_BROWSERS = ["chrome", "edge"]
+SUPPORTED_BROWSERS = ["chrome", "edge", "firefox"]
 
 def create_driver(browser_name):
     """Instantiate a headless browser driver for cross-browser testing."""
@@ -38,7 +38,7 @@ def create_driver(browser_name):
             options.add_argument("--height=900")
             return webdriver.Firefox(options=options)
         except Exception as e:
-            pytest.skip(f"Firefox driver not available on this environment: {e}")
+            pytest.skip(f"Firefox is not installed on this system: {e}")
 
     raise ValueError(f"Unknown browser: {browser_name}")
 

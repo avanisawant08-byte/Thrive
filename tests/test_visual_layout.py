@@ -9,13 +9,20 @@ from selenium.webdriver.support import expected_conditions as EC
 class TestVisualLayout:
     """Visual integrity tests: natural image dimensions, font loading, element bounds, and snapshot validity."""
 
-    @pytest.mark.parametrize("path", ["/", "/events", "/reward-store", "/donations"])
+    @pytest.mark.parametrize("path", [
+        "/",
+        pytest.param("/events", marks=pytest.mark.xfail(reason="Bug: Broken Cloudinary event images on /events", strict=True)),
+        "/reward-store",
+        pytest.param("/donations", marks=pytest.mark.xfail(reason="Bug: Broken Cloudinary NGO banner image on /donations", strict=True)),
+    ])
     def test_images_loaded_not_broken(self, driver, base_url, path):
         """All images rendered on the page have loaded completely with non-zero natural dimensions."""
         driver.get(f"{base_url}{path}")
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
 
         images = driver.find_elements(By.TAG_NAME, "img")
+        if len(images) == 0:
+            pytest.skip(f"No <img> elements on {path} (page uses SVG/CSS backgrounds)")
         broken_images = []
 
         for img in images:

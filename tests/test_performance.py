@@ -60,22 +60,25 @@ class TestPerformance:
         driver.get(f"{base_url}/reward-store")
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
 
-        oversized_images = driver.execute_script("""
+        result = driver.execute_script("""
             var resources = performance.getEntriesByType('resource');
             var oversized = [];
+            var totalCount = 0;
             for (var i = 0; i < resources.length; i++) {
                 var r = resources[i];
                 if (r.initiatorType === 'img' || r.name.match(/\\.(png|jpg|jpeg|webp|gif)/i)) {
+                    totalCount++;
                     var size = r.transferSize || r.decodedBodySize || 0;
                     if (size > 2500000) { // 2.5MB
                         oversized.push({ url: r.name, sizeBytes: size });
                     }
                 }
             }
-            return oversized;
+            return { totalCount: totalCount, oversized: oversized };
         """)
 
-        assert len(oversized_images) == 0, f"Oversized images detected (>2.5MB): {oversized_images}"
+        assert result["totalCount"] > 0, "No image resources found on page to evaluate size budget"
+        assert len(result["oversized"]) == 0, f"Oversized images detected (>2.5MB): {result['oversized']}"
 
     def test_total_resource_request_budget(self, driver, base_url):
         """Total network requests on the landing page remain within budget (< 100 requests)."""

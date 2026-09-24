@@ -10,6 +10,14 @@
 
 During automated UI testing and exploratory verification of the live deployed site, several real functional, visual, and accessibility defects were identified. These issues have been isolated from test code bugs and are documented below with reproduction steps, actual vs. expected behavior, and screenshot evidence.
 
+| # | Bug | Severity | Status |
+|---|-----|----------|--------|
+| 1 | Broken NGO Banner Image on `/donations` | Medium | **Open** — live site |
+| 2 | Missing `<h1>` on `/social-feed` | Low/Medium | **Open** — live site |
+| 3 | EventDetail modal back-button/popstate race | High | ✅ **Fixed locally**, pending Vercel deploy |
+| 4 | Missing 404 "Page Not Found" route | Medium | **Open** — live site |
+| 5 | Missing accessible labels on Social Feed tabs | Low | **Open** — live site |
+
 ---
 
 ### Bug 1: Broken NGO Banner Image on Donation Center Page
@@ -18,6 +26,7 @@ During automated UI testing and exploratory verification of the live deployed si
 - **URL Affected:** `https://thrive-rose.vercel.app/donations`
 - **Failing Test:** `tests/test_visual_layout.py::TestVisualLayout::test_images_loaded_not_broken[/donations]`
 - **Screenshot Path:** `screenshots/FAIL_test_images_loaded_not_broken__donations__*.png`
+- **Status:** ❌ Open — affects live site
 
 #### Steps to Reproduce
 1. Open Chrome or Edge and navigate to `https://thrive-rose.vercel.app/donations`.
@@ -36,8 +45,9 @@ All NGO banner cards should either resolve valid CDN media or fall back immediat
 
 - **Severity:** Low / Medium (Accessibility WCAG 2.1 A & SEO)
 - **URL Affected:** `https://thrive-rose.vercel.app/social-feed`
-- **Failing Test:** Identified in `tests/test_accessibility.py` / `TEST_PLAN.md`
+- **Failing Test:** `tests/test_accessibility.py::TestAccessibility::test_page_has_h1_heading[/social-feed]`
 - **Screenshot Path:** `screenshots/FAIL_test_social_feed_page_loads_*.png`
+- **Status:** ❌ Open — affects live site
 
 #### Steps to Reproduce
 1. Navigate to `https://thrive-rose.vercel.app/social-feed`.
@@ -51,23 +61,30 @@ Every distinct page/route must include exactly one `<h1>` heading to establish s
 
 ---
 
-### Bug 3: Missing Back Navigation in EventDetail Modal on Live Site
+### Bug 3: EventDetail Modal Back-Navigation / popstate Race Condition
 
 - **Severity:** High (Mobile UX & Navigation)
 - **URL Affected:** `https://thrive-rose.vercel.app/events`
 - **Failing Test:** `tests/test_interactions.py::TestInteractions::test_event_detail_modal_back_arrow_dismiss`
-- **Screenshot Path:** `screenshots/FAIL_test_event_detail_modal_back_arrow_dismiss_20260924_193332.png`
+- **Status:** ✅ **Fixed locally, pending Vercel deploy**
 
-#### Steps to Reproduce
+#### Root Cause (Identified)
+React 18+ StrictMode double-mounts components in development. The `EventDetail.jsx` modal used `window.history.pushState()` and a `popstate` listener. On unmount during StrictMode's immediate re-mount cycle, the cleanup function called `history.back()` even though no real user interaction had occurred, causing an accidental navigation away from `/events`.
+
+#### Fix Applied (Local)
+- Added a `closedByPop` flag in `EventDetail.jsx` to guard against StrictMode double-unmount.
+- Corrected the `useEffect` dependencies and cleanup logic.
+- **File Changed:** `src/components/EventDetail.jsx`
+- **Verified:** All 7 interaction tests pass on `localhost:5173`.
+- **Pending:** Merge and deploy to Vercel to validate on production.
+
+#### Original Steps to Reproduce (on deployed site)
 1. Navigate to `https://thrive-rose.vercel.app/events`.
-2. Click **"View Details"** on any event card (e.g. "eveeent").
-3. Inspect the top bar of the modal.
+2. Click **"View Details"** on any event card.
+3. Click the back arrow or use browser Back button.
 
-#### Actual Result
-The deployed modal on Vercel contains only a small close button (`close`), and lacks an accessible top back arrow button (`arrow_back`). If a user on mobile taps their Android hardware/browser back button, the modal does not dismiss cleanly; instead the browser navigates away from `/events` or triggers redirect issues.
-
-#### Expected Result
-The modal should feature both an explicit back arrow button and a browser `popstate` history listener so pressing "Back" simply closes the modal without unmounting or redirecting away from the Events catalog.
+#### Previous Actual Result (Deployed)
+The modal failed to dismiss cleanly; the browser navigated away from `/events` or triggered redirect issues to `/login`.
 
 ---
 
@@ -76,6 +93,8 @@ The modal should feature both an explicit back arrow button and a browser `popst
 - **Severity:** Medium (UX & Routing)
 - **URL Affected:** `https://thrive-rose.vercel.app/non-existent-route-check`
 - **Component:** `App.jsx`
+- **Failing Test:** `tests/test_smoke.py::TestSmoke::test_unknown_url_renders_404_page` (xfail strict)
+- **Status:** ❌ Open — affects live site
 
 #### Steps to Reproduce
 1. Navigate to `https://thrive-rose.vercel.app/any-random-url-not-in-routes`.
@@ -94,6 +113,7 @@ React Router should render a dedicated 404 page (e.g., `<Route path="*" element=
 - **Severity:** Low (Accessibility)
 - **URL Affected:** `https://thrive-rose.vercel.app/social-feed`
 - **Component:** `SocialFeed.jsx`
+- **Status:** ❌ Open — affects live site
 
 #### Steps to Reproduce
 1. Navigate to `https://thrive-rose.vercel.app/social-feed`.

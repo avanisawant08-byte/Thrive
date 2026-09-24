@@ -79,15 +79,17 @@ class TestSmoke:
         href = favicons[0].get_attribute("href")
         assert href and len(href) > 0, "Favicon href attribute is empty"
 
-    def test_non_existent_route_does_not_crash(self, driver, base_url):
-        """Verify routing to an unknown path keeps the React container intact and doesn't white-screen."""
+    @pytest.mark.xfail(reason="Bug: Unknown URLs render a blank container instead of a dedicated 404 page", strict=True)
+    def test_unknown_url_renders_404_page(self, driver, base_url):
+        """Routing to an unknown URL should present a dedicated 404 error page / message."""
         driver.get(f"{base_url}/non-existent-page-404-test")
-        root = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.ID, "root"))
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+
+        body_text = driver.find_element(By.TAG_NAME, "body").text
+        headings = [h.text.lower() for h in driver.find_elements(By.CSS_SELECTOR, "h1, h2, h3")]
+        has_404_heading = any("404" in h or "not found" in h for h in headings)
+        has_404_text = "404" in body_text or "page not found" in body_text.lower()
+
+        assert has_404_heading or has_404_text, (
+            "Unknown URL renders blank container without 404 / Page Not Found message or heading"
         )
-        assert root.is_displayed()
-        # Verify navigation header remains functional
-        logo = WebDriverWait(driver, 5).until(
-            EC.visibility_of_element_located((By.XPATH, "//header//a[contains(., 'THRIVE')]"))
-        )
-        assert logo.is_displayed()

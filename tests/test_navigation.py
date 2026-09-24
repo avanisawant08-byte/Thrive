@@ -114,9 +114,13 @@ class TestNavigation:
         anchors = driver.find_elements(By.TAG_NAME, "a")
         assert len(anchors) > 0, "No anchor tags found on page"
 
+        visible_count = 0
         for a in anchors:
             if a.is_displayed():
+                visible_count += 1
                 href = a.get_attribute("href")
                 # Href must exist and shouldn't be a broken link
                 assert href is not None, "Visible link has no href attribute"
                 assert href.strip() != "", "Visible link has an empty href"
+
+        assert visible_count > 0, "No visible anchor tags found on page to validate"
