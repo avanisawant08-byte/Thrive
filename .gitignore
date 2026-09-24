@@ -1,0 +1,59 @@
+# Environment & Secrets (NEVER COMMIT)
+.env
+.env*
+*.env
+!.env.example
+!*.env.example
+serviceAccountKey.json
+**/serviceAccountKey.json
+*.json.key
+*.pem
+*.key
+*.cert
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Production & Build outputs
+dist/
+**/dist/
+dist-ssr/
+build/
+
+# Uploads & Media
+uploads/
+**/uploads/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Testing & Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local scratches & agent artifacts
+.agent/
+**/scratch/
+graphify-out/

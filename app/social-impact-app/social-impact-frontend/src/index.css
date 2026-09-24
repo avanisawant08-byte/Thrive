@@ -1,0 +1,454 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Theme Text Selection */
+::selection {
+  background-color: rgba(16, 185, 129, 0.3) !important;
+  color: inherit !important;
+}
+
+::-moz-selection {
+  background-color: rgba(16, 185, 129, 0.3) !important;
+  color: inherit !important;
+}
+
+.dark ::selection {
+  background-color: rgba(0, 255, 135, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.dark ::-moz-selection {
+  background-color: rgba(0, 255, 135, 0.3) !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   1. LIGHT THEME TOKENS (:root) - Crystal Neo-Glass Aesthetic
+   ========================================================================== */
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --background: #f8fafc;
+  --on-background: #0f172a;
+  
+  --surface: #ffffff;
+  --on-surface: #0f172a;
+  --surface-variant: #f1f5f9;
+  --on-surface-variant: #475569;
+  
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f8fafc;
+  --surface-container: #f1f5f9;
+  --surface-container-high: #e2e8f0;
+  --surface-container-highest: #cbd5e1;
+  
+  --primary: #047857;
+  --on-primary: #ffffff;
+  --primary-container: #10b981;
+  --on-primary-container: #ffffff;
+  
+  --secondary: #0284c7;
+  --on-secondary: #ffffff;
+  --secondary-container: #e0f2fe;
+  --on-secondary-container: #0369a1;
+  
+  --tertiary: #0d9488;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #ccfbf1;
+  --on-tertiary-container: #115e59;
+
+  --error: #e11d48;
+  --on-error: #ffffff;
+  --error-container: #ffe4e6;
+  --on-error-container: #9f1239;
+  
+  --outline: rgba(15, 23, 42, 0.12);
+  --outline-variant: rgba(15, 23, 42, 0.08);
+
+  --glow-color: rgba(16, 185, 129, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --particle-color: #10b981;
+  --particle-glow: rgba(16, 185, 129, 0.3);
+
+  color-scheme: light;
+  background-color: var(--background);
+  color: var(--on-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   2. DARK THEME TOKENS (.dark) - Obsidian Cinematic Glow Aesthetic
+   ========================================================================== */
+.dark {
+  --background: #08090a;
+  --on-background: #f1ffef;
+  
+  --surface: #121212;
+  --on-surface: #f1ffef;
+  --surface-variant: #1e1e1e;
+  --on-surface-variant: #b9cbb9;
+  
+  --surface-container-lowest: #08090a;
+  --surface-container-low: rgba(255, 255, 255, 0.04);
+  --surface-container: rgba(255, 255, 255, 0.07);
+  --surface-container-high: rgba(255, 255, 255, 0.1);
+  --surface-container-highest: rgba(255, 255, 255, 0.14);
+  
+  --primary: #f1ffef;
+  --on-primary: #00210c;
+  --primary-container: #00ff87;
+  --on-primary-container: #00210c;
+  
+  --secondary: #60efff;
+  --on-secondary: #00210c;
+  --secondary-container: #00e077;
+  --on-secondary-container: #00210c;
+  
+  --tertiary: #60efff;
+  --on-tertiary: #00210c;
+  --tertiary-container: #00ff87;
+  --on-tertiary-container: #00210c;
+
+  --error: #ffb4ab;
+  --on-error: #690005;
+  --error-container: rgba(255, 85, 85, 0.2);
+  --on-error-container: #ffdad6;
+  
+  --outline: rgba(255, 255, 255, 0.1);
+  --outline-variant: rgba(255, 255, 255, 0.05);
+
+  --glow-color: rgba(0, 255, 135, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --particle-color: #00ff87;
+  --particle-glow: rgba(0, 255, 135, 0.5);
+
+  color-scheme: dark;
+  background-color: var(--background);
+  color: var(--on-background);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--on-background);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* ==========================================================================
+   3. DUAL-THEME GLASSMORPHIC CONTAINERS & CARDS
+   ========================================================================== */
+
+/* Light Mode Glass Cards */
+.glass-card,
+.glass-container,
+.glass-panel,
+.glass-modal {
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 
+    0 20px 45px -12px rgba(15, 23, 42, 0.08),
+    0 4px 16px -4px rgba(15, 23, 42, 0.04),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 1px 0 rgba(15, 23, 42, 0.02) !important;
+  color: var(--on-surface) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+  box-shadow: 
+    0 28px 60px -15px rgba(15, 23, 42, 0.12),
+    0 0 25px rgba(16, 185, 129, 0.15),
+    inset 0 1px 1px 0 #ffffff !important;
+  transform: translateY(-4px) !important;
+}
+
+/* Dark Mode Glass Cards */
+.dark .glass-card,
+.dark .glass-container,
+.dark .glass-panel,
+.dark .glass-modal {
+  background: rgba(255, 255, 255, 0.07) !important;
+  backdrop-filter: blur(28px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 
+    0 30px 60px -12px rgba(0, 0, 0, 0.75),
+    0 18px 36px -18px rgba(0, 0, 0, 0.85),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.22),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.4) !important;
+  color: var(--on-surface) !important;
+}
+
+.dark .glass-card:hover {
+  background: rgba(255, 255, 255, 0.11) !important;
+  box-shadow: 
+    0 40px 80px -15px rgba(0, 0, 0, 0.85),
+    0 0 35px rgba(0, 255, 135, 0.2),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.5) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* ==========================================================================
+   4. DUAL-THEME BUTTONS
+   ========================================================================== */
+
+/* Primary Action Buttons */
+.gradient-button,
+.btn-primary {
+  background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  border: none !important;
+  box-shadow: 
+    0 10px 25px -5px rgba(16, 185, 129, 0.4),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.4) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.gradient-button:hover,
+.btn-primary:hover {
+  box-shadow: 
+    0 14px 35px -4px rgba(16, 185, 129, 0.55),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.6) !important;
+  transform: translateY(-2px) !important;
+  color: #ffffff !important;
+}
+
+.dark .gradient-button,
+.dark .btn-primary {
+  background: linear-gradient(135deg, #00ff87 0%, #60efff 100%) !important;
+  color: #00210c !important;
+  box-shadow: 
+    0 10px 30px -5px rgba(0, 255, 135, 0.4),
+    0 0 20px rgba(0, 255, 135, 0.25),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.6) !important;
+}
+
+.dark .gradient-button:hover,
+.dark .btn-primary:hover {
+  box-shadow: 
+    0 15px 40px -3px rgba(0, 255, 135, 0.6),
+    0 0 35px rgba(0, 255, 135, 0.4),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.8) !important;
+  color: #00210c !important;
+}
+
+/* Secondary Glass Buttons */
+.glass-button,
+.glass-btn,
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05), inset 0 1px 1px #ffffff !important;
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.glass-button:hover,
+.glass-btn:hover,
+.btn-secondary:hover {
+  background: #ffffff !important;
+  border-color: #10b981 !important;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15) !important;
+  color: #047857 !important;
+  transform: translateY(-2px) !important;
+}
+
+.dark .glass-button,
+.dark .glass-btn,
+.dark .btn-secondary {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 
+    0 4px 15px 0 rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.dark .glass-button:hover,
+.dark .glass-btn:hover,
+.dark .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+  border-color: rgba(0, 255, 135, 0.4) !important;
+  box-shadow: 
+    0 10px 30px 0 rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(0, 255, 135, 0.25),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.35) !important;
+  color: #00ff87 !important;
+}
+
+/* ==========================================================================
+   5. DUAL-THEME FORM INPUTS & SELECTS
+   ========================================================================== */
+input,
+select,
+textarea,
+.glass-input {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  color-scheme: light !important;
+  border: 1px solid rgba(203, 213, 225, 0.9) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.04) !important;
+  accent-color: #10b981 !important;
+  transition: all 0.25s ease !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.glass-input:focus {
+  outline: none !important;
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15), inset 0 1px 2px rgba(15, 23, 42, 0.04) !important;
+}
+
+select option,
+select optgroup {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  font-weight: 600 !important;
+  padding: 12px 16px !important;
+}
+
+/* Dark Mode Inputs */
+.dark input,
+.dark select,
+.dark textarea,
+.dark .glass-input {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #ffffff !important;
+  color-scheme: dark !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 
+    inset 0 2px 6px rgba(0, 0, 0, 0.4),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.1) !important;
+  accent-color: #00ff87 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.dark input:focus,
+.dark select:focus,
+.dark textarea:focus,
+.dark .glass-input:focus {
+  background: rgba(255, 255, 255, 0.09) !important;
+  border-color: rgba(0, 255, 135, 0.5) !important;
+  box-shadow: 
+    inset 0 2px 6px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(0, 255, 135, 0.3),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+.dark select option,
+.dark select optgroup {
+  background-color: #121418 !important;
+  color: #ffffff !important;
+}
+
+.dark select option:hover,
+.dark select option:focus,
+.dark select option:checked {
+  background-color: #00ff87 !important;
+  color: #00210c !important;
+}
+
+/* Date Pickers */
+::-webkit-calendar-picker-indicator {
+  cursor: pointer !important;
+  opacity: 0.7 !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.dark ::-webkit-calendar-picker-indicator {
+  filter: invert(0.8) sepia(1) saturate(5) hue-rotate(90deg) !important;
+  opacity: 0.85 !important;
+}
+
+/* ==========================================================================
+   6. AMBIENT ANIMATIONS
+   ========================================================================== */
+@keyframes auroraSlow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(40px, 30px) scale(1.1);
+    opacity: 0.95;
+  }
+}
+
+@keyframes auroraReverse {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-30px, -40px) scale(1.08);
+    opacity: 0.85;
+  }
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.6;
+  }
+}
+
+.animate-aurora-slow {
+  animation: auroraSlow 18s ease-in-out infinite;
+}
+
+.animate-aurora-reverse {
+  animation: auroraReverse 22s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 14s ease-in-out infinite;
+}
+
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 500px;
+  z-index: 0;
+}
