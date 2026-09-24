@@ -1,0 +1,523 @@
+{
+  "communities": {
+    "0": [
+      "backend_controllers_ngocontroller_js",
+      "controllers_ngocontroller_createngoevent",
+      "controllers_ngocontroller_deletengoevent",
+      "controllers_ngocontroller_geteventjoinrequests",
+      "controllers_ngocontroller_getngoanalytics",
+      "controllers_ngocontroller_getngodashboard",
+      "controllers_ngocontroller_getngoevents",
+      "controllers_ngocontroller_getngoprofile",
+      "controllers_ngocontroller_getpublicngoprofile",
+      "controllers_ngocontroller_getvolunteerprofile",
+      "controllers_ngocontroller_handlejoinrequest",
+      "controllers_ngocontroller_registerngo",
+      "controllers_ngocontroller_updatengoevent",
+      "controllers_ngocontroller_updatengoprofile"
+    ],
+    "1": [
+      "backend_controllers_eventcontroller_js",
+      "controllers_eventcontroller_addcomment",
+      "controllers_eventcontroller_autocompleteevents",
+      "controllers_eventcontroller_createevent",
+      "controllers_eventcontroller_deleteevent",
+      "controllers_eventcontroller_getcomments",
+      "controllers_eventcontroller_geteventbyid",
+      "controllers_eventcontroller_getevents",
+      "controllers_eventcontroller_handlejoinrequest",
+      "controllers_eventcontroller_joinevent",
+      "controllers_eventcontroller_leaveevent",
+      "controllers_eventcontroller_updateevent"
+    ],
+    "2": [
+      "backend_controllers_socialcontroller_js",
+      "controllers_socialcontroller_commentonpost",
+      "controllers_socialcontroller_createpost",
+      "controllers_socialcontroller_followngo",
+      "controllers_socialcontroller_getfeed",
+      "controllers_socialcontroller_getfollowing",
+      "controllers_socialcontroller_getngoposts",
+      "controllers_socialcontroller_getnotifications",
+      "controllers_socialcontroller_likepost",
+      "controllers_socialcontroller_markasread",
+      "controllers_socialcontroller_unfollowngo"
+    ],
+    "3": [
+      "backend_controllers_authcontroller_js",
+      "controllers_authcontroller_forgotpassword",
+      "controllers_authcontroller_generatetoken",
+      "controllers_authcontroller_getprofile",
+      "controllers_authcontroller_googlelogin",
+      "controllers_authcontroller_loginuser",
+      "controllers_authcontroller_registeruser",
+      "controllers_authcontroller_resetpassword",
+      "controllers_authcontroller_updateprofile",
+      "controllers_authcontroller_uploadprofilephoto"
+    ],
+    "4": [
+      "backend_controllers_shopkeepercontroller_js",
+      "controllers_shopkeepercontroller_admincreateshopkeeper",
+      "controllers_shopkeepercontroller_admindeleteshopkeeper",
+      "controllers_shopkeepercontroller_admingetallshopkeepers",
+      "controllers_shopkeepercontroller_createshopcoupon",
+      "controllers_shopkeepercontroller_getshopkeeperhistory",
+      "controllers_shopkeepercontroller_redeemcoupon",
+      "controllers_shopkeepercontroller_updateshopprofile",
+      "controllers_shopkeepercontroller_verifycoupon"
+    ],
+    "5": [
+      "backend_controllers_storecontroller_js",
+      "controllers_storecontroller_createstoreitem",
+      "controllers_storecontroller_deletestoreitem",
+      "controllers_storecontroller_getmyredemptions",
+      "controllers_storecontroller_getstoreitembyid",
+      "controllers_storecontroller_getstoreitems",
+      "controllers_storecontroller_redeemitem",
+      "controllers_storecontroller_updatestoreitem"
+    ],
+    "6": [
+      "backend_controllers_activitycontroller_js",
+      "controllers_activitycontroller_getactivitybyid",
+      "controllers_activitycontroller_getmyactivities",
+      "controllers_activitycontroller_getpendingactivities",
+      "controllers_activitycontroller_submitactivity",
+      "controllers_activitycontroller_updateactivitystatus"
+    ],
+    "7": [
+      "backend_controllers_donationcontroller_js",
+      "controllers_donationcontroller_getmydonations",
+      "controllers_donationcontroller_getngodonationstats",
+      "controllers_donationcontroller_getngopendingdonations",
+      "controllers_donationcontroller_handledonationaction",
+      "controllers_donationcontroller_submitdonation"
+    ],
+    "8": [
+      "components_eventdetail_eventdetail",
+      "ngo_ngodashboard_ngodashboard",
+      "social_impact_frontend_src_components_eventdetail_jsx",
+      "social_impact_frontend_src_pages_ngo_ngodashboard_jsx",
+      "social_impact_frontend_src_utils_eventstatus_js",
+      "utils_eventstatus_geteventstatus"
+    ],
+    "9": [
+      "ngo_createevent_createevent",
+      "ngo_createevent_field",
+      "ngo_createevent_input",
+      "ngo_createevent_textarea",
+      "social_impact_frontend_src_pages_ngo_createevent_jsx"
+    ],
+    "10": [
+      "backend_test_connection_js",
+      "backend_test_connection_runtests",
+      "backend_test_connection_testfirebase",
+      "backend_test_connection_testmongodb"
+    ],
+    "11": [
+      "backend_controllers_rewardcontroller_js",
+      "controllers_rewardcontroller_getbalance",
+      "controllers_rewardcontroller_getleaderboard",
+      "controllers_rewardcontroller_gettransactions"
+    ],
+    "12": [
+      "backend_middleware_authmiddleware_js",
+      "middleware_authmiddleware_adminonly",
+      "middleware_authmiddleware_protect",
+      "middleware_authmiddleware_shopkeeperonly"
+    ],
+    "13": [
+      "backend_controllers_admincontroller_js",
+      "controllers_admincontroller_getpendingngos",
+      "controllers_admincontroller_verifyngo"
+    ],
+    "14": [
+      "ngo_ngoanalytics_bar",
+      "ngo_ngoanalytics_ngoanalytics",
+      "social_impact_frontend_src_pages_ngo_ngoanalytics_jsx"
+    ],
+    "15": [
+      "ngo_ngodonations_ngodonations",
+      "ngo_ngodonations_statcard",
+      "social_impact_frontend_src_pages_ngo_ngodonations_jsx"
+    ],
+    "16": [
+      "read_prd_py",
+      "social_impact_app_read_prd_read_docx"
+    ],
+    "17": [
+      "seed_shopkeeper_js",
+      "social_impact_app_seed_shopkeeper_createshopkeeper"
+    ],
+    "18": [
+      "backend_config_db_js",
+      "config_db_connectdb"
+    ],
+    "19": [
+      "backend_scratch_check_db_js",
+      "scratch_check_db_checkdata"
+    ],
+    "20": [
+      "backend_scripts_createtestshopkeeper_js",
+      "scripts_createtestshopkeeper_createshopkeeper"
+    ],
+    "21": [
+      "backend_scripts_createtestuser_js",
+      "scripts_createtestuser_createtestuser"
+    ],
+    "22": [
+      "social_impact_frontend_src_app_jsx",
+      "src_app_app"
+    ],
+    "23": [
+      "components_background_background",
+      "social_impact_frontend_src_components_background_jsx"
+    ],
+    "24": [
+      "components_leafloader_leafloader",
+      "social_impact_frontend_src_components_leafloader_jsx"
+    ],
+    "25": [
+      "components_loader_loader",
+      "social_impact_frontend_src_components_loader_jsx"
+    ],
+    "26": [
+      "components_navbar_navbar",
+      "social_impact_frontend_src_components_navbar_jsx"
+    ],
+    "27": [
+      "components_scratchcard_scratchcard",
+      "social_impact_frontend_src_components_scratchcard_jsx"
+    ],
+    "28": [
+      "components_splashscreen_splashscreen",
+      "social_impact_frontend_src_components_splashscreen_jsx"
+    ],
+    "29": [
+      "pages_applyngo_applyngo",
+      "social_impact_frontend_src_pages_applyngo_jsx"
+    ],
+    "30": [
+      "pages_dashboard_dashboard",
+      "social_impact_frontend_src_pages_dashboard_jsx"
+    ],
+    "31": [
+      "pages_donations_donations",
+      "social_impact_frontend_src_pages_donations_jsx"
+    ],
+    "32": [
+      "pages_editprofile_editprofile",
+      "social_impact_frontend_src_pages_editprofile_jsx"
+    ],
+    "33": [
+      "pages_events_events",
+      "social_impact_frontend_src_pages_events_jsx"
+    ],
+    "34": [
+      "pages_herolanding_herolanding",
+      "social_impact_frontend_src_pages_herolanding_jsx"
+    ],
+    "35": [
+      "pages_leaderboard_leaderboard",
+      "social_impact_frontend_src_pages_leaderboard_jsx"
+    ],
+    "36": [
+      "pages_login_login",
+      "social_impact_frontend_src_pages_login_jsx"
+    ],
+    "37": [
+      "pages_ngocommandcenter_ngocommandcenter",
+      "social_impact_frontend_src_pages_ngocommandcenter_jsx"
+    ],
+    "38": [
+      "pages_rewardstore_rewardstore",
+      "social_impact_frontend_src_pages_rewardstore_jsx"
+    ],
+    "39": [
+      "pages_socialfeed_socialfeed",
+      "social_impact_frontend_src_pages_socialfeed_jsx"
+    ],
+    "40": [
+      "pages_userprofile_userprofile",
+      "social_impact_frontend_src_pages_userprofile_jsx"
+    ],
+    "41": [
+      "admin_adminactivitymanagement_adminactivitymanagement",
+      "social_impact_frontend_src_pages_admin_adminactivitymanagement_jsx"
+    ],
+    "42": [
+      "admin_admindashboard_admindashboard",
+      "social_impact_frontend_src_pages_admin_admindashboard_jsx"
+    ],
+    "43": [
+      "admin_adminlayout_adminlayout",
+      "social_impact_frontend_src_pages_admin_adminlayout_jsx"
+    ],
+    "44": [
+      "admin_adminngoapprovals_adminngoapprovals",
+      "social_impact_frontend_src_pages_admin_adminngoapprovals_jsx"
+    ],
+    "45": [
+      "admin_adminshopverification_adminshopverification",
+      "social_impact_frontend_src_pages_admin_adminshopverification_jsx"
+    ],
+    "46": [
+      "ngo_ngosocial_ngosocial",
+      "social_impact_frontend_src_pages_ngo_ngosocial_jsx"
+    ],
+    "47": [
+      "ngo_volunteermanagement_volunteermanagement",
+      "social_impact_frontend_src_pages_ngo_volunteermanagement_jsx"
+    ],
+    "48": [
+      "shopkeeper_shopkeeperdashboard_shopkeeperdashboard",
+      "social_impact_frontend_src_pages_shopkeeper_shopkeeperdashboard_jsx"
+    ],
+    "49": [
+      "server_js"
+    ],
+    "50": [
+      "backend_index_js"
+    ],
+    "51": [
+      "backend_config_cloudinary_js"
+    ],
+    "52": [
+      "backend_config_firebase_js"
+    ],
+    "53": [
+      "backend_models_activity_js"
+    ],
+    "54": [
+      "backend_models_donation_js"
+    ],
+    "55": [
+      "backend_models_event_js"
+    ],
+    "56": [
+      "backend_models_ngo_js"
+    ],
+    "57": [
+      "backend_models_ngofollow_js"
+    ],
+    "58": [
+      "backend_models_ngopost_js"
+    ],
+    "59": [
+      "backend_models_notification_js"
+    ],
+    "60": [
+      "backend_models_redemption_js"
+    ],
+    "61": [
+      "backend_models_store_js"
+    ],
+    "62": [
+      "backend_models_transaction_js"
+    ],
+    "63": [
+      "backend_models_user_js"
+    ],
+    "64": [
+      "backend_routes_activityroutes_js"
+    ],
+    "65": [
+      "backend_routes_adminroutes_js"
+    ],
+    "66": [
+      "backend_routes_authroutes_js"
+    ],
+    "67": [
+      "backend_routes_donationroutes_js"
+    ],
+    "68": [
+      "backend_routes_eventroutes_js"
+    ],
+    "69": [
+      "backend_routes_ngoroutes_js"
+    ],
+    "70": [
+      "backend_routes_rewardroutes_js"
+    ],
+    "71": [
+      "backend_routes_shopkeeperroutes_js"
+    ],
+    "72": [
+      "backend_routes_socialroutes_js"
+    ],
+    "73": [
+      "backend_routes_storeroutes_js"
+    ],
+    "74": [
+      "social_impact_frontend_postcss_config_js"
+    ],
+    "75": [
+      "social_impact_frontend_tailwind_config_js"
+    ],
+    "76": [
+      "social_impact_frontend_vite_config_js"
+    ],
+    "77": [
+      "social_impact_frontend_src_main_jsx"
+    ],
+    "78": [
+      "social_impact_frontend_src_config_firebase_js"
+    ],
+    "79": [
+      "social_impact_frontend_src_services_api_js"
+    ]
+  },
+  "cohesion": {
+    "0": 0.14,
+    "1": 0.2,
+    "2": 0.18,
+    "3": 0.27,
+    "4": 0.22,
+    "5": 0.25,
+    "6": 0.33,
+    "7": 0.33,
+    "8": 0.4,
+    "9": 0.4,
+    "10": 0.83,
+    "11": 0.5,
+    "12": 0.5,
+    "13": 0.67,
+    "14": 0.67,
+    "15": 0.67,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+    "30": 1.0,
+    "31": 1.0,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0,
+    "35": 1.0,
+    "36": 1.0,
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0,
+    "41": 1.0,
+    "42": 1.0,
+    "43": 1.0,
+    "44": 1.0,
+    "45": 1.0,
+    "46": 1.0,
+    "47": 1.0,
+    "48": 1.0,
+    "49": 1.0,
+    "50": 1.0,
+    "51": 1.0,
+    "52": 1.0,
+    "53": 1.0,
+    "54": 1.0,
+    "55": 1.0,
+    "56": 1.0,
+    "57": 1.0,
+    "58": 1.0,
+    "59": 1.0,
+    "60": 1.0,
+    "61": 1.0,
+    "62": 1.0,
+    "63": 1.0,
+    "64": 1.0,
+    "65": 1.0,
+    "66": 1.0,
+    "67": 1.0,
+    "68": 1.0,
+    "69": 1.0,
+    "70": 1.0,
+    "71": 1.0,
+    "72": 1.0,
+    "73": 1.0,
+    "74": 1.0,
+    "75": 1.0,
+    "76": 1.0,
+    "77": 1.0,
+    "78": 1.0,
+    "79": 1.0
+  },
+  "gods": [
+    {
+      "id": "controllers_authcontroller_generatetoken",
+      "label": "generateToken()",
+      "degree": 4
+    },
+    {
+      "id": "utils_eventstatus_geteventstatus",
+      "label": "getEventStatus()",
+      "degree": 4
+    },
+    {
+      "id": "backend_test_connection_runtests",
+      "label": "runTests()",
+      "degree": 3
+    },
+    {
+      "id": "controllers_eventcontroller_autocompleteevents",
+      "label": "autoCompleteEvents()",
+      "degree": 3
+    },
+    {
+      "id": "backend_test_connection_testmongodb",
+      "label": "testMongoDB()",
+      "degree": 2
+    },
+    {
+      "id": "backend_test_connection_testfirebase",
+      "label": "testFirebase()",
+      "degree": 2
+    },
+    {
+      "id": "controllers_authcontroller_registeruser",
+      "label": "registerUser()",
+      "degree": 2
+    },
+    {
+      "id": "controllers_authcontroller_loginuser",
+      "label": "loginUser()",
+      "degree": 2
+    },
+    {
+      "id": "controllers_authcontroller_googlelogin",
+      "label": "googleLogin()",
+      "degree": 2
+    },
+    {
+      "id": "controllers_eventcontroller_getevents",
+      "label": "getEvents()",
+      "degree": 2
+    }
+  ],
+  "surprises": [
+    {
+      "source": "EventDetail()",
+      "target": "getEventStatus()",
+      "source_files": [
+        "social-impact-frontend/src/components/EventDetail.jsx",
+        "social-impact-frontend/src/utils/eventStatus.js"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source"
+    }
+  ],
+  "questions": [
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.14 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
