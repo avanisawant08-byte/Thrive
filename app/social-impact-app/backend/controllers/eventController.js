@@ -147,6 +147,10 @@ const createEvent = async (req, res) => {
       latitude, longitude
     } = req.body;
 
+    if (!title || !description || (!date && !startDate) || !address) {
+      return res.status(400).json({ message: 'Title, description, date, and address are required' });
+    }
+
     const activityTypeMap = {
       volunteer: 'volunteering',
       medical_camp: 'blood_donation',
@@ -160,13 +164,23 @@ const createEvent = async (req, res) => {
 
     // Logic to determine final dates
     const finalStartDate = startDate ? new Date(startDate) : new Date(date);
+    if (isNaN(finalStartDate.getTime())) {
+      return res.status(400).json({ message: 'Invalid start date' });
+    }
+
+    const durationNum = Math.max(0.25, Math.min(Number(duration) || 1, 168));
     let finalEndDate;
-    
     if (endDate) {
       finalEndDate = new Date(endDate);
+      if (isNaN(finalEndDate.getTime())) {
+        return res.status(400).json({ message: 'Invalid end date' });
+      }
     } else {
-      // Fallback to duration if endDate not provided
-      finalEndDate = new Date(finalStartDate.getTime() + duration * 60 * 60 * 1000);
+      finalEndDate = new Date(finalStartDate.getTime() + durationNum * 60 * 60 * 1000);
+    }
+
+    if (finalEndDate < finalStartDate) {
+      return res.status(400).json({ message: 'End date cannot be earlier than start date' });
     }
 
     let finalLocation = location;
@@ -177,9 +191,16 @@ const createEvent = async (req, res) => {
       };
     }
 
+    let parsedReward = Number(coinsReward);
+    if (!Number.isFinite(parsedReward) || parsedReward < 0) {
+      parsedReward = 50;
+    } else {
+      parsedReward = Math.min(Math.max(Math.floor(parsedReward), 0), 500);
+    }
+
     // Adapt event settings based on whether the creator is a verified NGO
     const ngo = await NGO.findOne({ userId: req.user._id });
-    let finalCoinsReward = coinsReward;
+    let finalCoinsReward = parsedReward;
     let finalCertificateAvailable = certificateAvailable;
     let isApproved = false;
     let ngoId = undefined;
@@ -188,28 +209,31 @@ const createEvent = async (req, res) => {
       isApproved = true; // Auto-approved for verified NGOs
       ngoId = ngo._id;
     } else {
-      finalCoinsReward = coinsReward || 500; // Reward for community events upon completion
+      finalCoinsReward = Math.min(parsedReward, 100); // Reward capped for community events
       finalCertificateAvailable = false; // Certificates disabled for community events
     }
 
+    const parsedVolunteers = Math.max(0, Math.min(Number(volunteersNeeded) || 0, 10000));
+
     const event = await Event.create({
-      title, description, 
+      title: String(title).slice(0, 150),
+      description: String(description).slice(0, 5000), 
       activityType: finalActivityType, 
       location: finalLocation,
-      address, 
+      address: String(address).slice(0, 200), 
       date: finalStartDate, // fallback for legacy
       startDate: finalStartDate,
       endDate: finalEndDate,
       coinsReward: finalCoinsReward, 
-      duration, 
+      duration: durationNum, 
       endTime: finalEndDate, // legacy sync
       createdBy: req.user._id,
       ngoId,
       isApproved,
       status: isApproved ? 'upcoming' : 'pending_approval',
-      eventImage,
-      volunteersNeeded,
-      joinPolicy,
+      eventImage: eventImage || '',
+      volunteersNeeded: parsedVolunteers,
+      joinPolicy: joinPolicy === 'approval' ? 'approval' : 'open',
       certificateAvailable: finalCertificateAvailable
     });
 
@@ -311,8 +335,23 @@ const joinEvent = async (req, res) => {
     const event = await Event.findById(req.params.id);
     if (!event) return res.status(404).json({ message: 'Event not found' });
 
-    if (event.participants.includes(req.user._id)) {
+    if (['cancelled', 'rejected'].includes(event.status)) {
+      return res.status(400).json({ message: 'Cannot join a cancelled or rejected event' });
+    }
+
+    if (event.status === 'pending_approval') {
+      return res.status(400).json({ message: 'Cannot join an event that is pending approval' });
+    }
+
+    const isAlreadyParticipant = event.participants.some(
+      p => p.toString() === req.user._id.toString()
+    );
+    if (isAlreadyParticipant) {
       return res.status(400).json({ message: 'Already joined' });
+    }
+
+    if (event.volunteersNeeded > 0 && event.participants.length >= event.volunteersNeeded) {
+      return res.status(400).json({ message: 'Event has reached maximum volunteer capacity' });
     }
 
     const now = new Date();
@@ -367,10 +406,18 @@ const leaveEvent = async (req, res) => {
 // @desc Add comment
 const addComment = async (req, res) => {
   try {
+    const { text } = req.body;
+    if (!text || !text.trim()) {
+      return res.status(400).json({ message: 'Comment text is required' });
+    }
+    if (text.trim().length > 1000) {
+      return res.status(400).json({ message: 'Comment cannot exceed 1000 characters' });
+    }
+
     const event = await Event.findById(req.params.id);
     if (!event) return res.status(404).json({ message: 'Event not found' });
 
-    event.comments.push({ user: req.user._id, text: req.body.text });
+    event.comments.push({ user: req.user._id, text: text.trim() });
     await event.save();
     res.status(201).json({ message: 'Comment added' });
   } catch (error) {
@@ -393,6 +440,10 @@ const getComments = async (req, res) => {
 const handleJoinRequest = async (req, res) => {
   try {
     const { status } = req.body; // 'approved' or 'rejected'
+    if (!['approved', 'rejected'].includes(status)) {
+      return res.status(400).json({ message: 'Invalid status. Must be approved or rejected' });
+    }
+
     const event = await Event.findById(req.params.id);
     
     if (!event) return res.status(404).json({ message: 'Event not found' });
@@ -408,7 +459,12 @@ const handleJoinRequest = async (req, res) => {
     }
 
     if (status === 'approved') {
-      event.participants.push(req.params.userId);
+      if (event.volunteersNeeded > 0 && event.participants.length >= event.volunteersNeeded) {
+        return res.status(400).json({ message: 'Event has reached maximum volunteer capacity' });
+      }
+      if (!event.participants.some(p => p.toString() === req.params.userId)) {
+        event.participants.push(req.params.userId);
+      }
     }
     
     // Remove from joinRequests whether approved or rejected

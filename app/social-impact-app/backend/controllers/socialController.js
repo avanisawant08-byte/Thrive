@@ -346,6 +346,9 @@ const createPost = async (req, res) => {
     if (!content || !content.trim()) {
       return res.status(400).json({ message: 'Post content is required' });
     }
+    if (content.trim().length > 5000) {
+      return res.status(400).json({ message: 'Post content cannot exceed 5000 characters' });
+    }
 
     let mediaUrls = [];
     let imageUrl = req.body.imageUrl || "";
@@ -573,6 +576,9 @@ const commentOnPost = async (req, res) => {
 
     if (!commentText || !commentText.trim()) {
       return res.status(400).json({ message: 'Comment text is required' });
+    }
+    if (commentText.trim().length > 1000) {
+      return res.status(400).json({ message: 'Comment cannot exceed 1000 characters' });
     }
 
     let post = await Post.findById(postId);

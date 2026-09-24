@@ -9,17 +9,26 @@ const registerNGO = async (req, res) => {
   try {
     const { name, registrationNumber, contactPerson, email, phone, description, logo } = req.body;
 
-    const ngoExists = await NGO.findOne({ email });
+    if (!name || !registrationNumber || !contactPerson || !email) {
+      return res.status(400).json({ message: 'Name, registration number, contact person, and email are required' });
+    }
+
+    const userAlreadyRegistered = await NGO.findOne({ userId: req.user._id });
+    if (userAlreadyRegistered) {
+      return res.status(400).json({ message: 'You have already submitted an NGO registration application' });
+    }
+
+    const ngoExists = await NGO.findOne({ email: email.toLowerCase().trim() });
     if (ngoExists) return res.status(400).json({ message: 'NGO with this email already registered' });
 
     const ngo = await NGO.create({
-      name,
-      registrationNumber,
-      contactPerson,
-      email,
-      phone,
-      description,
-      logo,
+      name: String(name).slice(0, 150),
+      registrationNumber: String(registrationNumber).slice(0, 100),
+      contactPerson: String(contactPerson).slice(0, 100),
+      email: email.toLowerCase().trim(),
+      phone: phone ? String(phone).slice(0, 30) : '',
+      description: description ? String(description).slice(0, 2000) : '',
+      logo: logo || '',
       userId: req.user._id
     });
 
@@ -398,7 +407,7 @@ const deleteNGOEvent = async (req, res) => {
   try {
     const event = await Event.findOne({ _id: req.params.id, createdBy: req.user._id });
     if (!event) return res.status(404).json({ message: 'Event not found' });
-    event.status = 'completed'; // soft delete — mark cancelled
+    event.status = 'cancelled';
     await event.save();
     res.json({ message: 'Event cancelled' });
   } catch (error) {
@@ -454,7 +463,10 @@ const handleJoinRequest = async (req, res) => {
     request.reviewedAt = new Date();
 
     if (action === 'approve') {
-      if (!event.participants.includes(req.params.userId)) {
+      if (event.volunteersNeeded > 0 && event.participants.length >= event.volunteersNeeded) {
+        return res.status(400).json({ message: 'Event has reached maximum volunteer capacity' });
+      }
+      if (!event.participants.some(p => p.toString() === req.params.userId)) {
         event.participants.push(req.params.userId);
       }
     } else {

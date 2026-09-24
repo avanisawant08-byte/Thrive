@@ -92,15 +92,23 @@ const getActivityById = async (req, res) => {
 const updateActivityStatus = async (req, res) => {
   try {
     const { status, coinsAwarded } = req.body;
+    if (!['approved', 'rejected'].includes(status)) {
+      return res.status(400).json({ message: 'Invalid status. Must be approved or rejected' });
+    }
+
     const activity = await Activity.findById(req.params.id).populate('eventId');
     if (!activity) return res.status(404).json({ message: 'Activity not found' });
+
+    if (activity.status === 'approved') {
+      return res.status(400).json({ message: 'Activity has already been approved' });
+    }
 
     // Authorization check
     if (req.user.role !== 'admin') {
       if (req.user.role !== 'ngo') {
         return res.status(403).json({ message: 'Not authorized' });
       }
-      if (!activity.eventId || activity.eventId.createdBy.toString() !== req.user._id.toString()) {
+      if (!activity.eventId || !activity.eventId.createdBy || activity.eventId.createdBy.toString() !== req.user._id.toString()) {
         return res.status(403).json({ message: 'Not authorized for this event' });
       }
     }
@@ -109,20 +117,27 @@ const updateActivityStatus = async (req, res) => {
     activity.reviewedBy = req.user._id;
     activity.reviewedAt = new Date();
 
-    if (status === 'approved' && coinsAwarded) {
-      activity.coinsAwarded = coinsAwarded;
+    if (status === 'approved' && coinsAwarded !== undefined) {
+      const parsedCoins = Number(coinsAwarded);
+      if (!Number.isInteger(parsedCoins) || parsedCoins < 0 || parsedCoins > 5000) {
+        return res.status(400).json({ message: 'coinsAwarded must be an integer between 0 and 5000' });
+      }
 
-      await User.findByIdAndUpdate(activity.userId, {
-        $inc: { coinBalance: coinsAwarded }
-      });
+      activity.coinsAwarded = parsedCoins;
 
-      await Transaction.create({
-        userId: activity.userId,
-        type: 'earned',
-        amount: coinsAwarded,
-        source: 'activity_approval',
-        referenceId: activity._id,
-      });
+      if (parsedCoins > 0) {
+        await User.findByIdAndUpdate(activity.userId, {
+          $inc: { coinBalance: parsedCoins }
+        });
+
+        await Transaction.create({
+          userId: activity.userId,
+          type: 'earned',
+          amount: parsedCoins,
+          source: 'activity_approval',
+          referenceId: activity._id,
+        });
+      }
     }
 
     await activity.save();

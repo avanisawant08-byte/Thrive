@@ -7,7 +7,7 @@ const protect = async (req, res, next) => {
   if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
     try {
       token = req.headers.authorization.split(' ')[1];
-      if (token && token.startsWith('mock_')) {
+      if (process.env.NODE_ENV !== 'production' && token && token.startsWith('mock_')) {
         const isRole = (role) => token.includes(role);
         const role = isRole('admin') ? 'admin' : (isRole('ngo') ? 'ngo' : (isRole('shop') ? 'shopkeeper' : 'user'));
         

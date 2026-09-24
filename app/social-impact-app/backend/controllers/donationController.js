@@ -8,16 +8,25 @@ const submitDonation = async (req, res) => {
   try {
     const { ngoId, donationType, quantityOrAmount, message, proofMedia, isBirthdayDonation, isReliefDonation } = req.body;
 
+    if (!ngoId || !donationType || !quantityOrAmount) {
+      return res.status(400).json({ message: 'NGO, donation type, and quantity/amount are required' });
+    }
+
+    const targetNgo = await NGO.findById(ngoId);
+    if (!targetNgo) {
+      return res.status(404).json({ message: 'NGO not found' });
+    }
+
     const donation = await Donation.create({
       userId: req.user._id,
       ngoId,
       donationType,
-      quantityOrAmount,
-      message,
-      proofMedia: proofMedia || [],
+      quantityOrAmount: String(quantityOrAmount).slice(0, 100),
+      message: message ? String(message).slice(0, 1000) : '',
+      proofMedia: Array.isArray(proofMedia) ? proofMedia.slice(0, 10) : [],
       status: 'proof_submitted',
-      isBirthdayDonation,
-      isReliefDonation
+      isBirthdayDonation: !!isBirthdayDonation,
+      isReliefDonation: !!isReliefDonation
     });
 
     res.status(201).json({ message: 'Donation submitted! Wait for NGO to verify.', donation });
@@ -60,19 +69,26 @@ const getNGOPendingDonations = async (req, res) => {
 const handleDonationAction = async (req, res) => {
   try {
     const { id, action } = req.params; // action = 'confirm' or 'reject'
+    if (!['confirm', 'reject'].includes(action)) {
+      return res.status(400).json({ message: 'Invalid action. Must be confirm or reject' });
+    }
+
     const donation = await Donation.findById(id);
     if (!donation) return res.status(404).json({ message: 'Donation not found' });
 
     // Verify this NGO owns this donation
     const ngo = await NGO.findOne({ userId: req.user._id });
-    if (donation.ngoId.toString() !== ngo._id.toString()) {
-      return res.status(403).json({ message: 'Not authorized' });
+    if (!ngo || donation.ngoId.toString() !== ngo._id.toString()) {
+      return res.status(403).json({ message: 'Not authorized to manage this donation' });
     }
 
     if (action === 'confirm') {
+      if (donation.status === 'verified') {
+        return res.status(400).json({ message: 'Donation has already been verified' });
+      }
       donation.status = 'verified';
-      // Optionally award coins to user
-      const rewardAmount = 100; // Reward for donation
+      // Award coins to user only once
+      const rewardAmount = 100;
       await User.findByIdAndUpdate(donation.userId, { $inc: { coinBalance: rewardAmount } });
     } else {
       donation.status = 'rejected';

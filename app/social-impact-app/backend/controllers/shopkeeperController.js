@@ -116,14 +116,19 @@ const createShopCoupon = async (req, res) => {
   try {
     const { title, description, coinCost } = req.body;
     
-    if (!title || !description || !coinCost) {
+    if (!title || !description || coinCost === undefined) {
       return res.status(400).json({ message: 'Title, description, and coin cost are required' });
     }
 
+    const numericCost = Number(coinCost);
+    if (!Number.isInteger(numericCost) || numericCost <= 0 || numericCost > 100000) {
+      return res.status(400).json({ message: 'Coin cost must be a positive integer up to 100,000' });
+    }
+
     const newItem = await Store.create({
-      title,
-      description,
-      coinCost,
+      title: String(title).slice(0, 100),
+      description: String(description).slice(0, 500),
+      coinCost: numericCost,
       category: 'coupon',
       vendorId: req.user._id,
       isActive: true

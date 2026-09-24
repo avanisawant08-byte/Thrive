@@ -35,20 +35,45 @@ const redeemItem = async (req, res) => {
     if (!item) return res.status(404).json({ message: 'Item not found' });
     if (!item.isActive) return res.status(400).json({ message: 'Item not available' });
 
+    if (!Number.isInteger(item.coinCost) || item.coinCost <= 0) {
+      return res.status(400).json({ message: 'Item has an invalid price configuration' });
+    }
+
+    if (item.stock !== -1 && item.stock <= 0) {
+      return res.status(400).json({ message: 'Item is out of stock' });
+    }
+
+    // Atomically decrement stock first if item has limited stock
+    let stockDecremented = false;
+    if (item.stock !== -1) {
+      const updatedStockItem = await Store.findOneAndUpdate(
+        { _id: item._id, isActive: true, stock: { $gt: 0 } },
+        { $inc: { stock: -1 } },
+        { new: true }
+      );
+      if (!updatedStockItem) {
+        return res.status(400).json({ message: 'Item is out of stock' });
+      }
+      stockDecremented = true;
+      if (updatedStockItem.stock === 0) {
+        updatedStockItem.isActive = false;
+        await updatedStockItem.save();
+      }
+    }
+
+    // Deduct user balance
     const user = await User.findOneAndUpdate(
       { _id: req.user._id, coinBalance: { $gte: item.coinCost } },
       { $inc: { coinBalance: -item.coinCost } },
       { new: true }
     );
-    if (!user) {
-      return res.status(400).json({ message: 'Insufficient balance' });
-    }
 
-    // Reduce stock
-    if (item.stock !== -1) {
-      item.stock -= 1;
-      if (item.stock === 0) item.isActive = false;
-      await item.save();
+    if (!user) {
+      // Rollback stock decrement if user had insufficient balance
+      if (stockDecremented) {
+        await Store.findByIdAndUpdate(item._id, { $inc: { stock: 1 }, isActive: true });
+      }
+      return res.status(400).json({ message: 'Insufficient balance' });
     }
 
     // Create transaction
@@ -100,7 +125,21 @@ const getMyRedemptions = async (req, res) => {
 // @desc Create store item (Admin)
 const createStoreItem = async (req, res) => {
   try {
-    const item = await Store.create(req.body);
+    const { title, description, coinCost, category, stock } = req.body;
+    if (!title || !coinCost) {
+      return res.status(400).json({ message: 'Title and coinCost are required' });
+    }
+
+    const numericCost = Number(coinCost);
+    if (!Number.isInteger(numericCost) || numericCost <= 0) {
+      return res.status(400).json({ message: 'coinCost must be a positive integer' });
+    }
+
+    const item = await Store.create({
+      ...req.body,
+      coinCost: numericCost,
+      stock: stock !== undefined ? Number(stock) : -1
+    });
     res.status(201).json(item);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -110,6 +149,14 @@ const createStoreItem = async (req, res) => {
 // @desc Update store item (Admin)
 const updateStoreItem = async (req, res) => {
   try {
+    if (req.body.coinCost !== undefined) {
+      const numericCost = Number(req.body.coinCost);
+      if (!Number.isInteger(numericCost) || numericCost <= 0) {
+        return res.status(400).json({ message: 'coinCost must be a positive integer' });
+      }
+      req.body.coinCost = numericCost;
+    }
+
     const item = await Store.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!item) return res.status(404).json({ message: 'Item not found' });
     res.json(item);

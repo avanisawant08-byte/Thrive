@@ -11,8 +11,17 @@ const generateToken = (id) => {
 const registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
+    if (!name || !email || !password) {
+      return res.status(400).json({ message: 'Name, email, and password are required' });
+    }
+    if (name.trim().length > 100) {
+      return res.status(400).json({ message: 'Name cannot exceed 100 characters' });
+    }
+    if (password.length < 6) {
+      return res.status(400).json({ message: 'Password must be at least 6 characters' });
+    }
 
-    const userExists = await User.findOne({ email });
+    const userExists = await User.findOne({ email: email.toLowerCase().trim() });
     if (userExists) {
       return res.status(400).json({ message: 'User already exists' });
     }
@@ -51,6 +60,9 @@ const registerUser = async (req, res) => {
 const loginUser = async (req, res) => {
   try {
     const { email, password, idToken } = req.body;
+    if (!email || !password) {
+      return res.status(400).json({ message: 'Email and password are required' });
+    }
 
     const user = await User.findOne({ email });
     if (!user) {
@@ -69,8 +81,8 @@ const loginUser = async (req, res) => {
             isVerified = true;
           }
         } catch (tokenErr) {
-          console.log('Token verification notice:', tokenErr.message);
-          isVerified = true; // Trust client-side Firebase Auth success
+          console.warn('Token verification failed:', tokenErr.message);
+          isVerified = false;
         }
       }
 
