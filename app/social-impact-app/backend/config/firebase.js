@@ -17,18 +17,43 @@ if (process.env.FIREBASE_SERVICE_ACCOUNT) {
 }
 
 if (serviceAccount && !admin.apps.length) {
-  admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    storageBucket: process.env.FIREBASE_STORAGE_BUCKET || 'social-app-3cc98.appspot.com',
-  });
-} else if (!admin.apps.length) {
-  console.warn("⚠️ Firebase Admin initialized without credentials (limited features).");
+  try {
+    admin.initializeApp({
+      credential: admin.credential.cert(serviceAccount),
+      storageBucket: process.env.FIREBASE_STORAGE_BUCKET || 'social-app-3cc98.appspot.com',
+    });
+    console.log("✅ Firebase Admin initialized with service account.");
+  } catch (err) {
+    console.error("❌ Failed to initialize Firebase Admin with service account:", err.message);
+  }
 }
 
-const auth = admin.auth();
-let bucket;
+if (!admin.apps.length) {
+  try {
+    admin.initializeApp({
+      projectId: process.env.FIREBASE_PROJECT_ID || 'social-app-3cc98',
+      storageBucket: process.env.FIREBASE_STORAGE_BUCKET || 'social-app-3cc98.appspot.com',
+    });
+    console.warn("⚠️ Firebase Admin initialized without explicit credentials (limited features).");
+  } catch (err) {
+    console.warn("⚠️ Firebase Admin initialization failed:", err.message);
+  }
+}
+
+let auth = null;
 try {
-  bucket = admin.storage().bucket();
+  if (admin.apps.length) {
+    auth = admin.auth();
+  }
+} catch (err) {
+  console.warn("⚠️ Firebase auth() unavailable:", err.message);
+}
+
+let bucket = null;
+try {
+  if (admin.apps.length) {
+    bucket = admin.storage().bucket();
+  }
 } catch (_) {
   bucket = null;
 }

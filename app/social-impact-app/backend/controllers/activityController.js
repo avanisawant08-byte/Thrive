@@ -22,7 +22,7 @@ const submitActivity = async (req, res) => {
     let coinsAwarded = 0;
     if (eventId) {
       const eventObj = await Event.findById(eventId);
-      if (eventObj && !eventObj.ngoId && eventObj.createdBy.toString() === req.user._id.toString()) {
+      if (eventObj && !eventObj.ngoId && eventObj.createdBy && eventObj.createdBy.toString() === req.user._id.toString()) {
         coinsAwarded = 500;
       }
     }
